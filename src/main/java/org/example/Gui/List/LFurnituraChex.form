@@ -46,7 +46,7 @@
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/cancel.png"/>
+              <Image iconType="3" name="/org/example/images/cancel.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x43a;&#x440;&#x44b;&#x442;&#x44c;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -76,7 +76,7 @@
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/refresh.png"/>
+              <Image iconType="3" name="/org/example/images/refresh.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41e;&#x431;&#x43d;&#x43e;&#x432;&#x438;&#x442;&#x44c;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -90,7 +90,7 @@
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/forw.png"/>
+              <Image iconType="3" name="/org/example/images/forw.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x430;&#x442;&#x44c;"/>
             <Property name="focusable" type="boolean" value="false"/>

@@ -75,7 +75,7 @@ public class LRevizia extends javax.swing.JPanel {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jButton1.setText("Закрыть");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -87,7 +87,7 @@ public class LRevizia extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton2.setText("Добавить");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -99,7 +99,7 @@ public class LRevizia extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton2);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton3.setText("Изменить");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -111,7 +111,7 @@ public class LRevizia extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton3);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton4.setText("Удалить");
         jButton4.setFocusable(false);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -123,7 +123,7 @@ public class LRevizia extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton4);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/refresh.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/refresh.png"))); // NOI18N
         jButton5.setText("Обновить");
         jButton5.setFocusable(false);
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -135,7 +135,7 @@ public class LRevizia extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton5);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/filter.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/filter.png"))); // NOI18N
         jButton6.setText("Фильтр");
         jButton6.setFocusable(false);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -147,7 +147,7 @@ public class LRevizia extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton6);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/2.png"))); // NOI18N
         jButton7.setText("Провести");
         jButton7.setFocusable(false);
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -159,7 +159,7 @@ public class LRevizia extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton7);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/1.png"))); // NOI18N
         jButton8.setText("Открыть");
         jButton8.setFocusable(false);
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -171,7 +171,7 @@ public class LRevizia extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton8);
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
         jButton9.setText("Печать");
         jButton9.setFocusable(false);
         jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -365,8 +365,8 @@ public class LRevizia extends javax.swing.JPanel {
 
     
     // подсветка и картинки в таблицу                       
-    final ImageIcon edit = new ImageIcon(getClass().getResource("/images/1.png"));
-    final ImageIcon ok = new ImageIcon(getClass().getResource("/images/2.png"));
+    final ImageIcon edit = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
+    final ImageIcon ok = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
 
     private final DefaultTableCellRenderer jTableRenderer = new DefaultTableCellRenderer() {
         @Override

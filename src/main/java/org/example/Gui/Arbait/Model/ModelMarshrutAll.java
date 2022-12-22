@@ -73,13 +73,13 @@ public class ModelMarshrutAll  extends AbstractTableModel{
     }    
        
     // подсветка и картинки в таблицу                       
-    final ImageIcon ok0 = new ImageIcon(getClass().getResource("/images/1.png"));
-    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/images/forw.png"));
-    final ImageIcon ok2 = new ImageIcon(getClass().getResource("/images/Filled.png"));
-    final ImageIcon ok3 = new ImageIcon(getClass().getResource("/images/2.png"));
-    final ImageIcon ok4 = new ImageIcon(getClass().getResource("/images/clos.png"));
+    final ImageIcon ok0 = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
+    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/org/example/images/forw.png"));
+    final ImageIcon ok2 = new ImageIcon(getClass().getResource("/org/example/images/Filled.png"));
+    final ImageIcon ok3 = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
+    final ImageIcon ok4 = new ImageIcon(getClass().getResource("/org/example/images/clos.png"));
     
-    final ImageIcon warn = new ImageIcon(getClass().getResource("/images/warning.png"));
+    final ImageIcon warn = new ImageIcon(getClass().getResource("/org/example/images/warning.png"));
     
     
     public DefaultTableCellRenderer jTableRenderer1 = new DefaultTableCellRenderer() {

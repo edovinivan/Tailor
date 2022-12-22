@@ -57,7 +57,7 @@
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/cancel.png"/>
+              <Image iconType="3" name="/org/example/images/cancel.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x43a;&#x440;&#x44b;&#x442;&#x44c;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -71,7 +71,7 @@
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/add.png"/>
+              <Image iconType="3" name="/org/example/images/add.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x412;&#x441;&#x435;+"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -85,7 +85,7 @@
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/remove.png"/>
+              <Image iconType="3" name="/org/example/images/remove.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x412;&#x441;&#x435;-"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -99,7 +99,7 @@
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/redo.png"/>
+              <Image iconType="3" name="/org/example/images/redo.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Excel"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x412;&#x44b;&#x433;&#x440;&#x443;&#x437;&#x438;&#x442;&#x44c; &#x432;&#x44b;&#x434;&#x435;&#x43b;&#x435;&#x43d;&#x43d;&#x44b;&#x435; &#x441;&#x442;&#x440;&#x43e;&#x43a;&#x438; &#x432; Excel"/>

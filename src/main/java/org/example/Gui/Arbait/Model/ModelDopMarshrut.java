@@ -119,10 +119,10 @@ public class ModelDopMarshrut extends AbstractTableModel{
     };
     
     // подсветка и картинки в таблицу                       
-    final ImageIcon s1 = new ImageIcon(getClass().getResource("/images/1.png"));
-    final ImageIcon s2 = new ImageIcon(getClass().getResource("/images/Filled.png"));
-    final ImageIcon s3 = new ImageIcon(getClass().getResource("/images/2.png"));
-    final ImageIcon s4 = new ImageIcon(getClass().getResource("/images/clos.png"));
+    final ImageIcon s1 = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
+    final ImageIcon s2 = new ImageIcon(getClass().getResource("/org/example/images/Filled.png"));
+    final ImageIcon s3 = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
+    final ImageIcon s4 = new ImageIcon(getClass().getResource("/org/example/images/clos.png"));
     
     
     

@@ -53,7 +53,7 @@
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/cancel.png"/>
+              <Image iconType="3" name="/org/example/images/cancel.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x43a;&#x440;&#x44b;&#x442;&#x44c;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -67,7 +67,7 @@
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/2.png"/>
+              <Image iconType="3" name="/org/example/images/2.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x438;&#x43d;&#x44f;&#x442;&#x44c;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -81,7 +81,7 @@
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/icons8-Needle_16.png"/>
+              <Image iconType="3" name="/org/example/images/icons8-Needle_16.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x410;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x438;&#x432;&#x44f;&#x437;&#x430;&#x442;&#x44c; &#x430;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;"/>
@@ -96,7 +96,7 @@
         <Component class="javax.swing.JButton" name="jButton6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/magn.png"/>
+              <Image iconType="3" name="/org/example/images/magn.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x426;&#x432;&#x435;&#x442;"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x438;&#x432;&#x44f;&#x437;&#x430;&#x442;&#x44c; &#x446;&#x432;&#x435;&#x442;"/>
@@ -111,7 +111,7 @@
         <Component class="javax.swing.JButton" name="jButton9">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/need.png"/>
+              <Image iconType="3" name="/org/example/images/need.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x437;&#x43c;&#x435;&#x440;"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x438;&#x432;&#x44f;&#x437;&#x430;&#x442;&#x44c; &#x440;&#x430;&#x437;&#x43c;&#x435;&#x440;"/>
@@ -126,7 +126,7 @@
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/money.png"/>
+              <Image iconType="3" name="/org/example/images/money.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x434;&#x430;&#x436;&#x438;"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x417;&#x430;&#x433;&#x440;&#x443;&#x437;&#x438;&#x442;&#x44c; &#x43f;&#x440;&#x43e;&#x434;&#x430;&#x436;&#x438; &#x438;&#x437; &#x444;&#x430;&#x439;&#x43b;&#x430;"/>
@@ -141,7 +141,7 @@
         <Component class="javax.swing.JButton" name="jButton5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/redo.png"/>
+              <Image iconType="3" name="/org/example/images/redo.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x438;"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x417;&#x430;&#x433;&#x440;&#x443;&#x437;&#x438;&#x442;&#x44c; &#x43e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x438; &#x438;&#x437; &#x444;&#x430;&#x439;&#x43b;&#x430;"/>
@@ -156,7 +156,7 @@
         <Component class="javax.swing.JButton" name="jButton7">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/Filled.png"/>
+              <Image iconType="3" name="/org/example/images/Filled.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x412; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x435;"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x417;&#x430;&#x433;&#x440;&#x443;&#x437;&#x438;&#x442;&#x44c; &#x430;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;&#x430; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x44b;&#x435; &#x432; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x435;"/>
@@ -171,7 +171,7 @@
         <Component class="javax.swing.JButton" name="jButton8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/remove.png"/>
+              <Image iconType="3" name="/org/example/images/remove.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x412;&#x441;&#x435;"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43d;&#x44f;&#x442;&#x44c; &#x432;&#x44b;&#x434;&#x435;&#x43b;&#x435;&#x43d;&#x438;&#x435; &#x441;&#x43e; &#x432;&#x441;&#x435;&#x445; &#x441;&#x442;&#x440;&#x43e;&#x43a;"/>
@@ -186,7 +186,7 @@
         <Component class="javax.swing.JButton" name="jButton10">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/basket.png"/>
+              <Image iconType="3" name="/org/example/images/basket.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="ABC"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43e;&#x440;&#x442;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x434;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x43f;&#x43e; ABC"/>
@@ -201,7 +201,7 @@
         <Component class="javax.swing.JButton" name="jButton11">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/basket.png"/>
+              <Image iconType="3" name="/org/example/images/basket.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x410;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43e;&#x440;&#x442;&#x438;&#x440;&#x43e;&#x432;&#x43a;&#x430; &#x43f;&#x43e; &#x430;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;&#x443;"/>
@@ -216,7 +216,7 @@
         <Component class="javax.swing.JButton" name="jButton12">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/Hand.png"/>
+              <Image iconType="3" name="/org/example/images/Hand.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Except"/>
             <Property name="focusable" type="boolean" value="false"/>

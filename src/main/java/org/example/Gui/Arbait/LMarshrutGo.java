@@ -57,7 +57,7 @@ public class LMarshrutGo extends javax.swing.JPanel {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jButton1.setText("Закрыть");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -69,7 +69,7 @@ public class LMarshrutGo extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton1);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bac.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/bac.png"))); // NOI18N
         jButton3.setText("Вернуть");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -81,7 +81,7 @@ public class LMarshrutGo extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton3);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redo.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/redo.png"))); // NOI18N
         jButton2.setText("Отправить");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -93,7 +93,7 @@ public class LMarshrutGo extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton2);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/application.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/application.png"))); // NOI18N
         jButton4.setText("Время");
         jButton4.setFocusable(false);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

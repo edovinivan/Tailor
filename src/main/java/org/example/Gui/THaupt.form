@@ -20,7 +20,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/house.png"/>
+              <Image iconType="3" name="/org/example/images/house.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x424;&#x430;&#x439;&#x43b;"/>
           </Properties>
@@ -28,7 +28,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/cancel.png"/>
+                  <Image iconType="3" name="/org/example/images/cancel.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x445;&#x43e;&#x434;"/>
               </Properties>
@@ -44,7 +44,7 @@
               <Border info="null"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/application.png"/>
+              <Image iconType="3" name="/org/example/images/application.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x421;&#x43f;&#x440;&#x430;&#x432;&#x43e;&#x447;&#x43d;&#x438;&#x43a;&#x438;"/>
           </Properties>
@@ -52,7 +52,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/cascade.png"/>
+                  <Image iconType="3" name="/org/example/images/cascade.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x422;&#x438;&#x43f; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x43d;&#x430;"/>
               </Properties>
@@ -63,7 +63,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem24">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x424;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x430;"/>
               </Properties>
@@ -74,7 +74,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem59">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x413;&#x440;&#x443;&#x43f;&#x43f;&#x44b; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x435;&#x43d;"/>
               </Properties>
@@ -85,7 +85,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem60">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x413;&#x440;&#x443;&#x43f;&#x43f;&#x44b; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b;"/>
               </Properties>
@@ -96,7 +96,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/lorrygreen.png"/>
+                  <Image iconType="3" name="/org/example/images/lorrygreen.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x438; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x43d;&#x430;"/>
               </Properties>
@@ -107,7 +107,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem30">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x438; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b;"/>
               </Properties>
@@ -118,7 +118,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem9">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43d;&#x444;&#x435;&#x43a;&#x446;&#x438;&#x43e;&#x43d;&#x43d;&#x44b;&#x435; &#x43a;&#x430;&#x440;&#x442;&#x44b;"/>
               </Properties>
@@ -129,7 +129,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem110">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43c;&#x43c;&#x435;&#x43d;&#x442;&#x430;&#x440;&#x438;&#x439; &#x43a; &#x430;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;&#x430;&#x43c;"/>
               </Properties>
@@ -140,7 +140,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/work.png"/>
+                  <Image iconType="3" name="/org/example/images/work.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x438;"/>
               </Properties>
@@ -151,7 +151,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem43">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x413;&#x440;&#x443;&#x43f;&#x43f;&#x44b; &#x43e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x439;"/>
               </Properties>
@@ -162,7 +162,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x426;&#x432;&#x435;&#x442; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x43d;&#x430;"/>
               </Properties>
@@ -173,7 +173,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem26">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x426;&#x432;&#x435;&#x442; &#x43d;&#x438;&#x442;&#x43e;&#x43a;"/>
               </Properties>
@@ -184,7 +184,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem29">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x426;&#x432;&#x435;&#x442; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b;"/>
               </Properties>
@@ -195,7 +195,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem10">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41a;&#x43b;&#x435;&#x435;&#x432;&#x430;&#x44f;"/>
               </Properties>
@@ -206,7 +206,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x435;&#x442;&#x430;&#x43b;&#x438; &#x441; &#x43f;&#x440;&#x438;&#x43d;&#x442;&#x43e;&#x43c;"/>
               </Properties>
@@ -217,7 +217,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem25">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x435;&#x442;&#x430;&#x43b;&#x438; &#x441; &#x432;&#x44b;&#x448;&#x438;&#x432;&#x43a;&#x43e;&#x439;"/>
               </Properties>
@@ -228,7 +228,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem126">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x435;&#x442;&#x430;&#x43b;&#x438; &#x441; &#x442;&#x435;&#x440;&#x43c;&#x43e; &#x43f;&#x435;&#x447;&#x430;&#x442;&#x44c;&#x44e;"/>
               </Properties>
@@ -239,7 +239,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x441;&#x43a;&#x43b;&#x430;&#x434;&#x447;&#x438;&#x43a;"/>
               </Properties>
@@ -250,7 +250,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem14">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x422;&#x438;&#x43f;&#x44b; &#x43c;&#x43e;&#x434;&#x435;&#x43b;&#x435;&#x439;"/>
               </Properties>
@@ -261,7 +261,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem15">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x422;&#x438;&#x43f; &#x43d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x430;"/>
               </Properties>
@@ -272,7 +272,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem16">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x413;&#x440;&#x443;&#x43f;&#x43f;&#x44b; &#x440;&#x430;&#x437;&#x43c;&#x435;&#x440;&#x43e;&#x432;"/>
               </Properties>
@@ -283,7 +283,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem17">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x437;&#x43c;&#x435;&#x440;&#x44b;"/>
               </Properties>
@@ -294,7 +294,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem18">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x413;&#x440;&#x443;&#x43f;&#x43f;&#x44b; &#x441;&#x43e;&#x442;&#x440;&#x443;&#x434;&#x43d;&#x438;&#x43a;&#x43e;&#x432;"/>
               </Properties>
@@ -305,7 +305,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem19">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43e;&#x442;&#x440;&#x443;&#x434;&#x43d;&#x438;&#x43a;&#x438;"/>
               </Properties>
@@ -316,7 +316,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem20">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x428;&#x430;&#x431;&#x43b;&#x43e;&#x43d;&#x44b;"/>
               </Properties>
@@ -327,7 +327,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem21">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41c;&#x435;&#x441;&#x442;&#x43e; &#x445;&#x440;&#x430;&#x43d;&#x435;&#x43d;&#x438;&#x44f;"/>
               </Properties>
@@ -338,7 +338,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem27">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x415;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x44b; &#x438;&#x437;&#x43c;&#x435;&#x440;&#x435;&#x43d;&#x438;&#x44f;"/>
               </Properties>
@@ -349,7 +349,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem28">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x438;&#x434;&#x44b; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x435;&#x43d;"/>
               </Properties>
@@ -360,7 +360,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem37">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/sun.png"/>
+                  <Image iconType="3" name="/org/example/images/sun.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x437;&#x440;&#x44f;&#x434;&#x44b;"/>
               </Properties>
@@ -373,7 +373,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/document.png"/>
+              <Image iconType="3" name="/org/example/images/document.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value=" &#x421;&#x43a;&#x43b;&#x430;&#x434; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x43d;&#x430;"/>
           </Properties>
@@ -381,7 +381,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/add.png"/>
+                  <Image iconType="3" name="/org/example/images/add.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x43a;&#x438;"/>
               </Properties>
@@ -392,7 +392,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem122">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x43d;&#x430;&#x43a;&#x43b;&#x430;&#x434;&#x43d;&#x44b;&#x445; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x43a;&#x438;"/>
               </Properties>
@@ -405,7 +405,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem22">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/preferences.png"/>
+                  <Image iconType="3" name="/org/example/images/preferences.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x438; &#x441;&#x442;&#x430;&#x440;&#x44b;&#x435;"/>
               </Properties>
@@ -416,7 +416,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem116">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/preferences.png"/>
+                  <Image iconType="3" name="/org/example/images/preferences.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x438;"/>
               </Properties>
@@ -427,7 +427,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem34">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/warning.png"/>
+                  <Image iconType="3" name="/org/example/images/warning.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41d;&#x435; &#x43f;&#x440;&#x43e;&#x432;&#x435;&#x440;&#x435;&#x43d;&#x43d;&#x44b;&#x435;"/>
               </Properties>
@@ -438,7 +438,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem36">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/bac.png"/>
+                  <Image iconType="3" name="/org/example/images/bac.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x44f;"/>
               </Properties>
@@ -449,7 +449,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem48">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/redo.png"/>
+                  <Image iconType="3" name="/org/example/images/redo.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x43e;&#x437;&#x432;&#x440;&#x430;&#x442;&#x44b; &#x441; &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x434;&#x441;&#x442;&#x432;&#x430;"/>
               </Properties>
@@ -460,7 +460,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem64">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/down.png"/>
+                  <Image iconType="3" name="/org/example/images/down.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x43e;&#x437;&#x432;&#x440;&#x430;&#x442; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x443;"/>
               </Properties>
@@ -471,7 +471,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem65">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/filter.png"/>
+                  <Image iconType="3" name="/org/example/images/filter.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x418;&#x43d;&#x432;&#x435;&#x43d;&#x442;&#x430;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44f;"/>
               </Properties>
@@ -482,7 +482,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem66">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/basket.png"/>
+                  <Image iconType="3" name="/org/example/images/basket.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x43b;&#x430;&#x434; &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x434;&#x441;&#x442;&#x432;&#x430;"/>
               </Properties>
@@ -493,7 +493,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem68">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/configure.png"/>
+                  <Image iconType="3" name="/org/example/images/configure.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x43b;&#x430;&#x434; &#x431;&#x435;&#x439;&#x43a;&#x438;"/>
               </Properties>
@@ -506,7 +506,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem119">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/Filled.png"/>
+                  <Image iconType="3" name="/org/example/images/Filled.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x43b;&#x430;&#x434; &#x43a;&#x43e;&#x43d;&#x446;&#x435;&#x432;&#x44b;&#x445; &#x43e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x43e;&#x432;"/>
               </Properties>
@@ -517,7 +517,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem120">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/application.png"/>
+                  <Image iconType="3" name="/org/example/images/application.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x438;&#x43d;&#x44f;&#x442;&#x438;&#x435; &#x43a;&#x43e;&#x43d;&#x446;&#x435;&#x432;&#x44b;&#x445; &#x43e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x43e;&#x432;"/>
               </Properties>
@@ -528,7 +528,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem121">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/1.png"/>
+                  <Image iconType="3" name="/org/example/images/1.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435; &#x43a;&#x43e;&#x43d;&#x446;&#x435;&#x432;&#x44b;&#x445; &#x43e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x43e;&#x432;"/>
               </Properties>
@@ -541,7 +541,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu7">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/database.png"/>
+              <Image iconType="3" name="/org/example/images/database.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x43b;&#x430;&#x434; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b;"/>
           </Properties>
@@ -549,7 +549,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem31">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/add.png"/>
+                  <Image iconType="3" name="/org/example/images/add.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x43a;&#x438;"/>
               </Properties>
@@ -560,7 +560,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem32">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/preferences.png"/>
+                  <Image iconType="3" name="/org/example/images/preferences.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x438;"/>
               </Properties>
@@ -571,7 +571,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem98">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/down.png"/>
+                  <Image iconType="3" name="/org/example/images/down.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x43e;&#x437;&#x432;&#x440;&#x430;&#x442; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x443;"/>
               </Properties>
@@ -582,7 +582,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem58">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/bac.png"/>
+                  <Image iconType="3" name="/org/example/images/bac.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b;"/>
               </Properties>
@@ -593,7 +593,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem95">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/Pen.png"/>
+                  <Image iconType="3" name="/org/example/images/Pen.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x435;&#x440;&#x435;&#x43c;&#x435;&#x449;&#x435;&#x43d;&#x438;&#x435; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b;"/>
               </Properties>
@@ -604,7 +604,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem107">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/filter.png"/>
+                  <Image iconType="3" name="/org/example/images/filter.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x418;&#x43d;&#x432;&#x435;&#x43d;&#x442;&#x430;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44f;"/>
               </Properties>
@@ -615,7 +615,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem96">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/Filled.png"/>
+                  <Image iconType="3" name="/org/example/images/Filled.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x424;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x430; &#x432; &#x446;&#x435;&#x445;&#x435;"/>
               </Properties>
@@ -626,7 +626,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem97">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/Hand.png"/>
+                  <Image iconType="3" name="/org/example/images/Hand.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x430;&#x43d;&#x438;&#x435; &#x432; &#x446;&#x435;&#x445;&#x435;"/>
               </Properties>
@@ -637,7 +637,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem100">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/up.png"/>
+                  <Image iconType="3" name="/org/example/images/up.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x43e;&#x437;&#x432;&#x440;&#x430;&#x442;&#x44b; &#x43d;&#x430; &#x441;&#x43a;&#x43b;&#x430;&#x434;"/>
               </Properties>
@@ -650,7 +650,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem99">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x432;&#x438;&#x436;&#x435;&#x43d;&#x438;&#x435; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b;"/>
               </Properties>
@@ -661,7 +661,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem101">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x432;&#x438;&#x436;&#x435;&#x43d;&#x438;&#x435; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b; &#x432; &#x446;&#x435;&#x445;&#x443;"/>
               </Properties>
@@ -672,7 +672,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem102">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x432;&#x438;&#x436;&#x435;&#x43d;&#x438;&#x435; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b; - &#x441;&#x443;&#x43c;&#x43c;&#x44b;"/>
               </Properties>
@@ -683,7 +683,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem106">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x438; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b; &#x43f;&#x43e; &#x43c;&#x435;&#x441;&#x442;&#x430;&#x43c; &#x445;&#x440;&#x430;&#x43d;&#x435;&#x43d;&#x438;&#x44f;"/>
               </Properties>
@@ -696,7 +696,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/configure.png"/>
+              <Image iconType="3" name="/org/example/images/configure.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x434;&#x430;&#x447;&#x438;"/>
           </Properties>
@@ -704,7 +704,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem8">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/preferences.png"/>
+                  <Image iconType="3" name="/org/example/images/preferences.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x424;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x437;&#x430;&#x434;&#x430;&#x447;"/>
               </Properties>
@@ -715,7 +715,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem33">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/go.png"/>
+                  <Image iconType="3" name="/org/example/images/go.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x43f;&#x443;&#x441;&#x43a; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x43d;&#x430;"/>
               </Properties>
@@ -726,7 +726,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem51">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/cascade.png"/>
+                  <Image iconType="3" name="/org/example/images/cascade.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x424;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x43e;&#x432;"/>
               </Properties>
@@ -737,7 +737,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem35">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/stock.png"/>
+                  <Image iconType="3" name="/org/example/images/stock.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x43a;&#x440;&#x44b;&#x442;&#x438;&#x435; &#x437;&#x430;&#x434;&#x430;&#x447;"/>
               </Properties>
@@ -748,7 +748,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem38">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/down.png"/>
+                  <Image iconType="3" name="/org/example/images/down.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x431;&#x440;&#x430;&#x431;&#x43e;&#x442;&#x43a;&#x430; &#x43d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x43e;&#x432;"/>
               </Properties>
@@ -759,7 +759,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem45">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/bac.png"/>
+                  <Image iconType="3" name="/org/example/images/bac.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x43e;&#x437;&#x432;&#x440;&#x430;&#x442; &#x43d;&#x430; &#x441;&#x43a;&#x43b;&#x430;&#x434;"/>
               </Properties>
@@ -770,7 +770,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem46">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/printer.png"/>
+                  <Image iconType="3" name="/org/example/images/printer.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x435;&#x442;&#x430;&#x43b;&#x438; &#x441; &#x43f;&#x440;&#x438;&#x43d;&#x442;&#x43e;&#x43c;"/>
               </Properties>
@@ -781,7 +781,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem47">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Needle_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Needle_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x435;&#x442;&#x430;&#x43b;&#x438; &#x441; &#x432;&#x44b;&#x448;&#x438;&#x432;&#x43a;&#x43e;&#x439;"/>
               </Properties>
@@ -792,7 +792,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem11">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/compose.png"/>
+                  <Image iconType="3" name="/org/example/images/compose.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43c;&#x43f;&#x43b;&#x435;&#x43a;&#x442;&#x43e;&#x432;&#x43a;&#x430;"/>
               </Properties>
@@ -803,7 +803,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem39">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/need.png"/>
+                  <Image iconType="3" name="/org/example/images/need.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41d;&#x430;&#x431;&#x43e;&#x440; &#x444;&#x443;&#x440;&#x43d;&#x438;&#x442;&#x443;&#x440;&#x44b;"/>
               </Properties>
@@ -814,7 +814,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem93">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/timer.png"/>
+                  <Image iconType="3" name="/org/example/images/timer.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x43b;&#x430;&#x434; &#x43a;&#x440;&#x43e;&#x44f;"/>
               </Properties>
@@ -825,7 +825,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem44">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/forward.png"/>
+                  <Image iconType="3" name="/org/example/images/forward.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x43f;&#x440;&#x430;&#x432;&#x43a;&#x430; &#x43c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x43e;&#x432;"/>
               </Properties>
@@ -836,7 +836,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem40">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/lorrygreen.png"/>
+                  <Image iconType="3" name="/org/example/images/lorrygreen.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x44b; &#x441;&#x442;&#x430;&#x440;&#x44b;&#x435;"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -848,7 +848,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem115">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/lorrygreen.png"/>
+                  <Image iconType="3" name="/org/example/images/lorrygreen.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x44b;"/>
               </Properties>
@@ -859,7 +859,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem114">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/basket.png"/>
+                  <Image iconType="3" name="/org/example/images/basket.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x43f;. &#x41c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x44b;"/>
               </Properties>
@@ -870,7 +870,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem62">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/question.png"/>
+                  <Image iconType="3" name="/org/example/images/question.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x435;&#x442;&#x435;&#x43d;&#x437;&#x438;&#x438;"/>
               </Properties>
@@ -881,7 +881,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem74">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/Pen.png"/>
+                  <Image iconType="3" name="/org/example/images/Pen.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x420;&#x443;&#x447;&#x43d;&#x43e;&#x439; &#x441;&#x442;&#x43e;&#x43b;. &#x41d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x44b;"/>
               </Properties>
@@ -892,7 +892,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem75">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/Pen.png"/>
+                  <Image iconType="3" name="/org/example/images/Pen.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x420;&#x443;&#x447;&#x43d;&#x43e;&#x439; &#x441;&#x442;&#x43e;&#x43b;. &#x41a;&#x43e;&#x43c;&#x43f;&#x43b;&#x435;&#x43a;&#x442;&#x43e;&#x432;&#x43a;&#x430;"/>
               </Properties>
@@ -905,7 +905,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/percent.png"/>
+              <Image iconType="3" name="/org/example/images/percent.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x423;&#x447;&#x435;&#x442;"/>
           </Properties>
@@ -913,7 +913,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem41">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x423;&#x447;&#x435;&#x442; &#x43e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x439;"/>
               </Properties>
@@ -924,7 +924,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem53">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x41f; &#x448;&#x432;&#x435;&#x439;&#x43d;&#x44b;&#x439; &#x446;&#x435;&#x445;"/>
               </Properties>
@@ -935,7 +935,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem123">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x41f; &#x43f;&#x43e; &#x434;&#x43d;&#x44f;&#x43c;"/>
               </Properties>
@@ -946,7 +946,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem124">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x41f; &#x43e;&#x431;&#x449;&#x438;&#x439;"/>
               </Properties>
@@ -957,7 +957,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem127">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x431;&#x43e;&#x447;&#x435;&#x435; &#x432;&#x440;&#x435;&#x43c;&#x44f;"/>
               </Properties>
@@ -970,7 +970,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu10">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/stock.png"/>
+              <Image iconType="3" name="/org/example/images/stock.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x442;&#x440;&#x430;&#x442;&#x44b;"/>
           </Properties>
@@ -978,7 +978,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem49">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/edit.png"/>
+                  <Image iconType="3" name="/org/example/images/edit.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x442;&#x440;&#x430;&#x442;&#x44b;"/>
               </Properties>
@@ -989,7 +989,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem50">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/money.png"/>
+                  <Image iconType="3" name="/org/example/images/money.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41a;&#x443;&#x440;&#x441; &#x423;.&#x415;."/>
               </Properties>
@@ -1000,7 +1000,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem54">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x41f; &#x41a;&#x43e;&#x43c;&#x43f;&#x43b;&#x435;&#x43a;&#x442;&#x43e;&#x432;&#x449;&#x438;&#x43a;&#x438;"/>
               </Properties>
@@ -1011,7 +1011,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem55">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x41f; &#x41d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x44c;&#x449;&#x438;&#x43a;&#x438;"/>
               </Properties>
@@ -1022,7 +1022,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem56">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x41f; &#x420;&#x435;&#x437;&#x447;&#x438;&#x43a;&#x438;"/>
               </Properties>
@@ -1033,7 +1033,7 @@
             <Menu class="javax.swing.JMenu" name="jMenu13">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/forward.png"/>
+                  <Image iconType="3" name="/org/example/images/forward.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43e;&#x43a;&#x440;&#x430;&#x449;&#x435;&#x43d;&#x43d;&#x44b;&#x435; &#x43e;&#x442;&#x447;&#x435;&#x442;&#x44b;"/>
               </Properties>
@@ -1041,7 +1041,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem140">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                      <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x417;&#x41f; &#x41a;&#x43e;&#x43c;&#x43f;&#x43b;&#x435;&#x43a;&#x442;&#x43e;&#x432;&#x449;&#x438;&#x43a;&#x438;"/>
                   </Properties>
@@ -1052,7 +1052,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem141">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                      <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x417;&#x41f; &#x41d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x44c;&#x449;&#x438;&#x43a;&#x438;"/>
                   </Properties>
@@ -1063,7 +1063,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem142">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                      <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x417;&#x41f; &#x420;&#x435;&#x437;&#x447;&#x438;&#x43a;&#x438;"/>
                   </Properties>
@@ -1074,7 +1074,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem143">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                      <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;-&#x432;&#x43e; &#x438;&#x437;&#x434;&#x435;&#x43b;&#x438;&#x439; &#x43f;&#x43e; &#x43a;&#x43e;&#x43c;&#x43f;&#x43b;&#x435;&#x43a;&#x442;&#x43e;&#x432;&#x449;&#x438;&#x43a;&#x430;&#x43c;"/>
                   </Properties>
@@ -1087,7 +1087,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem76">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430; &#x43d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x43e;&#x432;"/>
               </Properties>
@@ -1098,7 +1098,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem91">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;-&#x432;&#x43e; &#x438;&#x437;&#x434;&#x435;&#x43b;&#x438;&#x439; &#x43f;&#x43e; &#x43a;&#x43e;&#x43c;&#x43f;&#x43b;&#x435;&#x43a;&#x442;&#x43e;&#x432;&#x449;&#x438;&#x43a;&#x430;&#x43c;"/>
               </Properties>
@@ -1109,7 +1109,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem57">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x435;&#x440;&#x435;&#x432;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x435;&#x43d;&#x43d;&#x44b;&#x435; &#x43e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x438;"/>
               </Properties>
@@ -1120,7 +1120,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem67">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x418;&#x441;&#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x43d;&#x430;"/>
               </Properties>
@@ -1131,7 +1131,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem71">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x440;&#x430;&#x431;&#x43e;&#x442;&#x43a;&#x430;"/>
               </Properties>
@@ -1142,7 +1142,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem128">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x440;&#x430;&#x431;&#x43e;&#x442;&#x43a;&#x430; 3"/>
               </Properties>
@@ -1153,7 +1153,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem72">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x44b; &#x43f;&#x43e; &#x446;&#x435;&#x445;&#x430;&#x43c;"/>
               </Properties>
@@ -1164,7 +1164,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem77">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x44b; &#x430;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;&#x430;"/>
               </Properties>
@@ -1175,7 +1175,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem80">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x43f;&#x443;&#x449;&#x435;&#x43d;&#x43d;&#x44b;&#x435; &#x438; &#x43d;&#x435; &#x43e;&#x442;&#x440;&#x430;&#x431;&#x43e;&#x442;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x43d;&#x430;"/>
               </Properties>
@@ -1186,7 +1186,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem81">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x445;&#x43e;&#x434;&#x44b; &#x43f;&#x43e; &#x442;&#x438;&#x43f;&#x443; &#x43c;&#x43e;&#x434;&#x435;&#x43b;&#x438;"/>
               </Properties>
@@ -1197,7 +1197,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem86">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x44b; &#x432; &#x446;&#x435;&#x445;&#x435;"/>
               </Properties>
@@ -1208,7 +1208,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem103">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x44b; &#x432; &#x446;&#x435;&#x445;&#x435; &#x43f;&#x43e; &#x430;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;&#x430;&#x43c;"/>
               </Properties>
@@ -1219,7 +1219,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem104">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x44b; &#x432; &#x446;&#x435;&#x445;&#x435; &#x43f;&#x43e; &#x430;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;&#x430;&#x43c; 2"/>
               </Properties>
@@ -1230,7 +1230,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem105">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x44b; &#x432; &#x446;&#x435;&#x445;&#x435; &#x43f;&#x43e; &#x430;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;&#x430;&#x43c; 3"/>
               </Properties>
@@ -1241,7 +1241,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem89">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43c;&#x43f;&#x43b;&#x435;&#x43a;&#x442;&#x43e;&#x432;&#x43a;&#x438; &#x441; &#x43d;&#x435;&#x434;&#x43e;&#x441;&#x442;&#x430;&#x447;&#x435;&#x439;"/>
               </Properties>
@@ -1252,7 +1252,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem117">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;-&#x432;&#x43e; &#x438;&#x437;&#x434;&#x435;&#x43b;&#x438;&#x439; &#x432; &#x437;&#x430;&#x434;&#x430;&#x447;&#x435;"/>
               </Properties>
@@ -1263,7 +1263,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem118">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x435;&#x441; &#x43d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x43e;&#x432;"/>
               </Properties>
@@ -1274,7 +1274,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem129">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41d;&#x435; &#x43e;&#x442;&#x43a;&#x43e;&#x43c;&#x43f;&#x43b;&#x435;&#x43a;&#x442;&#x43e;&#x432;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x437;&#x430;&#x434;&#x430;&#x447;&#x438;"/>
               </Properties>
@@ -1285,7 +1285,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem132">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x435;&#x441; &#x43d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x43e;&#x432; &#x441; &#x43d;&#x430;&#x447;&#x430;&#x43b;&#x44c;&#x43d;&#x44b;&#x43c; &#x43e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x43e;&#x43c;"/>
               </Properties>
@@ -1296,7 +1296,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem139">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x43f;&#x443;&#x441;&#x43a; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x435;&#x43d; &#x432; &#x437;&#x430;&#x43a;&#x440;&#x43e;&#x439;&#x43d;&#x44b;&#x439; &#x446;&#x435;&#x445;"/>
               </Properties>
@@ -1309,7 +1309,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/print.png"/>
+              <Image iconType="3" name="/org/example/images/print.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x447;&#x435;&#x442;&#x44b;"/>
           </Properties>
@@ -1317,7 +1317,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem23">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/print.png"/>
+                  <Image iconType="3" name="/org/example/images/print.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x447;&#x435;&#x442;&#x44b;"/>
               </Properties>
@@ -1328,7 +1328,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem69">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x418;&#x441;&#x442;&#x43e;&#x440;&#x438;&#x44f; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x435;&#x43d;"/>
               </Properties>
@@ -1339,7 +1339,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem70">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x418;&#x441;&#x442;&#x43e;&#x440;&#x438;&#x44f; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x435;&#x43d; &#x43f;&#x43e; &#x446;&#x432;&#x435;&#x442;&#x430;&#x43c;"/>
               </Properties>
@@ -1350,7 +1350,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem73">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x418;&#x441;&#x442;&#x43e;&#x440;&#x438;&#x44f; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x435;&#x43d;(&#x421;&#x432;&#x43e;&#x434;&#x43d;&#x430;&#x44f;)"/>
               </Properties>
@@ -1363,7 +1363,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/pinion.png"/>
+              <Image iconType="3" name="/org/example/images/pinion.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x421;&#x435;&#x440;&#x432;&#x438;&#x441;"/>
           </Properties>
@@ -1371,7 +1371,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/configure.png"/>
+                  <Image iconType="3" name="/org/example/images/configure.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41d;&#x430;&#x441;&#x442;&#x440;&#x43e;&#x439;&#x43a;&#x438;"/>
               </Properties>
@@ -1379,7 +1379,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem42">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/vcard.png"/>
+                  <Image iconType="3" name="/org/example/images/vcard.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x438;"/>
               </Properties>
@@ -1390,7 +1390,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem52">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/print.png"/>
+                  <Image iconType="3" name="/org/example/images/print.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x435;&#x447;&#x430;&#x442;&#x43d;&#x44b;&#x435; &#x444;&#x43e;&#x440;&#x43c;&#x44b;"/>
               </Properties>
@@ -1401,7 +1401,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem63">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/refresh.png"/>
+                  <Image iconType="3" name="/org/example/images/refresh.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x431;&#x43d;&#x43e;&#x432;&#x43b;&#x435;&#x43d;&#x438;&#x435;"/>
               </Properties>
@@ -1414,7 +1414,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu9">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/basket.png"/>
+              <Image iconType="3" name="/org/example/images/basket.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x410;&#x43d;&#x430;&#x43b;&#x438;&#x442;&#x438;&#x43a;&#x430;"/>
           </Properties>
@@ -1422,7 +1422,7 @@
             <Menu class="javax.swing.JMenu" name="jMenu11">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/print.png"/>
+                  <Image iconType="3" name="/org/example/images/print.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x447;&#x435;&#x442;&#x44b;"/>
               </Properties>
@@ -1430,7 +1430,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem130">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                      <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x41f;&#x43b;&#x430;&#x43d;&#x438;&#x440;&#x443;&#x435;&#x43c;&#x430;&#x44f; &#x437;&#x430;&#x433;&#x440;&#x443;&#x436;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;"/>
                   </Properties>
@@ -1441,7 +1441,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem131">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                      <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x424;&#x430;&#x43a;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x430;&#x44f; &#x437;&#x430;&#x433;&#x440;&#x443;&#x436;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c;"/>
                   </Properties>
@@ -1452,7 +1452,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem85">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                      <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x433;&#x440;&#x443;&#x436;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x446;&#x435;&#x445;&#x43e;&#x432;"/>
                   </Properties>
@@ -1463,7 +1463,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem134">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                      <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x433;&#x440;&#x443;&#x436;&#x435;&#x43d;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x446;&#x435;&#x445;&#x43e;&#x432; 2"/>
                   </Properties>
@@ -1474,7 +1474,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem79">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                      <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x440;&#x430;&#x431;&#x43e;&#x442;&#x43a;&#x430; &#x446;&#x435;&#x445;&#x43e;&#x432;"/>
                   </Properties>
@@ -1487,7 +1487,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem108">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x44f; &#x445;&#x430;&#x440;&#x430;&#x43a;&#x442;&#x435;&#x440;&#x438;&#x441;&#x442;&#x438;&#x43a;"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -1499,7 +1499,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem109">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x43f;. &#x445;&#x430;&#x440;&#x430;&#x43a;&#x442;&#x435;&#x440;&#x438;&#x441;&#x442;&#x438;&#x43a;&#x438; &#x41a;&#x41a;"/>
               </Properties>
@@ -1510,7 +1510,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem111">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x410;&#x43d;&#x430;&#x43b;&#x438;&#x437; &#x43f;&#x43e; &#x43d;&#x43e;&#x432;&#x438;&#x43d;&#x43a;&#x430;&#x43c;"/>
               </Properties>
@@ -1521,7 +1521,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem61">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x434;&#x430;&#x436;&#x438;"/>
               </Properties>
@@ -1532,7 +1532,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem78">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41c;&#x43e;&#x449;&#x43d;&#x43e;&#x441;&#x442;&#x438; &#x446;&#x435;&#x445;&#x43e;&#x432; &#x432; &#x434;&#x435;&#x43d;&#x44c;"/>
               </Properties>
@@ -1543,7 +1543,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem82">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x44b; &#x43f;&#x43e; &#x430;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;&#x430;&#x43c;"/>
               </Properties>
@@ -1554,7 +1554,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem83">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43e;&#x445;&#x440;&#x430;&#x43d;&#x435;&#x43d;&#x438;&#x435; &#x432; Excel"/>
               </Properties>
@@ -1565,7 +1565,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem84">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x43b;&#x430;&#x43d; &#x437;&#x430;&#x434;&#x430;&#x447;"/>
               </Properties>
@@ -1576,7 +1576,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem125">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/cascade.png"/>
+                  <Image iconType="3" name="/org/example/images/cascade.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x43b;&#x430;&#x43d; &#x437;&#x430;&#x434;&#x430;&#x447; &#x43e;&#x431;&#x449;&#x438;&#x439;"/>
               </Properties>
@@ -1587,7 +1587,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem87">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x426;&#x432;&#x435;&#x442;&#x430;1&#x421;"/>
               </Properties>
@@ -1598,7 +1598,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem88">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x410;&#x440;&#x442;&#x438;&#x43a;&#x443;&#x43b;&#x430;1&#x421;"/>
               </Properties>
@@ -1609,7 +1609,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem90">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x437;&#x43c;&#x435;&#x440;&#x44b;1&#x421;"/>
               </Properties>
@@ -1620,7 +1620,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem92">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/forward.png"/>
+                  <Image iconType="3" name="/org/example/images/forward.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x434;&#x430;&#x447;&#x438; &#x43d;&#x430; &#x437;&#x430;&#x43a;&#x443;&#x43f;&#x43a;&#x443;"/>
               </Properties>
@@ -1631,7 +1631,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem94">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/money.png"/>
+                  <Image iconType="3" name="/org/example/images/money.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x423;&#x447;&#x435;&#x442; &#x440;&#x430;&#x441;&#x445;&#x43e;&#x434;&#x43e;&#x432;"/>
               </Properties>
@@ -1642,7 +1642,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem113">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/catapult.png"/>
+                  <Image iconType="3" name="/org/example/images/catapult.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41a;&#x430;&#x43b;&#x435;&#x43d;&#x434;&#x430;&#x440;&#x44c;"/>
               </Properties>
@@ -1653,7 +1653,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem112">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/need.png"/>
+                  <Image iconType="3" name="/org/example/images/need.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x441;&#x43f;&#x440;&#x435;&#x434;&#x435;&#x43b;&#x435;&#x43d;&#x438;&#x435; &#x437;&#x430;&#x43f;&#x43b;&#x430;&#x43d;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x43d;&#x44b;&#x445; &#x437;&#x430;&#x434;&#x430;&#x447;"/>
               </Properties>
@@ -1664,7 +1664,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem133">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/pinion.png"/>
+                  <Image iconType="3" name="/org/example/images/pinion.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x441;&#x447;&#x435;&#x442; &#x437;&#x430;&#x434;&#x430;&#x447;"/>
               </Properties>
@@ -1675,7 +1675,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem135">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x446;&#x435;&#x43d;&#x442; &#x43e;&#x442;&#x445;&#x43e;&#x434;&#x43e;&#x432; (&#x41f;&#x43e;&#x434;&#x440;&#x43e;&#x431;&#x43d;&#x43e;)"/>
               </Properties>
@@ -1686,7 +1686,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem136">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+                  <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x446;&#x435;&#x43d;&#x442; &#x43e;&#x442;&#x445;&#x43e;&#x434;&#x43e;&#x432; (&#x41a;&#x440;&#x430;&#x442;&#x43a;&#x43e;)"/>
               </Properties>
@@ -1697,7 +1697,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem137">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/Filled.png"/>
+                  <Image iconType="3" name="/org/example/images/Filled.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x43f;&#x43b;&#x430;&#x43d;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x437;&#x430;&#x434;&#x430;&#x447;&#x438;"/>
               </Properties>
@@ -1710,7 +1710,7 @@
         <Menu class="javax.swing.JMenu" name="jMenu12">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/work.png"/>
+              <Image iconType="3" name="/org/example/images/work.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41f;&#x43b;&#x430;&#x43d;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;"/>
           </Properties>
@@ -1718,7 +1718,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem138">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/database.png"/>
+                  <Image iconType="3" name="/org/example/images/database.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x435;&#x437;&#x43e;&#x43d;&#x44b; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x44b;"/>
               </Properties>
@@ -1842,7 +1842,7 @@
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/add.png"/>
+              <Image iconType="3" name="/org/example/images/add.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x43a;&#x438;"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x43a;&#x438; &#x43f;&#x43e;&#x43b;&#x43e;&#x442;&#x43d;&#x430;"/>
@@ -1857,7 +1857,7 @@
         <Component class="javax.swing.JButton" name="jButton8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/preferences.png"/>
+              <Image iconType="3" name="/org/example/images/preferences.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x438;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -1873,7 +1873,7 @@
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/vcard.png"/>
+              <Image iconType="3" name="/org/example/images/vcard.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43d;&#x444;. &#x43a;&#x430;&#x440;&#x442;&#x44b;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -1887,7 +1887,7 @@
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/down.png"/>
+              <Image iconType="3" name="/org/example/images/down.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41d;&#x430;&#x441;&#x442;&#x438;&#x43b;&#x44b;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -1901,7 +1901,7 @@
         <Component class="javax.swing.JButton" name="jButton5">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/compose.png"/>
+              <Image iconType="3" name="/org/example/images/compose.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43c;&#x43f;&#x43b;&#x435;&#x43a;&#x442;&#x43e;&#x432;&#x43a;&#x430;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -1915,7 +1915,7 @@
         <Component class="javax.swing.JButton" name="jButton6">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/lorrygreen.png"/>
+              <Image iconType="3" name="/org/example/images/lorrygreen.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x41c;&#x430;&#x440;&#x448;&#x440;&#x443;&#x442;&#x44b;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -1929,7 +1929,7 @@
         <Component class="javax.swing.JButton" name="jButton7">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/icons8-Forward_16.png"/>
+              <Image iconType="3" name="/org/example/images/icons8-Forward_16.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x423;&#x447;&#x435;&#x442; &#x43e;&#x43f;."/>
             <Property name="focusable" type="boolean" value="false"/>

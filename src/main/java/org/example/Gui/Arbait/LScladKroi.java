@@ -80,7 +80,7 @@ public class LScladKroi extends javax.swing.JPanel {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jButton1.setText("Закрыть");
         jButton1.setToolTipText("Закрыть окно");
         jButton1.setFocusable(false);
@@ -93,7 +93,7 @@ public class LScladKroi extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jButton2.setText("В работу");
         jButton2.setToolTipText("Отправить маршрут в работу");
         jButton2.setFocusable(false);
@@ -106,7 +106,7 @@ public class LScladKroi extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton2);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/2.png"))); // NOI18N
         jButton6.setText("Принять");
         jButton6.setToolTipText("Принять маршрут на склад кроя");
         jButton6.setFocusable(false);
@@ -119,7 +119,7 @@ public class LScladKroi extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton6);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bac.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/bac.png"))); // NOI18N
         jButton7.setText("Вернуть");
         jButton7.setToolTipText("Вернуть маршрут со склада кроя");
         jButton7.setFocusable(false);
@@ -132,7 +132,7 @@ public class LScladKroi extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton7);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/refresh.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/refresh.png"))); // NOI18N
         jButton3.setText("Обновить");
         jButton3.setToolTipText("Обновить список");
         jButton3.setFocusable(false);
@@ -145,7 +145,7 @@ public class LScladKroi extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton3);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cascade.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cascade.png"))); // NOI18N
         jButton4.setText("МестоХранения");
         jButton4.setToolTipText("Изменить место хранения маршрута");
         jButton4.setFocusable(false);
@@ -158,7 +158,7 @@ public class LScladKroi extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton4);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
         jButton5.setText("Печать");
         jButton5.setToolTipText("Выбрать форму для печати");
         jButton5.setFocusable(false);
@@ -268,9 +268,9 @@ public class LScladKroi extends javax.swing.JPanel {
     
     
     // подсветка и картинки в таблицу                       
-    final ImageIcon s11 = new ImageIcon(getClass().getResource("/images/question.png"));
-    final ImageIcon s12 = new ImageIcon(getClass().getResource("/images/bac.png"));
-    final ImageIcon s13 = new ImageIcon(getClass().getResource("/images/2.png"));
+    final ImageIcon s11 = new ImageIcon(getClass().getResource("/org/example/images/question.png"));
+    final ImageIcon s12 = new ImageIcon(getClass().getResource("/org/example/images/bac.png"));
+    final ImageIcon s13 = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
 
     private final DefaultTableCellRenderer jTableRendererSt = new DefaultTableCellRenderer() {
         @Override

@@ -112,10 +112,10 @@ public class ModelAllNastil extends AbstractTableModel{
     }
     
     // подсветка и картинки в таблицу                       
-    final ImageIcon edit = new ImageIcon(getClass().getResource("/images/1.png"));
-    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/images/2.png"));
-    final ImageIcon ok2 = new ImageIcon(getClass().getResource("/images/bac.png"));
-    final ImageIcon ok3 = new ImageIcon(getClass().getResource("/images/clos.png"));
+    final ImageIcon edit = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
+    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
+    final ImageIcon ok2 = new ImageIcon(getClass().getResource("/org/example/images/bac.png"));
+    final ImageIcon ok3 = new ImageIcon(getClass().getResource("/org/example/images/clos.png"));
     
     public DefaultTableCellRenderer jTableRenderer = new DefaultTableCellRenderer() {
         @Override

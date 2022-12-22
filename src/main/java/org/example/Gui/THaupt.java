@@ -446,7 +446,7 @@ public class THaupt extends javax.swing.JFrame {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton2.setText("Поставки");
         jButton2.setToolTipText("Поставки полотна");
         jButton2.setFocusable(false);
@@ -459,7 +459,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jToolBar1.add(jButton2);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/preferences.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/preferences.png"))); // NOI18N
         jButton8.setText("Остатки");
         jButton8.setFocusable(false);
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -472,7 +472,7 @@ public class THaupt extends javax.swing.JFrame {
         jToolBar1.add(jButton8);
         jToolBar1.add(jSeparator4);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/vcard.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/vcard.png"))); // NOI18N
         jButton4.setText("Конф. карты");
         jButton4.setFocusable(false);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -484,7 +484,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jToolBar1.add(jButton4);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/down.png"))); // NOI18N
         jButton3.setText("Настилы");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -496,7 +496,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jToolBar1.add(jButton3);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/compose.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/compose.png"))); // NOI18N
         jButton5.setText("Комплектовка");
         jButton5.setFocusable(false);
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -508,7 +508,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jToolBar1.add(jButton5);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lorrygreen.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/lorrygreen.png"))); // NOI18N
         jButton6.setText("Маршруты");
         jButton6.setFocusable(false);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -520,7 +520,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jToolBar1.add(jButton6);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jButton7.setText("Учет оп.");
         jButton7.setFocusable(false);
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -535,10 +535,10 @@ public class THaupt extends javax.swing.JFrame {
         jMenuBar1.setBorder(null);
         jMenuBar1.setPreferredSize(new java.awt.Dimension(336, 30));
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/house.png"))); // NOI18N
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/house.png"))); // NOI18N
         jMenu1.setText("Файл");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jMenuItem1.setText("Выход");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -550,10 +550,10 @@ public class THaupt extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setBorder(null);
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/application.png"))); // NOI18N
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/application.png"))); // NOI18N
         jMenu2.setText("Справочники");
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cascade.png"))); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cascade.png"))); // NOI18N
         jMenuItem2.setText("Тип полотна");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -562,7 +562,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem2);
 
-        jMenuItem24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem24.setText("Фурнитура");
         jMenuItem24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -571,7 +571,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem24);
 
-        jMenuItem59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem59.setText("Группы полотен");
         jMenuItem59.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -580,7 +580,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem59);
 
-        jMenuItem60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem60.setText("Группы фурнитуры");
         jMenuItem60.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -589,7 +589,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem60);
 
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lorrygreen.png"))); // NOI18N
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/lorrygreen.png"))); // NOI18N
         jMenuItem6.setText("Поставщики полотна");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -598,7 +598,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem6);
 
-        jMenuItem30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem30.setText("Поставщики фурнитуры");
         jMenuItem30.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -607,7 +607,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem30);
 
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem9.setText("Конфекционные карты");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -616,7 +616,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem9);
 
-        jMenuItem110.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem110.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem110.setText("Комментарий к артикулам");
         jMenuItem110.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -625,7 +625,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem110);
 
-        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/work.png"))); // NOI18N
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/work.png"))); // NOI18N
         jMenuItem7.setText("Операции");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -634,7 +634,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem7);
 
-        jMenuItem43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem43.setText("Группы операций");
         jMenuItem43.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -643,7 +643,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem43);
 
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem5.setText("Цвет полотна");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -652,7 +652,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem5);
 
-        jMenuItem26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem26.setText("Цвет ниток");
         jMenuItem26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -661,7 +661,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem26);
 
-        jMenuItem29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem29.setText("Цвет фурнитуры");
         jMenuItem29.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -670,7 +670,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem29);
 
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem10.setText("Клеевая");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -679,7 +679,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem10);
 
-        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem12.setText("Детали с принтом");
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -688,7 +688,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem12);
 
-        jMenuItem25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem25.setText("Детали с вышивкой");
         jMenuItem25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -697,7 +697,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem25);
 
-        jMenuItem126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem126.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem126.setText("Детали с термо печатью");
         jMenuItem126.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -706,7 +706,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem126);
 
-        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem13.setText("Раскладчик");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -715,7 +715,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem13);
 
-        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem14.setText("Типы моделей");
         jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -724,7 +724,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem14);
 
-        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem15.setText("Тип настила");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -733,7 +733,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem15);
 
-        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem16.setText("Группы размеров");
         jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -742,7 +742,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem16);
 
-        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem17.setText("Размеры");
         jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -751,7 +751,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem17);
 
-        jMenuItem18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem18.setText("Группы сотрудников");
         jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -760,7 +760,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem18);
 
-        jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem19.setText("Сотрудники");
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -769,7 +769,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem19);
 
-        jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem20.setText("Шаблоны");
         jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -778,7 +778,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem20);
 
-        jMenuItem21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem21.setText("Место хранения");
         jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -787,7 +787,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem21);
 
-        jMenuItem27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem27.setText("Единицы измерения");
         jMenuItem27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -796,7 +796,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem27);
 
-        jMenuItem28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem28.setText("Виды полотен");
         jMenuItem28.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -805,7 +805,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem28);
 
-        jMenuItem37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sun.png"))); // NOI18N
+        jMenuItem37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
         jMenuItem37.setText("Разряды");
         jMenuItem37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -816,10 +816,10 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/document.png"))); // NOI18N
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/document.png"))); // NOI18N
         jMenu3.setText(" Склад полотна");
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jMenuItem3.setText("Поставки");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -828,7 +828,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem3);
 
-        jMenuItem122.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem122.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem122.setText("Список накладных поставки");
         jMenuItem122.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -838,7 +838,7 @@ public class THaupt extends javax.swing.JFrame {
         jMenu3.add(jMenuItem122);
         jMenu3.add(jSeparator2);
 
-        jMenuItem22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/preferences.png"))); // NOI18N
+        jMenuItem22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/preferences.png"))); // NOI18N
         jMenuItem22.setText("Остатки старые");
         jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -847,7 +847,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem22);
 
-        jMenuItem116.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/preferences.png"))); // NOI18N
+        jMenuItem116.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/preferences.png"))); // NOI18N
         jMenuItem116.setText("Остатки");
         jMenuItem116.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -856,7 +856,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem116);
 
-        jMenuItem34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/warning.png"))); // NOI18N
+        jMenuItem34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/warning.png"))); // NOI18N
         jMenuItem34.setText("Не проверенные");
         jMenuItem34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -865,7 +865,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem34);
 
-        jMenuItem36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bac.png"))); // NOI18N
+        jMenuItem36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/bac.png"))); // NOI18N
         jMenuItem36.setText("Списания");
         jMenuItem36.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -874,7 +874,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem36);
 
-        jMenuItem48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redo.png"))); // NOI18N
+        jMenuItem48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/redo.png"))); // NOI18N
         jMenuItem48.setText("Возвраты с производства");
         jMenuItem48.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -883,7 +883,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem48);
 
-        jMenuItem64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
+        jMenuItem64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/down.png"))); // NOI18N
         jMenuItem64.setText("Возврат поставщику");
         jMenuItem64.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -892,7 +892,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem64);
 
-        jMenuItem65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/filter.png"))); // NOI18N
+        jMenuItem65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/filter.png"))); // NOI18N
         jMenuItem65.setText("Инвентаризация");
         jMenuItem65.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -901,7 +901,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem65);
 
-        jMenuItem66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/basket.png"))); // NOI18N
+        jMenuItem66.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/basket.png"))); // NOI18N
         jMenuItem66.setText("Склад производства");
         jMenuItem66.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -910,7 +910,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem66);
 
-        jMenuItem68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/configure.png"))); // NOI18N
+        jMenuItem68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/configure.png"))); // NOI18N
         jMenuItem68.setText("Склад бейки");
         jMenuItem68.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -920,7 +920,7 @@ public class THaupt extends javax.swing.JFrame {
         jMenu3.add(jMenuItem68);
         jMenu3.add(jSeparator3);
 
-        jMenuItem119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Filled.png"))); // NOI18N
+        jMenuItem119.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Filled.png"))); // NOI18N
         jMenuItem119.setText("Склад концевых остатков");
         jMenuItem119.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -929,7 +929,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem119);
 
-        jMenuItem120.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/application.png"))); // NOI18N
+        jMenuItem120.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/application.png"))); // NOI18N
         jMenuItem120.setText("Принятие концевых остатков");
         jMenuItem120.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -938,7 +938,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem120);
 
-        jMenuItem121.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1.png"))); // NOI18N
+        jMenuItem121.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/1.png"))); // NOI18N
         jMenuItem121.setText("Списание концевых остатков");
         jMenuItem121.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -949,10 +949,10 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
-        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/database.png"))); // NOI18N
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/database.png"))); // NOI18N
         jMenu7.setText("Склад фурнитуры");
 
-        jMenuItem31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jMenuItem31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jMenuItem31.setText("Поставки");
         jMenuItem31.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -961,7 +961,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem31);
 
-        jMenuItem32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/preferences.png"))); // NOI18N
+        jMenuItem32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/preferences.png"))); // NOI18N
         jMenuItem32.setText("Остатки");
         jMenuItem32.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -970,7 +970,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem32);
 
-        jMenuItem98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
+        jMenuItem98.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/down.png"))); // NOI18N
         jMenuItem98.setText("Возврат поставщику");
         jMenuItem98.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -979,7 +979,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem98);
 
-        jMenuItem58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bac.png"))); // NOI18N
+        jMenuItem58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/bac.png"))); // NOI18N
         jMenuItem58.setText("Списание фурнитуры");
         jMenuItem58.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -988,7 +988,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem58);
 
-        jMenuItem95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pen.png"))); // NOI18N
+        jMenuItem95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Pen.png"))); // NOI18N
         jMenuItem95.setText("Перемещение фурнитуры");
         jMenuItem95.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -997,7 +997,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem95);
 
-        jMenuItem107.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/filter.png"))); // NOI18N
+        jMenuItem107.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/filter.png"))); // NOI18N
         jMenuItem107.setText("Инвентаризация");
         jMenuItem107.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1006,7 +1006,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem107);
 
-        jMenuItem96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Filled.png"))); // NOI18N
+        jMenuItem96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Filled.png"))); // NOI18N
         jMenuItem96.setText("Фурнитура в цехе");
         jMenuItem96.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1015,7 +1015,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem96);
 
-        jMenuItem97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Hand.png"))); // NOI18N
+        jMenuItem97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Hand.png"))); // NOI18N
         jMenuItem97.setText("Списание в цехе");
         jMenuItem97.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1024,7 +1024,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem97);
 
-        jMenuItem100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/up.png"))); // NOI18N
+        jMenuItem100.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/up.png"))); // NOI18N
         jMenuItem100.setText("Возвраты на склад");
         jMenuItem100.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1034,7 +1034,7 @@ public class THaupt extends javax.swing.JFrame {
         jMenu7.add(jMenuItem100);
         jMenu7.add(jSeparator1);
 
-        jMenuItem99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem99.setText("Движение фурнитуры");
         jMenuItem99.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1043,7 +1043,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem99);
 
-        jMenuItem101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem101.setText("Движение фурнитуры в цеху");
         jMenuItem101.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1052,7 +1052,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem101);
 
-        jMenuItem102.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem102.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem102.setText("Движение фурнитуры - суммы");
         jMenuItem102.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1061,7 +1061,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem102);
 
-        jMenuItem106.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem106.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem106.setText("Остатки фурнитуры по местам хранения");
         jMenuItem106.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1072,10 +1072,10 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu7);
 
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/configure.png"))); // NOI18N
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/configure.png"))); // NOI18N
         jMenu5.setText("Задачи");
 
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/preferences.png"))); // NOI18N
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/preferences.png"))); // NOI18N
         jMenuItem8.setText("Формирование задач");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1084,7 +1084,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem8);
 
-        jMenuItem33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/go.png"))); // NOI18N
+        jMenuItem33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/go.png"))); // NOI18N
         jMenuItem33.setText("Отпуск полотна");
         jMenuItem33.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1093,7 +1093,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem33);
 
-        jMenuItem51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cascade.png"))); // NOI18N
+        jMenuItem51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cascade.png"))); // NOI18N
         jMenuItem51.setText("Формирование настилов");
         jMenuItem51.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1102,7 +1102,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem51);
 
-        jMenuItem35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/stock.png"))); // NOI18N
+        jMenuItem35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/stock.png"))); // NOI18N
         jMenuItem35.setText("Закрытие задач");
         jMenuItem35.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1111,7 +1111,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem35);
 
-        jMenuItem38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
+        jMenuItem38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/down.png"))); // NOI18N
         jMenuItem38.setText("Обработка настилов");
         jMenuItem38.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1120,7 +1120,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem38);
 
-        jMenuItem45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bac.png"))); // NOI18N
+        jMenuItem45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/bac.png"))); // NOI18N
         jMenuItem45.setText("Возврат на склад");
         jMenuItem45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1129,7 +1129,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem45);
 
-        jMenuItem46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/printer.png"))); // NOI18N
+        jMenuItem46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/printer.png"))); // NOI18N
         jMenuItem46.setText("Детали с принтом");
         jMenuItem46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1138,7 +1138,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem46);
 
-        jMenuItem47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Needle_16.png"))); // NOI18N
+        jMenuItem47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Needle_16.png"))); // NOI18N
         jMenuItem47.setText("Детали с вышивкой");
         jMenuItem47.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1147,7 +1147,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem47);
 
-        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/compose.png"))); // NOI18N
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/compose.png"))); // NOI18N
         jMenuItem11.setText("Комплектовка");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1156,7 +1156,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem11);
 
-        jMenuItem39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/need.png"))); // NOI18N
+        jMenuItem39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/need.png"))); // NOI18N
         jMenuItem39.setText("Набор фурнитуры");
         jMenuItem39.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1165,7 +1165,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem39);
 
-        jMenuItem93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/timer.png"))); // NOI18N
+        jMenuItem93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/timer.png"))); // NOI18N
         jMenuItem93.setText("Склад кроя");
         jMenuItem93.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1174,7 +1174,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem93);
 
-        jMenuItem44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/forward.png"))); // NOI18N
+        jMenuItem44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/forward.png"))); // NOI18N
         jMenuItem44.setText("Отправка маршрутов");
         jMenuItem44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1183,7 +1183,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem44);
 
-        jMenuItem40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lorrygreen.png"))); // NOI18N
+        jMenuItem40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/lorrygreen.png"))); // NOI18N
         jMenuItem40.setText("Маршруты старые");
         jMenuItem40.setToolTipText("");
         jMenuItem40.addActionListener(new java.awt.event.ActionListener() {
@@ -1193,7 +1193,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem40);
 
-        jMenuItem115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lorrygreen.png"))); // NOI18N
+        jMenuItem115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/lorrygreen.png"))); // NOI18N
         jMenuItem115.setText("Маршруты");
         jMenuItem115.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1202,7 +1202,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem115);
 
-        jMenuItem114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/basket.png"))); // NOI18N
+        jMenuItem114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/basket.png"))); // NOI18N
         jMenuItem114.setText("Доп. Маршруты");
         jMenuItem114.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1211,7 +1211,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem114);
 
-        jMenuItem62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/question.png"))); // NOI18N
+        jMenuItem62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/question.png"))); // NOI18N
         jMenuItem62.setText("Претензии");
         jMenuItem62.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1220,7 +1220,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem62);
 
-        jMenuItem74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pen.png"))); // NOI18N
+        jMenuItem74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Pen.png"))); // NOI18N
         jMenuItem74.setText("Ручной стол. Настилы");
         jMenuItem74.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1229,7 +1229,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem74);
 
-        jMenuItem75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pen.png"))); // NOI18N
+        jMenuItem75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Pen.png"))); // NOI18N
         jMenuItem75.setText("Ручной стол. Комплектовка");
         jMenuItem75.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1240,10 +1240,10 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu5);
 
-        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/percent.png"))); // NOI18N
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/percent.png"))); // NOI18N
         jMenu8.setText("Учет");
 
-        jMenuItem41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem41.setText("Учет операций");
         jMenuItem41.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1252,7 +1252,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu8.add(jMenuItem41);
 
-        jMenuItem53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem53.setText("ЗП швейный цех");
         jMenuItem53.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1261,7 +1261,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu8.add(jMenuItem53);
 
-        jMenuItem123.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem123.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem123.setText("ЗП по дням");
         jMenuItem123.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1270,7 +1270,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu8.add(jMenuItem123);
 
-        jMenuItem124.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem124.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem124.setText("ЗП общий");
         jMenuItem124.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1279,7 +1279,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu8.add(jMenuItem124);
 
-        jMenuItem127.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem127.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem127.setText("Рабочее время");
         jMenuItem127.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1290,10 +1290,10 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu8);
 
-        jMenu10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/stock.png"))); // NOI18N
+        jMenu10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/stock.png"))); // NOI18N
         jMenu10.setText("Затраты");
 
-        jMenuItem49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jMenuItem49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jMenuItem49.setText("Затраты");
         jMenuItem49.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1302,7 +1302,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem49);
 
-        jMenuItem50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/money.png"))); // NOI18N
+        jMenuItem50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/money.png"))); // NOI18N
         jMenuItem50.setText("Курс У.Е.");
         jMenuItem50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1311,7 +1311,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem50);
 
-        jMenuItem54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem54.setText("ЗП Комплектовщики");
         jMenuItem54.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1320,7 +1320,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem54);
 
-        jMenuItem55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem55.setText("ЗП Настильщики");
         jMenuItem55.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1329,7 +1329,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem55);
 
-        jMenuItem56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem56.setText("ЗП Резчики");
         jMenuItem56.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1338,10 +1338,10 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem56);
 
-        jMenu13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/forward.png"))); // NOI18N
+        jMenu13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/forward.png"))); // NOI18N
         jMenu13.setText("Сокращенные отчеты");
 
-        jMenuItem140.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem140.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem140.setText("ЗП Комплектовщики");
         jMenuItem140.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1350,7 +1350,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu13.add(jMenuItem140);
 
-        jMenuItem141.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem141.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem141.setText("ЗП Настильщики");
         jMenuItem141.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1359,7 +1359,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu13.add(jMenuItem141);
 
-        jMenuItem142.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem142.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem142.setText("ЗП Резчики");
         jMenuItem142.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1368,7 +1368,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu13.add(jMenuItem142);
 
-        jMenuItem143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem143.setText("Кол-во изделий по комплектовщикам");
         jMenuItem143.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1379,7 +1379,7 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenu10.add(jMenu13);
 
-        jMenuItem76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem76.setText("Сумма настилов");
         jMenuItem76.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1388,7 +1388,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem76);
 
-        jMenuItem91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem91.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem91.setText("Кол-во изделий по комплектовщикам");
         jMenuItem91.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1397,7 +1397,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem91);
 
-        jMenuItem57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem57.setText("Перевыполненные операции");
         jMenuItem57.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1406,7 +1406,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem57);
 
-        jMenuItem67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem67.setText("Использованные полотна");
         jMenuItem67.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1415,7 +1415,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem67);
 
-        jMenuItem71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem71.setText("Выработка");
         jMenuItem71.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1424,7 +1424,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem71);
 
-        jMenuItem128.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem128.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem128.setText("Выработка 3");
         jMenuItem128.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1433,7 +1433,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem128);
 
-        jMenuItem72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem72.setText("Маршруты по цехам");
         jMenuItem72.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1442,7 +1442,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem72);
 
-        jMenuItem77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem77.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem77.setText("Настилы артикула");
         jMenuItem77.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1451,7 +1451,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem77);
 
-        jMenuItem80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem80.setText("Отпущенные и не отработанные полотна");
         jMenuItem80.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1460,7 +1460,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem80);
 
-        jMenuItem81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem81.setText("Отходы по типу модели");
         jMenuItem81.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1469,7 +1469,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem81);
 
-        jMenuItem86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem86.setText("Маршруты в цехе");
         jMenuItem86.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1478,7 +1478,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem86);
 
-        jMenuItem103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem103.setText("Маршруты в цехе по артикулам");
         jMenuItem103.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1487,7 +1487,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem103);
 
-        jMenuItem104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem104.setText("Маршруты в цехе по артикулам 2");
         jMenuItem104.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1496,7 +1496,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem104);
 
-        jMenuItem105.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem105.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem105.setText("Маршруты в цехе по артикулам 3");
         jMenuItem105.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1505,7 +1505,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem105);
 
-        jMenuItem89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem89.setText("Комплектовки с недостачей");
         jMenuItem89.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1514,7 +1514,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem89);
 
-        jMenuItem117.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem117.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem117.setText("Кол-во изделий в задаче");
         jMenuItem117.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1523,7 +1523,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem117);
 
-        jMenuItem118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem118.setText("Вес настилов");
         jMenuItem118.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1532,7 +1532,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem118);
 
-        jMenuItem129.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem129.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem129.setText("Не откомплектованные задачи");
         jMenuItem129.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1541,7 +1541,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem129);
 
-        jMenuItem132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem132.setText("Вес настилов с начальным остатком");
         jMenuItem132.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1550,7 +1550,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem132);
 
-        jMenuItem139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem139.setText("Отпуск полотен в закройный цех");
         jMenuItem139.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1561,10 +1561,10 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu10);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
         jMenu6.setText("Отчеты");
 
-        jMenuItem23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jMenuItem23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
         jMenuItem23.setText("Отчеты");
         jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1573,7 +1573,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem23);
 
-        jMenuItem69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem69.setText("История полотен");
         jMenuItem69.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1582,7 +1582,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem69);
 
-        jMenuItem70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem70.setText("История полотен по цветам");
         jMenuItem70.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1591,7 +1591,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu6.add(jMenuItem70);
 
-        jMenuItem73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem73.setText("История полотен(Сводная)");
         jMenuItem73.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1602,14 +1602,14 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pinion.png"))); // NOI18N
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/pinion.png"))); // NOI18N
         jMenu4.setText("Сервис");
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/configure.png"))); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/configure.png"))); // NOI18N
         jMenuItem4.setText("Настройки");
         jMenu4.add(jMenuItem4);
 
-        jMenuItem42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/vcard.png"))); // NOI18N
+        jMenuItem42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/vcard.png"))); // NOI18N
         jMenuItem42.setText("Пользователи");
         jMenuItem42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1618,7 +1618,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem42);
 
-        jMenuItem52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jMenuItem52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
         jMenuItem52.setText("Печатные формы");
         jMenuItem52.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1627,7 +1627,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem52);
 
-        jMenuItem63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/refresh.png"))); // NOI18N
+        jMenuItem63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/refresh.png"))); // NOI18N
         jMenuItem63.setText("Обновление");
         jMenuItem63.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1638,13 +1638,13 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/basket.png"))); // NOI18N
+        jMenu9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/basket.png"))); // NOI18N
         jMenu9.setText("Аналитика");
 
-        jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jMenu11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
         jMenu11.setText("Отчеты");
 
-        jMenuItem130.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem130.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem130.setText("Планируемая загруженность");
         jMenuItem130.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1653,7 +1653,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu11.add(jMenuItem130);
 
-        jMenuItem131.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem131.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem131.setText("Фактическая загруженность");
         jMenuItem131.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1662,7 +1662,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu11.add(jMenuItem131);
 
-        jMenuItem85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem85.setText("Загруженность цехов");
         jMenuItem85.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1671,7 +1671,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu11.add(jMenuItem85);
 
-        jMenuItem134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem134.setText("Загруженность цехов 2");
         jMenuItem134.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1680,7 +1680,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu11.add(jMenuItem134);
 
-        jMenuItem79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem79.setText("Выработка цехов");
         jMenuItem79.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1691,7 +1691,7 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenu9.add(jMenu11);
 
-        jMenuItem108.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem108.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem108.setText("Названия характеристик");
         jMenuItem108.setToolTipText("");
         jMenuItem108.addActionListener(new java.awt.event.ActionListener() {
@@ -1701,7 +1701,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem108);
 
-        jMenuItem109.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem109.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem109.setText("Доп. характеристики КК");
         jMenuItem109.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1710,7 +1710,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem109);
 
-        jMenuItem111.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem111.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem111.setText("Анализ по новинкам");
         jMenuItem111.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1719,7 +1719,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem111);
 
-        jMenuItem61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem61.setText("Продажи");
         jMenuItem61.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1728,7 +1728,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem61);
 
-        jMenuItem78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem78.setText("Мощности цехов в день");
         jMenuItem78.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1737,7 +1737,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem78);
 
-        jMenuItem82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem82.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem82.setText("Настилы по артикулам");
         jMenuItem82.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1746,7 +1746,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem82);
 
-        jMenuItem83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem83.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem83.setText("Сохранение в Excel");
         jMenuItem83.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1755,7 +1755,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem83);
 
-        jMenuItem84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem84.setText("План задач");
         jMenuItem84.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1764,7 +1764,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem84);
 
-        jMenuItem125.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cascade.png"))); // NOI18N
+        jMenuItem125.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cascade.png"))); // NOI18N
         jMenuItem125.setText("План задач общий");
         jMenuItem125.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1773,7 +1773,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem125);
 
-        jMenuItem87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem87.setText("Цвета1С");
         jMenuItem87.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1782,7 +1782,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem87);
 
-        jMenuItem88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem88.setText("Артикула1С");
         jMenuItem88.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1791,7 +1791,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem88);
 
-        jMenuItem90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem90.setText("Размеры1С");
         jMenuItem90.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1800,7 +1800,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem90);
 
-        jMenuItem92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/forward.png"))); // NOI18N
+        jMenuItem92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/forward.png"))); // NOI18N
         jMenuItem92.setText("Задачи на закупку");
         jMenuItem92.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1809,7 +1809,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem92);
 
-        jMenuItem94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/money.png"))); // NOI18N
+        jMenuItem94.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/money.png"))); // NOI18N
         jMenuItem94.setText("Учет расходов");
         jMenuItem94.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1818,7 +1818,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem94);
 
-        jMenuItem113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jMenuItem113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jMenuItem113.setText("Календарь");
         jMenuItem113.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1827,7 +1827,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem113);
 
-        jMenuItem112.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/need.png"))); // NOI18N
+        jMenuItem112.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/need.png"))); // NOI18N
         jMenuItem112.setText("Распределение запланированных задач");
         jMenuItem112.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1836,7 +1836,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem112);
 
-        jMenuItem133.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pinion.png"))); // NOI18N
+        jMenuItem133.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/pinion.png"))); // NOI18N
         jMenuItem133.setText("Расчет задач");
         jMenuItem133.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1845,7 +1845,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem133);
 
-        jMenuItem135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem135.setText("Процент отходов (Подробно)");
         jMenuItem135.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1854,7 +1854,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem135);
 
-        jMenuItem136.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem136.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
         jMenuItem136.setText("Процент отходов (Кратко)");
         jMenuItem136.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1863,7 +1863,7 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu9.add(jMenuItem136);
 
-        jMenuItem137.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Filled.png"))); // NOI18N
+        jMenuItem137.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Filled.png"))); // NOI18N
         jMenuItem137.setText("Запланированные задачи");
         jMenuItem137.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1874,10 +1874,10 @@ public class THaupt extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu9);
 
-        jMenu12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/work.png"))); // NOI18N
+        jMenu12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/work.png"))); // NOI18N
         jMenu12.setText("Планирование");
 
-        jMenuItem138.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/database.png"))); // NOI18N
+        jMenuItem138.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/database.png"))); // NOI18N
         jMenuItem138.setText("Сезоны работы");
         jMenuItem138.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

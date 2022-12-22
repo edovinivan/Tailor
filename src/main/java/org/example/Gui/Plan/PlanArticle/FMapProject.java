@@ -148,7 +148,7 @@ public class FMapProject extends javax.swing.JDialog {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton3.setText("Добавить");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -160,7 +160,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton3);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton4.setText("Изменить");
         jButton4.setFocusable(false);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -172,7 +172,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton4);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton5.setText("Удалить");
         jButton5.setFocusable(false);
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -184,7 +184,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton5);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/refresh.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/refresh.png"))); // NOI18N
         jButton6.setText("Обновить");
         jButton6.setFocusable(false);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -196,7 +196,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton6);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/redo.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/redo.png"))); // NOI18N
         jButton7.setText("Продажи");
         jButton7.setToolTipText("Загрузить продажи из файла");
         jButton7.setFocusable(false);
@@ -209,7 +209,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton7);
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/warning.png"))); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/warning.png"))); // NOI18N
         jButton12.setText("Excel");
         jButton12.setToolTipText("Выгрузка данных в excel");
         jButton12.setFocusable(false);
@@ -223,7 +223,7 @@ public class FMapProject extends javax.swing.JDialog {
         jToolBar1.add(jButton12);
         jToolBar1.add(jSeparator1);
 
-        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pinion.png"))); // NOI18N
+        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/pinion.png"))); // NOI18N
         jToggleButton1.setText("Артикул");
         jToggleButton1.setToolTipText("Сгруппировать по артикулам");
         jToggleButton1.setFocusable(false);
@@ -236,7 +236,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jToggleButton1);
 
-        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/basket.png"))); // NOI18N
+        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/basket.png"))); // NOI18N
         jToggleButton2.setText("Цвет");
         jToggleButton2.setToolTipText("Сгруппировать данные по артикулам и цветам");
         jToggleButton2.setFocusable(false);
@@ -249,7 +249,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jToggleButton2);
 
-        jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jToggleButton3.setText("Данные");
         jToggleButton3.setToolTipText("Показать поля продажи/остаки/в работе");
         jToggleButton3.setFocusable(false);
@@ -262,7 +262,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jToggleButton3);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Filled.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Filled.png"))); // NOI18N
         jButton8.setText("В работе");
         jButton8.setToolTipText("Загрузить данные по атикулам в работе");
         jButton8.setFocusable(false);
@@ -276,7 +276,7 @@ public class FMapProject extends javax.swing.JDialog {
         jToolBar1.add(jButton8);
         jToolBar1.add(jSeparator2);
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/money.png"))); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/money.png"))); // NOI18N
         jButton9.setText("ABC");
         jButton9.setToolTipText("Сортировка по ABC");
         jButton9.setFocusable(false);
@@ -289,7 +289,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton9);
 
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/preferences.png"))); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/preferences.png"))); // NOI18N
         jButton10.setText("Артикул");
         jButton10.setToolTipText("Сортировка по артикулу");
         jButton10.setFocusable(false);
@@ -302,7 +302,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton10);
 
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/filter.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/filter.png"))); // NOI18N
         jButton11.setText("Фильтр");
         jButton11.setToolTipText("Фильтр по выделенным");
         jButton11.setFocusable(false);
@@ -315,7 +315,7 @@ public class FMapProject extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton11);
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Pen.png"))); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Pen.png"))); // NOI18N
         jButton13.setText("Полотна");
         jButton13.setFocusable(false);
         jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

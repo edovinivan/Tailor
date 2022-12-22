@@ -68,7 +68,7 @@ public class FModelPlanTimeZagruzka extends javax.swing.JDialog {
         jToolBar1.setMinimumSize(new java.awt.Dimension(223, 30));
         jToolBar1.setPreferredSize(new java.awt.Dimension(449, 30));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jButton1.setText("Закрыть");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -96,7 +96,7 @@ public class FModelPlanTimeZagruzka extends javax.swing.JDialog {
         jDateChooser2.setPreferredSize(new java.awt.Dimension(140, 30));
         jToolBar1.add(jDateChooser2);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/refresh.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/refresh.png"))); // NOI18N
         jButton2.setText("Обновить");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);

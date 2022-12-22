@@ -196,7 +196,7 @@ public class LTimeOperation extends javax.swing.JPanel {
         jToolBar1.setRollover(true);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jButton1.setText("Закрыть");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -414,7 +414,7 @@ public class LTimeOperation extends javax.swing.JPanel {
     }//GEN-LAST:event_formComponentShown
 
     // подсветка и картинки в таблицу                       
-    final ImageIcon edit = new ImageIcon(getClass().getResource("/images/1.png"));    
+    final ImageIcon edit = new ImageIcon(getClass().getResource("/org/example/images/1.png"));    
 
     private final DefaultTableCellRenderer jTableRenderer = new DefaultTableCellRenderer() {
         @Override

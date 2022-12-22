@@ -325,7 +325,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton1.setText("Добавить");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -337,7 +337,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton2.setText("Изменить");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -349,7 +349,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton2);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton3.setText("Удалить");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -381,7 +381,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar2.setFloatable(false);
         jToolBar2.setRollover(true);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton4.setText("Добавить");
         jButton4.setFocusable(false);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -393,7 +393,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar2.add(jButton4);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton5.setText("Изменить");
         jButton5.setFocusable(false);
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -405,7 +405,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar2.add(jButton5);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton6.setText("Удалить");
         jButton6.setFocusable(false);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -460,7 +460,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar3.setFloatable(false);
         jToolBar3.setRollover(true);
 
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton10.setText("Добавить");
         jButton10.setFocusable(false);
         jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -472,7 +472,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar3.add(jButton10);
 
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton11.setText("Изменить");
         jButton11.setFocusable(false);
         jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -484,7 +484,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar3.add(jButton11);
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton12.setText("Удалить");
         jButton12.setFocusable(false);
         jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -539,7 +539,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar4.setFloatable(false);
         jToolBar4.setRollover(true);
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton13.setText("Добавить");
         jButton13.setFocusable(false);
         jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -551,7 +551,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar4.add(jButton13);
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton14.setText("Изменить");
         jButton14.setFocusable(false);
         jButton14.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -563,7 +563,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar4.add(jButton14);
 
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton15.setText("Удалить");
         jButton15.setFocusable(false);
         jButton15.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -619,7 +619,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar5.setFloatable(false);
         jToolBar5.setRollover(true);
 
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton16.setText("Добавить");
         jButton16.setFocusable(false);
         jButton16.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -631,7 +631,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar5.add(jButton16);
 
-        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton17.setText("Изменить");
         jButton17.setFocusable(false);
         jButton17.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -643,7 +643,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar5.add(jButton17);
 
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton18.setText("Удалить");
         jButton18.setFocusable(false);
         jButton18.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -656,7 +656,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar5.add(jButton18);
 
         jButton30.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/up.png"))); // NOI18N
+        jButton30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/up.png"))); // NOI18N
         jButton30.setText("+1");
         jButton30.setFocusable(false);
         jButton30.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -669,7 +669,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar5.add(jButton30);
 
         jButton31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
+        jButton31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/down.png"))); // NOI18N
         jButton31.setText("-1");
         jButton31.setFocusable(false);
         jButton31.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -725,7 +725,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar6.setFloatable(false);
         jToolBar6.setRollover(true);
 
-        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton19.setText("Добавить");
         jButton19.setFocusable(false);
         jButton19.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -737,7 +737,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar6.add(jButton19);
 
-        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton20.setText("Изменить");
         jButton20.setFocusable(false);
         jButton20.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -749,7 +749,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar6.add(jButton20);
 
-        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton21.setText("Удалить");
         jButton21.setFocusable(false);
         jButton21.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -762,7 +762,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar6.add(jButton21);
 
         jButton27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/up.png"))); // NOI18N
+        jButton27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/up.png"))); // NOI18N
         jButton27.setText("+1");
         jButton27.setFocusable(false);
         jButton27.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -775,7 +775,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar6.add(jButton27);
 
         jButton29.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
+        jButton29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/down.png"))); // NOI18N
         jButton29.setText("-1");
         jButton29.setFocusable(false);
         jButton29.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -831,7 +831,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar7.setFloatable(false);
         jToolBar7.setRollover(true);
 
-        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton22.setText("Добавить");
         jButton22.setFocusable(false);
         jButton22.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -843,7 +843,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar7.add(jButton22);
 
-        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton23.setText("Удалить");
         jButton23.setFocusable(false);
         jButton23.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -855,7 +855,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar7.add(jButton23);
 
-        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2.png"))); // NOI18N
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/2.png"))); // NOI18N
         jButton24.setText("Главная");
         jButton24.setFocusable(false);
         jButton24.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -867,7 +867,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar7.add(jButton24);
 
-        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
+        jButton34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/down.png"))); // NOI18N
         jButton34.setText("В файл");
         jButton34.setFocusable(false);
         jButton34.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -879,7 +879,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar7.add(jButton34);
 
-        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/refresh.png"))); // NOI18N
+        jButton36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/refresh.png"))); // NOI18N
         jButton36.setText("Заменить");
         jButton36.setFocusable(false);
         jButton36.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -965,7 +965,7 @@ public class FModel extends javax.swing.JDialog {
         jToolBar8.setFloatable(false);
         jToolBar8.setRollover(true);
 
-        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton33.setText("Добавить");
         jButton33.setFocusable(false);
         jButton33.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -977,7 +977,7 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar8.add(jButton33);
 
-        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton35.setText("Удалить");
         jButton35.setFocusable(false);
         jButton35.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);

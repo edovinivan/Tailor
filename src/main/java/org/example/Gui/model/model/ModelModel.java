@@ -86,10 +86,10 @@ public class ModelModel    extends AbstractTableModel{
     }
     
     // подсветка и картинки в таблицу                       
-    final ImageIcon edit = new ImageIcon(getClass().getResource("/images/1.png"));
-    final ImageIcon ok = new ImageIcon(getClass().getResource("/images/2.png"));
-    final ImageIcon clos = new ImageIcon(getClass().getResource("/images/clos.png"));
-    final ImageIcon block = new ImageIcon(getClass().getResource("/images/block.png"));
+    final ImageIcon edit = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
+    final ImageIcon ok = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
+    final ImageIcon clos = new ImageIcon(getClass().getResource("/org/example/images/clos.png"));
+    final ImageIcon block = new ImageIcon(getClass().getResource("/org/example/images/block.png"));
 
     public final DefaultTableCellRenderer jTableRenderer = new DefaultTableCellRenderer() {
         @Override

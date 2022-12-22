@@ -92,7 +92,7 @@ public class FCalcTimeModel extends javax.swing.JPanel {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jButton1.setText("Закрыть");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -104,7 +104,7 @@ public class FCalcTimeModel extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
         jButton2.setText("Печать");
         jButton2.setToolTipText("Печать данных");
         jButton2.setFocusable(false);
@@ -117,7 +117,7 @@ public class FCalcTimeModel extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton2);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/filter.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/filter.png"))); // NOI18N
         jButton5.setText("Просмотр");
         jButton5.setToolTipText("Просмотреть все введенные артикула");
         jButton5.setFocusable(false);
@@ -130,7 +130,7 @@ public class FCalcTimeModel extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton5);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/down.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/down.png"))); // NOI18N
         jButton3.setText("Сохранить");
         jButton3.setToolTipText("Сохранить данные в файл");
         jButton3.setFocusable(false);
@@ -143,7 +143,7 @@ public class FCalcTimeModel extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton3);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/up.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/up.png"))); // NOI18N
         jButton4.setText("Загрузить");
         jButton4.setToolTipText("Загрузить данные из файла");
         jButton4.setFocusable(false);

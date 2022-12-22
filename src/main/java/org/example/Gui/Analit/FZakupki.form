@@ -140,7 +140,7 @@
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/edit.png"/>
+                      <Image iconType="3" name="/org/example/images/edit.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x441;&#x43c;&#x43e;&#x442;&#x440;"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -157,7 +157,7 @@
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/add.png"/>
+                      <Image iconType="3" name="/org/example/images/add.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c;"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -174,7 +174,7 @@
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/remove.png"/>
+                      <Image iconType="3" name="/org/example/images/remove.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x423;&#x434;&#x430;&#x43b;&#x438;&#x442;&#x44c;"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -256,7 +256,7 @@
                       <Font name="Tahoma" size="14" style="0"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/images/application.png"/>
+                      <Image iconType="3" name="/org/example/images/application.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x434;&#x430;&#x447;&#x438;"/>
                     <Property name="focusable" type="boolean" value="false"/>

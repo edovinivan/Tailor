@@ -83,7 +83,7 @@ public class LZadachaEndArbait extends javax.swing.JPanel {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jButton1.setText("Выход");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -95,7 +95,7 @@ public class LZadachaEndArbait extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cascade.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cascade.png"))); // NOI18N
         jButton2.setText("Настилы");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -107,7 +107,7 @@ public class LZadachaEndArbait extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton2);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/basket.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/basket.png"))); // NOI18N
         jButton6.setText("Фурнитура");
         jButton6.setFocusable(false);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -119,7 +119,7 @@ public class LZadachaEndArbait extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton6);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/document.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/document.png"))); // NOI18N
         jButton7.setText("Комплектовка");
         jButton7.setFocusable(false);
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -131,7 +131,7 @@ public class LZadachaEndArbait extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton7);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/2.png"))); // NOI18N
         jButton3.setText("Закрыть задачу");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -143,7 +143,7 @@ public class LZadachaEndArbait extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton3);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/1.png"))); // NOI18N
         jButton4.setText("Открыть");
         jButton4.setFocusable(false);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -155,7 +155,7 @@ public class LZadachaEndArbait extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton4);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/refresh.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/refresh.png"))); // NOI18N
         jButton5.setText("Обновить");
         jButton5.setFocusable(false);
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -167,7 +167,7 @@ public class LZadachaEndArbait extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton5);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/filter.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/filter.png"))); // NOI18N
         jButton8.setText("Фильтр");
         jButton8.setFocusable(false);
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -271,11 +271,11 @@ public class LZadachaEndArbait extends javax.swing.JPanel {
 
     
     // подсветка и картинки в таблицу                       
-    final ImageIcon edit = new ImageIcon(getClass().getResource("/images/1.png"));
-    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/images/2.png"));
-    final ImageIcon ok2 = new ImageIcon(getClass().getResource("/images/up.png"));
-    final ImageIcon ok3 = new ImageIcon(getClass().getResource("/images/cascade.png"));
-    final ImageIcon ok10 = new ImageIcon(getClass().getResource("/images/clos.png"));
+    final ImageIcon edit = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
+    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
+    final ImageIcon ok2 = new ImageIcon(getClass().getResource("/org/example/images/up.png"));
+    final ImageIcon ok3 = new ImageIcon(getClass().getResource("/org/example/images/cascade.png"));
+    final ImageIcon ok10 = new ImageIcon(getClass().getResource("/org/example/images/clos.png"));
     public DefaultTableCellRenderer jTableRenderer = new DefaultTableCellRenderer() {
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {

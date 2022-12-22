@@ -101,7 +101,7 @@ public class FUOperDoc extends javax.swing.JDialog {
         jToolBar1.setRollover(true);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
         jButton3.setText("Добавить");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -114,7 +114,7 @@ public class FUOperDoc extends javax.swing.JDialog {
         jToolBar1.add(jButton3);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton5.setText("Изменить");
         jButton5.setFocusable(false);
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -127,7 +127,7 @@ public class FUOperDoc extends javax.swing.JDialog {
         jToolBar1.add(jButton5);
 
         jButton6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/remove.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/remove.png"))); // NOI18N
         jButton6.setText("Удалить");
         jButton6.setFocusable(false);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -139,7 +139,7 @@ public class FUOperDoc extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton6);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/catapult.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/catapult.png"))); // NOI18N
         jButton4.setText("Запуск");
         jButton4.setToolTipText("Запустить выполнение  задачи");
         jButton4.setFocusable(false);
@@ -152,7 +152,7 @@ public class FUOperDoc extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton4);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/block.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/block.png"))); // NOI18N
         jButton7.setText("Стоп");
         jButton7.setToolTipText("Остановить выполнение задачи");
         jButton7.setFocusable(false);
@@ -165,7 +165,7 @@ public class FUOperDoc extends javax.swing.JDialog {
         });
         jToolBar1.add(jButton7);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/go.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/go.png"))); // NOI18N
         jButton8.setText("+Час");
         jButton8.setToolTipText("Добавить час к выполнению задачи");
         jButton8.setFocusable(false);
