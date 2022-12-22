@@ -1,0 +1,117 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package org.example.logic;
+
+import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import org.hibernate.annotations.Formula;
+
+/**
+ *
+ * @author ivan
+ */
+@Entity
+@Table(name = "ZADACHAKOMPLEKTOVKARAZMERI")
+public class ZadachaKomplektovkaRazmeri implements Serializable {
+    @Id
+    @Column(name = "ZADACHAKOMPLEKTOVKARAZMERI")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "GEN_ZADACHAKOMPLEKTOVKARAZMERI_")
+    @SequenceGenerator(allocationSize = 1, name = "GEN_ZADACHAKOMPLEKTOVKARAZMERI_", sequenceName = "GEN_ZADACHAKOMPLEKTOVKARAZMERI_")
+    Integer zadachakomplektovkarazmeri;
+    
+    @Column(name = "ZADACHAKOMPLEKTOVKA")
+    Integer zadachakomplektovka;
+    
+    @ManyToOne
+    @JoinColumn(name = "ZADACHARAZMERI")
+    ZadachaRazmeri zadacharazmeri;
+    
+    @ManyToOne
+    @JoinColumn(name = "RAZMERI")
+    Razmeri razmeri;
+    
+    @Column(name = "QTY")
+    Integer qty;
+    
+    @Formula("0")
+    Integer counts;
+
+    public Integer getCounts() {
+        return counts;
+    }
+
+    public void setCounts(Integer counts) {
+        this.counts = counts;
+    }
+    
+    
+
+    public Razmeri getRazmeri() {
+        return razmeri;
+    }
+
+    public void setRazmeri(Razmeri razmeri) {
+        this.razmeri = razmeri;
+    }
+    
+    
+
+    public ZadachaKomplektovkaRazmeri(Integer zkr) {
+        zadachakomplektovkarazmeri = zkr;
+    }
+
+    public ZadachaKomplektovkaRazmeri() {
+    }
+
+    public Integer getZadachakomplektovkarazmeri() {
+        return zadachakomplektovkarazmeri;
+    }
+
+    public void setZadachakomplektovkarazmeri(Integer zadachakomplektovkarazmeri) {
+        this.zadachakomplektovkarazmeri = zadachakomplektovkarazmeri;
+    }
+
+    public Integer getZadachakomplektovka() {
+        return zadachakomplektovka;
+    }
+
+    public void setZadachakomplektovka(Integer zadachakomplektovka) {
+        this.zadachakomplektovka = zadachakomplektovka;
+    }
+
+    public ZadachaRazmeri getZadacharazmeri() {
+        return zadacharazmeri;
+    }
+
+    public void setZadacharazmeri(ZadachaRazmeri zadacharazmeri) {
+        this.zadacharazmeri = zadacharazmeri;
+    }
+
+    public Integer getQty() {
+        return qty;
+    }
+
+    public void setQty(Integer qty) {
+        this.qty = qty;
+    }
+
+   
+    
+    
+    
+    
+    
+    
+    
+}
