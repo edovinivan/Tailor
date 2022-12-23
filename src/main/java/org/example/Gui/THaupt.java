@@ -1958,7 +1958,7 @@ public class THaupt extends javax.swing.JFrame {
         
         
         //проверим версия программы в базе и в ехе файле
-        int ver = 108;    
+        int ver = 106;    
         jLabel2.setText("v 1." + ver);
         if(IOSetup.getSetuValInt(5)!= ver)
         {

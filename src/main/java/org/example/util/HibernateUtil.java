@@ -31,10 +31,13 @@ public class HibernateUtil {
     //static File fil = new File("hibernate.cfg.xml1");
     static Configuration c = new Configuration().configure();
     static {
+        
         try {
                 //creates the session factory from hibernate.cfg.xml
-                c.addProperties(getConnectionProperties());                
+                c.addProperties(getConnectionProperties());                                
                 sessionFactory = c.buildSessionFactory();
+                
+                
                 
         } catch (HibernateException e) {
             JOptionPane.showMessageDialog(null, "ERROR= " + e);
@@ -74,8 +77,8 @@ public class HibernateUtil {
             }
         }
         else
-           //h = "jdbc:firebirdsql:localhost:tailor";
-            h = "jdbc:firebirdsql:10.1.1.1:tailor";
+           h = "jdbc:firebirdsql:localhost:tailor";
+           // h = "jdbc:firebirdsql:10.1.1.1:tailor";
         return h;
     }
 

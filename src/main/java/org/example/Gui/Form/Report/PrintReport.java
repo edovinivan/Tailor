@@ -21,11 +21,12 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.query.JRHibernateQueryExecuterFactory;
 import net.sf.jasperreports.swing.JRViewer;
 import org.hibernate.Session;
-import org.hibernate.impl.SessionFactoryImpl;
 import org.example.util.HibernateUtil;
 import org.example.util.IOFiles;
 import org.example.util.IOOperator;
 import org.example.util.IOReport;
+import org.hibernate.SessionFactory;
+import org.hibernate.internal.SessionImpl;
 
 /**
  *
@@ -126,12 +127,9 @@ public class PrintReport extends javax.swing.JDialog {
         
             Connection connection = null; 
         
-            SessionFactoryImpl sf = (SessionFactoryImpl)sess.getSessionFactory();
-        try {
-            connection = sf.getConnectionProvider().getConnection();
-        } catch (SQLException ex) {
-            System.out.println( "Error sql" + ex); 
-        }
+            //SessionFactoryImpl sf = (SessionFactoryImpl)sess.getSessionFactory();
+            SessionFactory sf = sess.getSessionFactory();
+            connection = ((SessionImpl)sess.getSession()).connection();
         
         
         parameters.put(JRHibernateQueryExecuterFactory.PARAMETER_HIBERNATE_SESSION, sess);
