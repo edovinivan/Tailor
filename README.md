@@ -1,0 +1,2 @@
+# Tailor
+Проект Tailor
