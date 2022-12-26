@@ -26,6 +26,7 @@ import org.example.util.IOFiles;
 import org.example.util.IOOperator;
 import org.example.util.IOReport;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.internal.SessionImpl;
 
 /**
@@ -121,44 +122,39 @@ public class PrintReport extends javax.swing.JDialog {
         setLocationRelativeTo(null);
         setMaximumSize(null);
         
-        try {
-            Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+        Session sess = HibernateUtil.getSessionFactory().openSession();
+            Transaction trans =  sess.beginTransaction();
         
             Connection connection = null; 
         
-            //SessionFactoryImpl sf = (SessionFactoryImpl)sess.getSessionFactory();
-            SessionFactory sf = sess.getSessionFactory();
+        //SessionFactoryImpl sf = (SessionFactoryImpl)sess.getSessionFactory();
+            //SessionFactory sf = sess.getSessionFactory();
             connection = ((SessionImpl)sess.getSession()).connection();
         
         
         parameters.put(JRHibernateQueryExecuterFactory.PARAMETER_HIBERNATE_SESSION, sess);
         parameters.put("DOC", nDoc);
-        
-        
-            JasperReport rep;
-            try {
-                rep = JasperCompileManager.compileReport(str);
-
+        JasperReport rep;
+        try {
+            rep = JasperCompileManager.compileReport(str);
+            
                 JasperPrint print = JasperFillManager.fillReport(rep, parameters, connection);
-
-                JRViewer d = new JRViewer(print);
-                add(d);
-                d.setName("Печать отчета");
-                d.setBounds(0, 0, getWidth()-15, getHeight()-40);
-                d.setVisible(true);
-                
-                connection.close();
-                
-
-            } catch (JRException ex) {
-                System.out.println("JRError = " + ex);
-
-            }
-
+            
+            JRViewer d = new JRViewer(print);
+            add(d);
+            d.setName("Печать отчета");
+            d.setBounds(0, 0, getWidth()-15, getHeight()-40);
+            d.setVisible(true);
+            
+            trans.commit();
+            connection.close();
+            
+            
+        } catch (JRException ex) {
+            System.out.println("JRError = " + ex);
+            
         } catch (SQLException ex) {
             Logger.getLogger(PrintReport.class.getName()).log(Level.SEVERE, null, ex);
-
         } 
     }//GEN-LAST:event_formWindowOpened
 

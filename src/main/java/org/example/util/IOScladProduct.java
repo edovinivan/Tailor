@@ -23,6 +23,7 @@ import org.example.logic.ViewSP;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
@@ -181,7 +182,7 @@ public class IOScladProduct {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction tr =  sess.beginTransaction();
             String s = "";
             if(vid == 1)
             {
@@ -212,7 +213,7 @@ public class IOScladProduct {
             //ls =  (Map<Integer, String>)sess.createSQLQuery(s). uniqueResult();
             //System.out.println(s);
             l = sess.createSQLQuery(s).list();// uniqueResult();
-            sess.beginTransaction().commit();
+            tr.commit();
             sess.close();
             if(!l.isEmpty())
             {
