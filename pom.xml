@@ -24,7 +24,75 @@
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
+            </plugin>            
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>org.example.Gui.THaupt</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
+            
+            
+            
+            <!-- LAUNCH4J -->
+            <plugin>
+                <groupId>com.akathist.maven.plugins.launch4j</groupId>
+                <artifactId>launch4j-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <executions>
+                    <execution>
+                        <id>l4j-clui</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>launch4j</goal>
+                        </goals>
+                        <configuration>
+                            <headerType>gui</headerType>
+                            <jar>target/Tailor-1.0-SNAPSHOT-jar-with-dependencies.jar</jar>
+                            <outfile>target/Tailor.exe</outfile>
+                            <downloadUrl>www.jaca.com</downloadUrl>
+                            <classPath>
+                                <mainClass>org.example.Gui.THaupt</mainClass>
+                            </classPath>
+                            <jre>
+                                <minVersion>1.8.0</minVersion>                                
+                                <path>gfgfg</path>
+                            </jre>
+                            <versionInfo>
+                                <fileVersion>1.0.0.0</fileVersion>
+                                <txtFileVersion>1.0.0.1</txtFileVersion>
+                                <fileDescription>Tailor</fileDescription>
+                                <copyright>C</copyright>
+                                <productVersion>1.0.0.0</productVersion>
+                                <txtProductVersion>1.0.0.0</txtProductVersion>
+                                <productName>Tailor</productName>
+                                <internalName>AppName</internalName>
+                                <originalFilename>Tailor.exe</originalFilename>
+                            </versionInfo>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>  
+           
+                
+            <!-- LAUNCH4J ENDE -->
+            
+            
         </plugins>
     </build>
     <properties>
@@ -127,6 +195,14 @@
             <artifactId>groovy-all</artifactId>
             <version>2.0.8</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.akathist.maven.plugins.launch4j/launch4j-maven-plugin -->
+        <dependency>
+            <groupId>com.akathist.maven.plugins.launch4j</groupId>
+            <artifactId>launch4j-maven-plugin</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+
 
 
         

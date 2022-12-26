@@ -28,7 +28,7 @@ public class LFot extends javax.swing.JPanel {
         jLabel1.setText("");
     }
 
-    THaupt th;
+    THaupt th; 
     ModelFot model = new ModelFot();
     TableRowSorter<TableModel> sorter;
     /**
