@@ -13,6 +13,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -55,9 +56,9 @@ public class IOZLog {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(zl);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {

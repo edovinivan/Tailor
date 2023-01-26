@@ -17,6 +17,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -36,9 +37,9 @@ public class IOScladLoskut {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -125,9 +126,9 @@ public class IOScladLoskut {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
             ScladLoskut sl = p.getScladloskut();
             sl.setOstatok(sl.getOstatok().subtract(p.getQty()));
@@ -214,9 +215,9 @@ public class IOScladLoskut {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(ss);
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("ERROR SAVE" + e);            
@@ -236,9 +237,9 @@ public class IOScladLoskut {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(sl);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
             IOOperationHistory.saveOperationHistory("Удалили приход ", sl.getZadachanastil().getZadachanastil(), 1);
             

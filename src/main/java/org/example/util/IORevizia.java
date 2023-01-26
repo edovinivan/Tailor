@@ -18,6 +18,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -37,9 +38,9 @@ public class IORevizia {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -103,15 +104,15 @@ public class IORevizia {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from reviziajournal where revizia = " + d;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             s = "delete from revizia where revizia = " + d;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -133,9 +134,9 @@ public class IORevizia {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -198,10 +199,10 @@ public class IORevizia {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from reviziajournal where reviziajournal = " + d;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -245,10 +246,10 @@ public class IORevizia {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from reviziajournal where revizia = " + r;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -281,10 +282,10 @@ public class IORevizia {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update reviziajournal set ves = vesdb where revizia = " + r;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);

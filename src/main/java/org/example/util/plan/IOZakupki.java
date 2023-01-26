@@ -16,6 +16,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -36,9 +37,9 @@ public class IOZakupki {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -109,9 +110,9 @@ public class IOZakupki {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(pz);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -133,9 +134,9 @@ public class IOZakupki {
         {
             PModelPlan pm = p.getPmodelplan();
             Session sess = HibernateUtil.getSessionFactory().openSession();             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             pm.setStatus(1);
             IOModelPlan.setPModelPlan(pm);
             
@@ -193,9 +194,9 @@ public class IOZakupki {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {

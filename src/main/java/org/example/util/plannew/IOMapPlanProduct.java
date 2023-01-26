@@ -16,6 +16,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -66,9 +67,9 @@ public class IOMapPlanProduct {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             List<String> ls = sess.createSQLQuery(sql).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
             AtomicInteger id = new AtomicInteger(1);
             

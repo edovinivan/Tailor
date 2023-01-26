@@ -77,8 +77,8 @@ public class HibernateUtil {
             }
         }
         else
-           h = "jdbc:firebirdsql:localhost:tailor";
-           // h = "jdbc:firebirdsql:10.1.1.1:tailor";
+           //h = "jdbc:firebirdsql:localhost:tailor";
+            h = "jdbc:firebirdsql:10.1.1.1:tailor";
         return h;
     }
 

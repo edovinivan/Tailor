@@ -11,6 +11,7 @@ import org.example.logic.Setup;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -71,9 +72,9 @@ public class IOSetup {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(s);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {

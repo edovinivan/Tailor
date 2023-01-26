@@ -27,6 +27,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -142,9 +143,9 @@ public class IOZadachaKomplektovka {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -383,9 +384,9 @@ public class IOZadachaKomplektovka {
         try  
         {         
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            
@@ -560,10 +561,10 @@ public class IOZadachaKomplektovka {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update ZADACHAKOMPLEKTOVKA set status = "+nSt+" where ZadachaKomplektovka = " + zk;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -584,9 +585,9 @@ public class IOZadachaKomplektovka {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();             
             String s = "update rabotnikoperation set status = 1 where zadachakomplektovka = " + m;
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -607,9 +608,9 @@ public class IOZadachaKomplektovka {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();             
             String s = "update rabotnikoperation set status = 0 where zadachakomplektovka = " + m;
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -640,10 +641,10 @@ public class IOZadachaKomplektovka {
                 }
             }*/
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update ZADACHAKOMPLEKTOVKA set status = "+status+" where ZadachaKomplektovka = " + zk;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
             // если хотим принять маршрут на склад
             // попробуем закрыть задание
@@ -707,10 +708,10 @@ public class IOZadachaKomplektovka {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update ZADACHAKOMPLEKTOVKA set status = 0 where ZadachaKomplektovka = " + zk;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -738,15 +739,15 @@ public class IOZadachaKomplektovka {
                 IOZadachaFurnitura.delZadachaFurnitura(zf.getZadachafurnitura());
             }
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from ZADACHAKOMPLEKTOVKARAZMERI where ZadachaKomplektovka = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             s = "delete from ZadachaKomplektovka where ZadachaKomplektovka = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
             // если это временная задача 
             if(zk.getZadacha().getDel()==2)            
@@ -774,9 +775,9 @@ public class IOZadachaKomplektovka {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -816,10 +817,10 @@ public class IOZadachaKomplektovka {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update ZADACHAKOMPLEKTOVKARAZMERI set qty = " + nQty + "  where ZADACHAKOMPLEKTOVKARAZMERI = " + zkr;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR UPDATE" + e);
             return false;
@@ -859,7 +860,7 @@ public class IOZadachaKomplektovka {
                 Model mod = IOModel.getListModel(m, -1, true).get(0);
                 // получим все размеры для данной модели 
                 List<Razmeri> lRazm = sess.createCriteria(Razmeri.class).add(Restrictions.ge("nom", mod.getFirstrazmeri().getNom())).add(Restrictions.eq("razmerigruppa", mod.getFirstrazmeri().getRazmerigruppa())).addOrder(Order.asc("nom")).list();
-                sess.beginTransaction();
+                Transaction transaction = sess.beginTransaction();
                 for (Razmeri r : lRazm) 
                 {
                     zkr = new ZadachaKomplektovkaRazmeri();
@@ -908,9 +909,9 @@ public class IOZadachaKomplektovka {
                 sql = "select list(k.name || '(' || mk.qty || ')','; ') from modelsablon mk inner join sablon k on k.sablon = mk.sablon where mk.model = " + m;
             
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();            
+            Transaction transaction = sess.beginTransaction();            
             sql = (String)sess.createSQLQuery(sql).uniqueResult();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR UPDATE" + e);
             return "";

@@ -15,6 +15,7 @@ import org.example.logic.DocReturnJournal;
 import org.example.logic.ScladProduct;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
@@ -55,9 +56,9 @@ public class IODocReturn {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -121,15 +122,15 @@ public class IODocReturn {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from doc_return_journal where doc_return = " + d;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             s = "delete from doc_return where doc_return = " + d;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -151,9 +152,9 @@ public class IODocReturn {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -216,10 +217,10 @@ public class IODocReturn {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from doc_return_journal where doc_return_journal = " + d;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);

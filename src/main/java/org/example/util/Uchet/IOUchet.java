@@ -14,6 +14,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -33,9 +34,9 @@ public class IOUchet {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -99,9 +100,9 @@ public class IOUchet {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p1);
-            sess.beginTransaction().commit();            
+            transaction.commit();            
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -124,9 +125,9 @@ public class IOUchet {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -191,9 +192,9 @@ public class IOUchet {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(p1);
-            sess.beginTransaction().commit();            
+            transaction.commit();            
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);

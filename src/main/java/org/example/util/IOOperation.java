@@ -12,6 +12,7 @@ import org.example.logic.OperationGruppa;
 import org.example.logic.OperationText;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
@@ -33,9 +34,9 @@ public class IOOperation {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -77,10 +78,10 @@ public class IOOperation {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update Operation set del = 1 where Operation = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -103,9 +104,9 @@ public class IOOperation {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -147,10 +148,10 @@ public class IOOperation {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update OperationGruppa set del = 1 where OperationGruppa = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -170,10 +171,10 @@ public class IOOperation {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from OPERATIONTEXT where OPERATIONTEXT = " + op;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -219,9 +220,9 @@ public class IOOperation {
                 OperationText ot = new OperationText();
                 ot.setOperationtext(null);
                 ot.setText(str);
-                sess.beginTransaction();
+                Transaction transaction = sess.beginTransaction();
                 sess.saveOrUpdate(ot);
-                sess.beginTransaction().commit();
+                transaction.commit();
             }
         }catch(HibernateException e)
         {

@@ -21,6 +21,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -37,9 +38,9 @@ public class IOMapProjectJournal implements ioObject<MapProjectJournal, Integer>
         
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try{
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(obj);
-            sess.beginTransaction().commit();            
+            transaction.commit();            
         }catch(HibernateException e){            
             log.error("Error " + e);
         }
@@ -88,9 +89,9 @@ public class IOMapProjectJournal implements ioObject<MapProjectJournal, Integer>
             return false;
         try{
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(mp);
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch(HibernateException e){
             log.error("Error del object " + e);
         }
@@ -190,21 +191,21 @@ public class IOMapProjectJournal implements ioObject<MapProjectJournal, Integer>
         try{
             Session sess = HibernateUtil.getSessionFactory().openSession();
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             int i = 0;
             int j = 0;
             for(MapProjectJournal m: ls){                
                 sess.saveOrUpdate(m);
                 i++;
                 if(i>100){
-                    sess.beginTransaction().commit();
-                    sess.beginTransaction();
+                    transaction.commit();
+                    transaction = sess.beginTransaction();
                     i = 0;
                     //System.out.println("------>" + j);
                     j++;
                 }
             }
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e){
             log.error(e);
@@ -246,9 +247,9 @@ public class IOMapProjectJournal implements ioObject<MapProjectJournal, Integer>
         String sql = "update MAPPROJECTJOURNAL set QTY = " + qty + "where MAPPROJECTJOURNAL = " + mappj;
         try{
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e){
             return false;
         }

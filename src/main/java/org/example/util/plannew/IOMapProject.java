@@ -17,6 +17,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -34,9 +35,9 @@ public class IOMapProject implements ioObject<MapProject, Integer>{
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(obj);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {

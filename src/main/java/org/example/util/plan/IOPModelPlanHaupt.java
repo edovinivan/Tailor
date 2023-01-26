@@ -16,7 +16,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HibernateUtil;
-import static org.example.util.plan.IOModelPlan.getPModelPlan;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -37,9 +37,9 @@ public class IOPModelPlanHaupt {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -124,9 +124,9 @@ public class IOPModelPlanHaupt {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -221,10 +221,10 @@ public class IOPModelPlanHaupt {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from P_MODELPLANHAUPT where P_MODELPLANHAUPT = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();            
+            transaction.commit();            
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);

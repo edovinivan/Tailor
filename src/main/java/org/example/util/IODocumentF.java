@@ -21,6 +21,7 @@ import org.example.logic.ScladProductF;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
@@ -93,9 +94,9 @@ public class IODocumentF {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -183,9 +184,9 @@ public class IODocumentF {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -207,9 +208,9 @@ public class IODocumentF {
             Session sess = HibernateUtil.getSessionFactory().openSession();
             try 
             {
-                sess.beginTransaction();
+                Transaction transaction = sess.beginTransaction();
                 sess.delete(d);
-                sess.beginTransaction().commit();
+                transaction.commit();
 
             } catch (HibernateException e) {
                 System.out.println("ERROR SAVE" + e);
@@ -240,9 +241,9 @@ public class IODocumentF {
         
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(dd);
-            sess.beginTransaction().commit();
+            transaction.commit();
 
         } catch (HibernateException e) {
             System.out.println("ERROR SAVE" + e);
@@ -438,9 +439,9 @@ public class IODocumentF {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(sf);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -504,9 +505,9 @@ public class IODocumentF {
         try  
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(ff);
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            
@@ -550,9 +551,9 @@ public class IODocumentF {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(f);
-            sess.beginTransaction().commit();
+            transaction.commit();
             ScladProductF sf = f.getScladproductf();
             sf.setOstatok(sf.getOstatok().subtract(f.getQty()));
             setScladProductF(sf);
@@ -627,9 +628,9 @@ public class IODocumentF {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(ff);
-            sess.beginTransaction().commit();            
+            transaction.commit();            
             
         }catch(HibernateException e)
         {

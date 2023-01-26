@@ -1958,7 +1958,7 @@ public class THaupt extends javax.swing.JFrame {
         
         
         //проверим версия программы в базе и в ехе файле
-        int ver = 106;    
+        int ver = 108;    
         jLabel2.setText("v 1." + ver);
         if(IOSetup.getSetuValInt(5)!= ver)
         {
@@ -3061,6 +3061,23 @@ public class THaupt extends javax.swing.JFrame {
         /*java.awt.EventQueue.invokeLater(() -> {
             new THaupt().setVisible(true);
         });*/
+        
+        if(args.length>0){
+            for(int i=0;i<args.length;i++){
+                String ag = args[i];                
+                switch(ag){
+                    case "-em":
+                        String str_file = "c:\\1.xml";
+                        if((i+1)< args.length){
+                            str_file = args[i+1];
+                        }
+                        FSaveExcel excel =new FSaveExcel(null, true);
+                        excel.saveModelToXmlFile(str_file);
+                        break;
+                }
+            }
+            return;
+        }
         
         java.awt.EventQueue.invokeLater(() -> {
             new THaupt().setVisible(true);

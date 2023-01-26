@@ -14,6 +14,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -30,9 +31,9 @@ public class IOMapExceptionArticle {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(obj);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -85,9 +86,9 @@ public class IOMapExceptionArticle {
         try  
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();            
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(mp);
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             log.error("Error " + e);

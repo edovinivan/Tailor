@@ -7,6 +7,7 @@ package org.example.util;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -23,10 +24,10 @@ public class IOHelpClass {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select pasport from get_pasport";
             p =  (Integer)sess.createSQLQuery(s).uniqueResult();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR GET" + e);

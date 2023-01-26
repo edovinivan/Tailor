@@ -17,6 +17,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -33,9 +34,9 @@ public class IOMapArticleColorJoin implements ioObject<MapArticleColorJoin, Inte
             obj.setMaparticlecolorjoin(null);
         try{            
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(obj);
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException ex){
             log.error(ex);
         }
@@ -68,9 +69,9 @@ public class IOMapArticleColorJoin implements ioObject<MapArticleColorJoin, Inte
         if(ma.getMaparticlecolorjoin()==0) return false;
         try{
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(ma);
-            sess.beginTransaction().commit();           
+            transaction.commit();           
         }catch(HibernateException he){
             log.error(he);
         }

@@ -31,6 +31,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -52,9 +53,9 @@ public class IOZadachaNastil {
             Session sess = HibernateUtil.getSessionFactory().openSession();  
             String sql = "update ZADACHANASTILPRINTDETALI set qty = "+ qty + " where ZADACHANASTILPRINTDETALI = " + znpd;
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -98,9 +99,9 @@ public class IOZadachaNastil {
         try  
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();  
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(z);
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            
@@ -187,15 +188,15 @@ public class IOZadachaNastil {
             
             //System.out.println("\n\n\n\n\n\n" + sql + "\n\n\n\n\n\n");
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
             // удалим рулон из задачи
             sql = "delete from ZADACHASCLADPRODUCT where SCLADPRODUCT =" + sn.getScladproduct();
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
             // добавим новые рулоны к задаче
             ZadachaScladProduct z1 = z;
@@ -430,9 +431,9 @@ public class IOZadachaNastil {
         try  
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();  
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(z);
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            
@@ -451,9 +452,9 @@ public class IOZadachaNastil {
         {
             String sql = "delete from ZADACHANASTILDOP where ZADACHANASTILDOP = " + d;
             Session sess = HibernateUtil.getSessionFactory().openSession();  
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            
@@ -550,9 +551,9 @@ public class IOZadachaNastil {
         
         String sql = "update ZADACHANASTIL set TIPPOLOTNA = " + zz.getZadachascladproduct().getScladproduct().getProduct().getProduct() + " where ZADACHANASTIL = " + zz.getZadachanastil().getZadachanastil();
         Session sess = HibernateUtil.getSessionFactory().openSession();
-        sess.beginTransaction();
+        Transaction transaction = sess.beginTransaction();
         sess.createSQLQuery(sql).executeUpdate();
-        sess.beginTransaction().commit();
+        transaction.commit();
         
         //создадим приход на склад Обрезков
         if(zn.getQtyend().signum()>0)
@@ -647,20 +648,20 @@ public class IOZadachaNastil {
             {
                 Session sess = HibernateUtil.getSessionFactory().openSession();
                 String sql = "delete from documentjournal where document = " + zn.getDreturn().getDocument();
-                sess.beginTransaction();
+                Transaction transaction = sess.beginTransaction();
                 sess.createSQLQuery(sql).executeUpdate();
-                sess.beginTransaction().commit();
+                transaction.commit();
                 
                 //удалим ссылку в настиле на докумен
                 sql = "update zadachanastil set dreturn = 0 where zadachanastil = " + zn.getZadachanastil();
-                sess.beginTransaction();
+                Transaction transaction1 = sess.beginTransaction();
                 sess.createSQLQuery(sql).executeUpdate();
-                sess.beginTransaction().commit();
+                transaction1.commit();
                 
                 sql = "delete from document where document = " + zn.getDreturn().getDocument();
-                sess.beginTransaction();
+                Transaction transaction2 = sess.beginTransaction();
                 sess.createSQLQuery(sql).executeUpdate();
-                sess.beginTransaction().commit();
+                transaction2.commit();
                 
                 zn.setDreturn(new Document(0));
             }
@@ -685,20 +686,20 @@ public class IOZadachaNastil {
                 IODocument.Document_open(zn.getDreturn().getDocument());
                 // удалим возвращаемые полотна
                 sql = "delete from documentjournal where document = " + zn.getDreturn().getDocument();
-                sess.beginTransaction();
+                Transaction transaction = sess.beginTransaction();
                 sess.createSQLQuery(sql).executeUpdate();
-                sess.beginTransaction().commit();
+                transaction.commit();
                 
                 //удалим ссылку в настиле на докумен
                 sql = "update zadachanastil set dreturn = 0 where zadachanastil = " + zn.getZadachanastil();
-                sess.beginTransaction();
+                Transaction transaction1 = sess.beginTransaction();
                 sess.createSQLQuery(sql).executeUpdate();
-                sess.beginTransaction().commit();
+                transaction1.commit();
                 
                 sql = "delete from document where document = " + zn.getDreturn().getDocument();
-                sess.beginTransaction();
+                Transaction transaction2 = sess.beginTransaction();
                 sess.createSQLQuery(sql).executeUpdate();
-                sess.beginTransaction().commit();
+                transaction2.commit();
                 
                 zn.setDreturn(new Document(0));
                 
@@ -778,9 +779,9 @@ public class IOZadachaNastil {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -913,21 +914,21 @@ public class IOZadachaNastil {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             // отметим товар из задачи как выбранный
             ZadachaScladProduct s = p.getZadachascladproduct();
             s.setNastil(1);
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             sess.saveOrUpdate(s);
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
             //отметим товар как тип полотна в настиле
             /*String sql = "update ZADACHANASTIL set TIPPOLOTNA = " + p.getZadachascladproduct().getScladproduct().getProduct().getProduct() + " where ZADACHANASTIL = " + p.getZadachanastil().getZadachanastil();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();*/
+            transaction.commit();*/
             
             //System.out.println("\n\n\n\n\n\n\n"+ sql + "\n\n\n\n\n");
             
@@ -958,14 +959,14 @@ public class IOZadachaNastil {
             s.setNastil(0);
             
             // удалим строку принадлежности товара к настилу
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(ls.get(0));
-            sess.beginTransaction().commit();
+            transaction.commit();
                         
             // сохраним изменение что товар свободен для выбора в настил
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             sess.saveOrUpdate(s);
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
         }catch(HibernateException e)
         {
@@ -985,33 +986,33 @@ public class IOZadachaNastil {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             // пометим товары из настила как не использованные
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update ZADACHASCLADPRODUCT set nastil = 0 where ZADACHASCLADPRODUCT in (select ZADACHASCLADPRODUCT from ZADACHANASTILPRODUCT where ZADACHANASTIL = " + zn + ")";
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             //удалим все товары из настила
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             s = "delete from ZADACHANASTILPRODUCT where ZADACHANASTIL = " + zn;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
             //удалим доп секции настила
-            sess.beginTransaction();
+            Transaction transaction2 = sess.beginTransaction();
             s = "delete from ZADACHANASTILDOP where ZADACHANASTIL = " + zn;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction2.commit();
             
             //удалим детали с принтом и вышивкой
-            sess.beginTransaction();
+            Transaction transaction3 = sess.beginTransaction();
             s = "delete from ZADACHANASTILPRINTDETALI where ZADACHANASTIL = " + zn;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction3.commit();
             
             //удалим настил
-            sess.beginTransaction();
+            Transaction transaction4 = sess.beginTransaction();
             s = "delete from ZADACHANASTIL where ZADACHANASTIL = " + zn;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction4.commit();
             
             
            

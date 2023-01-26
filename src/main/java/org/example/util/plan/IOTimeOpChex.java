@@ -25,6 +25,7 @@ import org.example.util.HelpClass;
 import org.example.util.HibernateUtil;
 import org.example.util.IOOperation;
 import org.example.util.IORabotnik;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -44,9 +45,9 @@ public class IOTimeOpChex {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -109,10 +110,10 @@ public class IOTimeOpChex {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from P_TIMEOPCHEX where P_TIMEOPCHEX = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -170,9 +171,9 @@ public class IOTimeOpChex {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -257,9 +258,9 @@ public class IOTimeOpChex {
         try  
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();            
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -281,9 +282,9 @@ public class IOTimeOpChex {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -326,9 +327,9 @@ public class IOTimeOpChex {
         try  
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.delete(pp);
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            

@@ -65,7 +65,7 @@
                             <headerType>gui</headerType>
                             <jar>target/Tailor-1.0-SNAPSHOT-jar-with-dependencies.jar</jar>
                             <outfile>target/Tailor.exe</outfile>
-                            <downloadUrl>www.jaca.com</downloadUrl>
+                            <downloadUrl>www.java.com</downloadUrl>
                             <classPath>
                                 <mainClass>org.example.Gui.THaupt</mainClass>
                             </classPath>
@@ -81,7 +81,7 @@
                                 <productVersion>1.0.0.0</productVersion>
                                 <txtProductVersion>1.0.0.0</txtProductVersion>
                                 <productName>Tailor</productName>
-                                <internalName>AppName</internalName>
+                                <internalName>Tailor</internalName>
                                 <originalFilename>Tailor.exe</originalFilename>
                             </versionInfo>
                         </configuration>
@@ -185,7 +185,8 @@
         <dependency>
             <groupId>org.firebirdsql.jdbc</groupId>
             <artifactId>jaybird</artifactId>
-            <version>2.2.15</version>
+            <!--<version>2.2.15</version>-->
+            <version>3.0.12</version>
          
         </dependency>
         
@@ -202,9 +203,6 @@
             <artifactId>launch4j-maven-plugin</artifactId>
             <version>2.2.0</version>
         </dependency>
-
-
-
         
     </dependencies>
 

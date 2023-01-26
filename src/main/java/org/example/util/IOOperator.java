@@ -16,6 +16,7 @@ import org.example.logic.RabotnikGruppa;
 import org.example.logic.SetupName;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
@@ -78,9 +79,9 @@ public class IOOperator {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -122,10 +123,10 @@ public class IOOperator {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update operator set del = 1 where operator = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -181,7 +182,7 @@ public class IOOperator {
         try  
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             int h;
             for(OperatorSetup o: ls)
             {
@@ -189,7 +190,7 @@ public class IOOperator {
                 o.setOperatorsetup(h==0?null:h);
                 sess.saveOrUpdate(o);
             }
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            

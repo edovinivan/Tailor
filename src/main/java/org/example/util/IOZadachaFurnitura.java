@@ -15,6 +15,7 @@ import org.example.logic.ZadachaProduct;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -89,17 +90,17 @@ public class IOZadachaFurnitura {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
             ScladProduct s = p.getScladproduct();
             s.setWidth(s.getWidth().subtract(d));
             s.setStatus(2);
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             sess.saveOrUpdate(s);
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
         }catch(HibernateException e)
         {
@@ -225,22 +226,22 @@ public class IOZadachaFurnitura {
             ZadachaFurnitura zf = IOZadachaFurnitura.getListZadachaFurnitura(0, p).get(0);
             ScladProduct sp = zf.getScladproduct();
             sp.setWidth(sp.getWidth().add(zf.getQty()));
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(sp);
-            sess.beginTransaction().commit();
+            transaction.commit();
             // удалим товары задачи
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             String s = "delete from zadachafurnitura where Zadachafurnitura = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();            
+            transaction1.commit();            
             
             //если строка склада нигде не используется то пометин её как новая
             if(sess.createCriteria(ZadachaFurnitura.class).add(Restrictions.eq("scladproduct", sp)).list().isEmpty())
             {
                 sp.setStatus(1);
-                sess.beginTransaction();
+                Transaction transaction2 = sess.beginTransaction();
                 sess.saveOrUpdate(sp);
-                sess.beginTransaction().commit();
+                transaction2.commit();
             }
                 
             

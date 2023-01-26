@@ -17,6 +17,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -37,9 +38,9 @@ public class IOZadachaKomplektovkaPretenzia {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -61,9 +62,9 @@ public class IOZadachaKomplektovkaPretenzia {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -201,9 +202,9 @@ public class IOZadachaKomplektovkaPretenzia {
         {
             
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();            
+            Transaction transaction = sess.beginTransaction();            
             sess.delete(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -282,7 +283,7 @@ public class IOZadachaKomplektovkaPretenzia {
     {
         try {
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             for (ZadachaKomplektovkaPretenziaRazmer z : getListZKPretenziaRazmer(zp)) 
             {
                 if(z.getQty()<=0)
@@ -290,7 +291,7 @@ public class IOZadachaKomplektovkaPretenzia {
                     sess.delete(z);
                 }                
             }
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("GER ERROR " + e);
         }
@@ -310,15 +311,15 @@ public class IOZadachaKomplektovkaPretenzia {
             return -1;
         try {
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             for (ZadachaKomplektovkaPretenziaRazmer zj : getListZKPretenziaRazmer(zkp)) 
             {
                  sess.delete(zj);
             }
-            sess.beginTransaction().commit();
-            sess.beginTransaction();
+            transaction.commit();
+            Transaction transaction1 = sess.beginTransaction();
             sess.delete(z);
-            sess.beginTransaction().commit();
+            transaction1.commit();
         } catch (HibernateException e) {
             System.out.println("GER ERROR " + e);
             return -2;

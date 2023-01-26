@@ -12,6 +12,7 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -25,11 +26,11 @@ public class IOPrognoz {
         {
             SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select res from  GET_DATA_FOR_PROGNOZ("+model+", '"+sf.format(d1)+"', '"+sf.format(d2)+"', '"+sf.format(d3)+"')";            
             //System.out.println(s);
             ls = sess.createSQLQuery(s).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR close document" + e);
@@ -55,11 +56,11 @@ public class IOPrognoz {
         {
             SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select res from  GET_DATA_FOR_PROGNOZ1("+model+", '"+sf.format(d1)+"', '"+sf.format(d2)+"', '"+sf.format(d3)+"', " + yar+ " )";            
             //System.out.println(s);
             ls = sess.createSQLQuery(s).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR close document" + e);
@@ -77,11 +78,11 @@ public class IOPrognoz {
         {
             SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select res from  GET_DATA_FOR_PROGNOZ1_FOR_STR("+model+", " + color + ", " + razmer + ", '" +sf.format(d1)+"', '"+sf.format(d2)+"')";            
             //System.out.println(s);
             res = (Integer)sess.createSQLQuery(s).uniqueResult();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR close document" + e);
@@ -101,7 +102,7 @@ public class IOPrognoz {
         {
             SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select\n"
                     + " cast(coalesce(sum(-qty),0) as integer) || '<!>' || 'Продажи' || '<!>' || dat  \n"
                     + "from(\n"
@@ -115,7 +116,7 @@ public class IOPrognoz {
                     + "group by dat";
             //System.out.println(s);
             ls = sess.createSQLQuery(s).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR close document" + e);
@@ -133,7 +134,7 @@ public class IOPrognoz {
         {
             SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
            
             String s = "select\n"
                     + " cast(coalesce(sum(-qty),0) as integer) || '<!>' || 'Продажи' || '<!>' || dat  \n"
@@ -148,7 +149,7 @@ public class IOPrognoz {
                     + "group by dat";
             //System.out.println(s);
             ls = sess.createSQLQuery(s).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR close document" + e);
@@ -167,7 +168,7 @@ public class IOPrognoz {
         {
             SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
            
             
             String s = "select\n"
@@ -186,9 +187,9 @@ public class IOPrognoz {
                     + "  group by dat, colors";                              
                         
             ls = sess.createSQLQuery(s).list();                                                
-            sess.beginTransaction().commit();
+            transaction.commit();
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
            
             
             s = "select\n"
@@ -203,7 +204,7 @@ public class IOPrognoz {
                     + "  where j.article = "+model+" and j.dates between '" + sf.format(d1) + "' and '" + sf.format(d2) + "' and qty < 0) group by dat";                            
                         
             ls1 = sess.createSQLQuery(s).list();                                                
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
             ls.addAll(ls1);
             

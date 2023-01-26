@@ -14,6 +14,7 @@ import java.util.Date;
 import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -59,9 +60,9 @@ public class IOSaveData {
         {
             
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();     
+            Transaction transaction = sess.beginTransaction();     
             ls = (List<String>)sess.createSQLQuery(sql).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR get data" + e);
@@ -110,9 +111,9 @@ public class IOSaveData {
         {
             
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();     
+            Transaction transaction = sess.beginTransaction();     
             ls = (List<String>)sess.createSQLQuery(sql).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR get data" + e);
@@ -169,9 +170,9 @@ public class IOSaveData {
         {
             
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();     
+            Transaction transaction = sess.beginTransaction();     
             ls = (List<String>)sess.createSQLQuery(sql).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR get data" + e);

@@ -347,9 +347,8 @@ public class FSaveExcel extends javax.swing.JDialog {
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        new File("d:\\123.xml").delete();
+    public void saveModelToXmlFile(String str_file){
+        new File(str_file).delete();
         XMLForWtite();
         Element e1 = doc.createElement("Models");
         Element e2, e3, e4, e5, e6, e7, e8, e9;
@@ -659,8 +658,12 @@ public class FSaveExcel extends javax.swing.JDialog {
             //    break;
         }
         doc.appendChild(e1);
-        writeXLMToFile("d:\\123.xml");
-        
+        writeXLMToFile(str_file);
+    }
+    
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        saveModelToXmlFile("c:\\1.xml");
         System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
 

@@ -26,6 +26,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -182,7 +183,7 @@ public class IOScladProduct {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            Transaction tr =  sess.beginTransaction();
+            Transaction tr = sess.beginTransaction();
             String s = "";
             if(vid == 1)
             {
@@ -285,9 +286,9 @@ public class IOScladProduct {
         try  
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(sp);
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            

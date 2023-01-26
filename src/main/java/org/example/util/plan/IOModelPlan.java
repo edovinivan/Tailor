@@ -24,6 +24,7 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HelpClass;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -44,9 +45,9 @@ public class IOModelPlan {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -176,26 +177,26 @@ public class IOModelPlan {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
             //удалим строку в заголовке задач
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from P_MODELPLANHAUPTJOURNAL where P_MODELPLAN = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             s = "delete from P_MODELPLANRAZMERI where P_MODELPLAN = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
-            sess.beginTransaction();
+            Transaction transaction2 = sess.beginTransaction();
             s = "delete from P_MODELPLANPRODUCT where P_MODELPLAN = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction2.commit();
             
-            sess.beginTransaction();
+            Transaction transaction3 = sess.beginTransaction();
             s = "delete from P_MODELPLAN where P_MODELPLAN = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction3.commit();
             
             //проверим. Если удалили все планы из глобальной задачи, то удалим заголовок глобальной задачи
             
@@ -221,10 +222,10 @@ public class IOModelPlan {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
                         
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from P_MODELPLANPRODUCT where P_MODELPLAN = " + m;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -246,10 +247,10 @@ public class IOModelPlan {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
                         
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from P_MODELPLANRAZMERI where P_MODELPLAN = " + m;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -270,13 +271,13 @@ public class IOModelPlan {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = " select  og.name || '<!>' || sum(mo.times * "+q+")   from modeloperation mo\n" +
                        " inner join operation o on o.operation = mo.operation\n" +
                        " inner join operationgruppa og on o.operationgruppa = og.operationgruppa\n" +
                        " where mo.model = "+m+" group by og.name";            
             ls = sess.createSQLQuery(s).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR close document" + e);
@@ -297,7 +298,7 @@ public class IOModelPlan {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select rg1.name || '<!>' || og1.name || '<!>' || coalesce(pl.tim,0)  || '<!>' || pt.times\n"
                     + "from p_timeopchex pt\n"
                     + "left join (\n"
@@ -318,7 +319,7 @@ public class IOModelPlan {
                     + " inner join rabotnikgruppa rg1 on pt.chex = rg1.rabotnikgruppa\n"
                     + " order by  rg1.name, og1.name";            
             ls = sess.createSQLQuery(s).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR close document" + e);
@@ -413,9 +414,9 @@ public class IOModelPlan {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -494,9 +495,9 @@ public class IOModelPlan {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {

@@ -27,6 +27,7 @@ import org.example.logic.RabotnikGruppa;
 import org.example.logic.Zadacha;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
@@ -61,9 +62,9 @@ public class IOModel {
         {
             
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             l = (Integer)sess.createSQLQuery(sql).uniqueResult();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return true;
@@ -252,10 +253,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update Model set status = "+st+" where Model = " + mod;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -274,10 +275,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update Model set harticle = '"+st+"' where Model = " + mod;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -300,9 +301,9 @@ public class IOModel {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -511,10 +512,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update Model set del = 1 where Model = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -536,9 +537,9 @@ public class IOModel {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -604,10 +605,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from modelproduct where modelproduct = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -629,9 +630,9 @@ public class IOModel {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -675,10 +676,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from ModelPrintDetali where ModelPrintDetali = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -701,9 +702,9 @@ public class IOModel {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -746,10 +747,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from MODELKTEEVAYA where MODELKTEEVAYA = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -771,9 +772,9 @@ public class IOModel {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -816,10 +817,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from ModelSablon where ModelSablon = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -841,9 +842,9 @@ public class IOModel {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -918,15 +919,15 @@ public class IOModel {
             
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from ModelFiles where ModelFiles = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
-            sess.beginTransaction();
+            Transaction transaction2 = sess.beginTransaction();
             s = "delete from Files where Files = " + mf.getFiles().getFiles();
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction2.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -948,15 +949,15 @@ public class IOModel {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update modelfiles set haupt = 0 where Model = " + model;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             s = "update modelfiles set haupt = 1 where modelFiles = " + fot;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -987,9 +988,9 @@ public class IOModel {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -1007,10 +1008,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            //sess.beginTransaction();
+            //Transaction transaction = sess.beginTransaction();
             String s = "select coalesce(max(nom),0)+1 from modeloperation  where model = " + m;
             l = ((BigInteger)sess.createSQLQuery(s).uniqueResult()).intValue();
-            //sess.beginTransaction().commit();
+            //transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
         }        
@@ -1028,10 +1029,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            //sess.beginTransaction();
+            //Transaction transaction = sess.beginTransaction();
             String s = "select coalesce(sum(mo.times*mo.qty*r.summa/3600),0) from modeloperation mo inner join razrad r on r.razrad = mo.razrad where mo.model =" + m;
             l = (BigDecimal)sess.createSQLQuery(s).uniqueResult();
-            //sess.beginTransaction().commit();
+            //transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             l = new BigDecimal(0);
@@ -1072,10 +1073,10 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from ModelOperation where ModelOperation = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -1109,9 +1110,9 @@ public class IOModel {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(m);
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR STE11" + e);
             

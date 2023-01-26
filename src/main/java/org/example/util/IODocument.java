@@ -22,6 +22,7 @@ import org.example.logic.Sclad;
 import org.example.logic.ScladProduct;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
@@ -42,10 +43,10 @@ public class IODocument {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update document set status = " + st + " where document = " + doc;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -112,25 +113,25 @@ public class IODocument {
         try  
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(dr);
-            sess.beginTransaction().commit();
+            transaction.commit();
             // пометим на складе что товар удален
             if(dr.getScladproduct().getVid()==1)
             {
                 ScladProduct sp = IOScladProduct.getScladProduct(dr.getScladproduct().getScladproduct());
                 sp.setStatus(2);
-                sess.beginTransaction();
+                Transaction transaction2 = sess.beginTransaction();
                 sess.saveOrUpdate(sp);
-                sess.beginTransaction().commit();
+                transaction2.commit();
             }
             else // если фурнитура
             {
                 ScladProduct sp = IOScladProduct.getScladProduct(dr.getScladproduct().getScladproduct());
                 sp.setWidth(sp.getWidth().subtract(dr.getQty()));
-                sess.beginTransaction();
+                Transaction transaction1 = sess.beginTransaction();
                 sess.saveOrUpdate(sp);
-                sess.beginTransaction().commit();
+                transaction1.commit();
             }
             
         }catch(HibernateException e)
@@ -158,13 +159,13 @@ public class IODocument {
                 sp.setStatus(1);
             else
                 sp.setWidth(sp.getWidth().add(dr.getQty()));
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(sp);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
-            sess.beginTransaction();
+            Transaction transaction2 = sess.beginTransaction();
             sess.delete(dr);
-            sess.beginTransaction().commit();
+            transaction2.commit();
             
         }catch(HibernateException e)
         {
@@ -255,9 +256,9 @@ public class IODocument {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -301,9 +302,9 @@ public class IODocument {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -344,10 +345,10 @@ public class IODocument {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select result from DOCUMENT_CLOSE("+doc+")";
             p =  new BigInteger(sess.createSQLQuery(s).uniqueResult().toString()).intValue();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR close document" + e);
@@ -370,15 +371,15 @@ public class IODocument {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update documentjournal set del = 1 where document = " + doc;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             s = "update document set del = 1 where document = " + doc;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -397,10 +398,10 @@ public class IODocument {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from documentjournal where documentjournal = " + dj;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -448,10 +449,10 @@ public class IODocument {
             if(dr>0)
                 return -3;
             //System.out.println("3");
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select result from DOCUMENT_OPEN("+doc+")";
             p =  new BigInteger(sess.createSQLQuery(s).uniqueResult().toString()).intValue();
-            sess.beginTransaction().commit();
+            transaction.commit();
             //System.out.println("4");
         } catch (HibernateException e) {
             System.out.println("ERROR open document" + e);

@@ -15,6 +15,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -34,25 +35,25 @@ public class IORazmeri {
         {
             if(p.getNom()==0)
             {
-                sess.beginTransaction();
+                Transaction transaction = sess.beginTransaction();
                 String s = "select coalesce(max(nom),0)+1 from razmeri where del = 0 and razmerigruppa = " + p.getRazmerigruppa().getRazmerigruppa();
                 int mn = ((BigInteger)sess.createSQLQuery(s).uniqueResult()).intValue();
-                sess.beginTransaction().commit();
+                transaction.commit();
                 p.setNom(mn);
             }
             
             if(p.getRazmeri()== 0)
             {
-                sess.beginTransaction();
+                Transaction transaction = sess.beginTransaction();
                 String s = "update Razmeri set nom = nom + 1 where Razmerigruppa = " + p.getRazmerigruppa().getRazmerigruppa() + " and nom >=" + p.getNom() + " and del = 0";
                 sess.createSQLQuery(s).executeUpdate();
-                sess.beginTransaction().commit();
+                transaction.commit();
                 p.setRazmeri(null);
             }
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -154,16 +155,16 @@ public class IORazmeri {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update Razmeri set nom = nom - 1 where nom > " + r.getNom() + " and del = 0" ;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             s = "update Razmeri set del = 1 where Razmeri = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -185,9 +186,9 @@ public class IORazmeri {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -229,10 +230,10 @@ public class IORazmeri {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update RazmeriGruppa set del = 1 where RazmeriGruppa = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;
@@ -257,10 +258,10 @@ public class IORazmeri {
             // если нет 
             if(ls.isEmpty())
                 return false;
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "update RazmeriGruppa set del = 1 where RazmeriGruppa = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;

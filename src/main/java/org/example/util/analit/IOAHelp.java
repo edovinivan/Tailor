@@ -20,6 +20,7 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HibernateUtil;
 import org.example.util.IORazmeri;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -40,9 +41,9 @@ public class IOAHelp {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(ag);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -128,9 +129,9 @@ public class IOAHelp {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(ag);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -216,9 +217,9 @@ public class IOAHelp {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(ag);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -304,9 +305,9 @@ public class IOAHelp {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(ag);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -393,9 +394,9 @@ public class IOAHelp {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(ag);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -480,9 +481,9 @@ public class IOAHelp {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(ag);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -569,9 +570,9 @@ public class IOAHelp {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();
             String sql = "update A_COLOR set ID_COLOR = " + color + "where A_COLOR = " + aColor;
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
             ls = sess.createCriteria(aColor.class).add(Restrictions.eq("a_color", aColor)).list();                        
             
@@ -593,9 +594,9 @@ public class IOAHelp {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();
             String sql = "update A_RAZMER set RAZMER = " + razmer + "where A_RAZMER = " + aRazmer;
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -636,9 +637,9 @@ public class IOAHelp {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();
             String sql = "update A_ARTICLE set ID_MODEL = " + model + "where A_ARTICLE = " + aArticle;
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            
@@ -659,9 +660,9 @@ public class IOAHelp {
         {
             Session sess = HibernateUtil.getSessionFactory().openSession();
             String sql = "update RAZMERI set A_RAZMER = " + aRazmer + "where RAZMERI = " + razmer;
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         }catch(HibernateException e)
         {
             System.out.println("GER ERROR " + e);            

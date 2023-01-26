@@ -12,6 +12,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -31,9 +32,9 @@ public class IOReport {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -97,15 +98,15 @@ public class IOReport {
             Report r = getReport(p);
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from Report where Report = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
             
-            sess.beginTransaction();
+            Transaction transaction1 = sess.beginTransaction();
             s = "delete from files where files = " + r.getFiles().getFiles();
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
             
         } catch (HibernateException e) {
@@ -128,10 +129,10 @@ public class IOReport {
             
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from T_MODELCALC";
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();        
+            transaction.commit();        
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
@@ -152,9 +153,9 @@ public class IOReport {
             String sql = "insert into T_MODELCALC (MODEL, COU) values ("+m+", "+c+")";
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
             
-            sess.beginTransaction();            
+            Transaction transaction = sess.beginTransaction();            
             sess.createSQLQuery(sql).executeUpdate();
-            sess.beginTransaction().commit();        
+            transaction.commit();        
             
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);

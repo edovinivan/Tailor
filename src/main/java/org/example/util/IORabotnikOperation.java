@@ -19,6 +19,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -38,14 +39,14 @@ public class IORabotnikOperation {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s;
             if(o ==0 )
                 s = "select coalesce(sum(zkr.qty),0) from zadachakomplektovkarazmeri zkr where zkr.zadachakomplektovka = " + m;
             else
                 s = "select coalesce(sum(rro.qty),0) from rabotnikoperation rro where rro.zadachakomplektovka = "+m+" and rro.operation = "+o + " and rro.rabotnikoperation != " + ro;
             h = (BigInteger)sess.createSQLQuery(s).uniqueResult();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return 0;
@@ -85,9 +86,9 @@ public class IORabotnikOperation {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(p);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -208,10 +209,10 @@ public class IORabotnikOperation {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "delete from RabotnikOperation where RabotnikOperation = " + p;
             sess.createSQLQuery(s).executeUpdate();
-            sess.beginTransaction().commit();
+            transaction.commit();
         } catch (HibernateException e) {
             System.out.println("ERROR DEL" + e);
             return false;

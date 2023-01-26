@@ -36,6 +36,7 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.example.util.HelpClass;
 import org.example.util.HibernateUtil;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -163,16 +164,16 @@ public class IOAnalitika {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             for(tAJ t :ag)
             {
                 t.setTaj(null);
                 sess.save(t);
             }
-            sess.beginTransaction().commit();
-            sess.beginTransaction();
+            transaction.commit();
+            Transaction transaction1 = sess.beginTransaction();
             sess.createSQLQuery("execute procedure execute_load_sale").executeUpdate();
-            sess.beginTransaction().commit();
+            transaction1.commit();
             
         }catch(HibernateException e)
         {
@@ -193,9 +194,9 @@ public class IOAnalitika {
         Session sess = HibernateUtil.getSessionFactory().openSession();
         try 
         {
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             sess.saveOrUpdate(ag);
-            sess.beginTransaction().commit();
+            transaction.commit();
             
         }catch(HibernateException e)
         {
@@ -296,11 +297,11 @@ public class IOAnalitika {
         {
             SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select j.dates || '#' || -sum(j.qty) from a_journal j where j.article =  "+article+" and j.qty < 0 and j.dates between '"+sf.format(d1)+"' and '"+sf.format(d2)+"'  group by j.dates";
             
             ls = sess.createSQLQuery(s).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR close document" + e);
@@ -322,11 +323,11 @@ public class IOAnalitika {
         {
             SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd");
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select MONTS from GET_ARTICLE_FOR_PERIOD('"+sf.format(d1)+"', '"+sf.format(d2)+"')";
             
             ls = sess.createSQLQuery(s).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR get data" + e);
@@ -347,7 +348,7 @@ public class IOAnalitika {
         try 
         {
             Session sess = HibernateUtil.getSessionFactory().openSession(); 
-            sess.beginTransaction();
+            Transaction transaction = sess.beginTransaction();
             String s = "select\n" +
 "  gc.CHEX || '<!>' || gc.CHEXNAME || '<!>' || gc.GRUPPA || '<!>' || gc.GRUPPANAME  || '<!>' || gc.QOST || '<!>' ||   pt.times  || '<!>' ||   coalesce(mt.ot, 0)\n" +
 "from GET_TIME_OF_CEX gc\n" +
@@ -364,7 +365,7 @@ public class IOAnalitika {
 " )  mt on mt.og = gc.gruppa";
             
             ls = sess.createSQLQuery(s).list();
-            sess.beginTransaction().commit();
+            transaction.commit();
             sess.close();            
         } catch (HibernateException e) {
             System.out.println("ERROR get data3" + e);
