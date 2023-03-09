@@ -196,4 +196,54 @@ public class IOSaveData {
         return true;
     }
     
+    /**
+     * Сохранить все маршруты в цехе
+     * @param file
+     * @return 
+     */
+    public static boolean saveMarhrutAll(String file)
+    {
+        String sql;
+        sql = "select\n" +
+"(case status when 3 then 'отправлена в швейный цех' when 4 then 'принята в швейном цехе' else 'нет' end) || ';' ||\n" +
+"chexname || ';' ||\n" +
+"article || ';' ||\n" +
+"sum(qty)\n" +
+"\n" +
+"from VIEWMARSHRUT\n" +
+"where status in (3,4)\n" +
+"group by status, chexname, article";
+        
+        List<String> ls = null;
+        
+        try 
+        {
+            
+            Session sess = HibernateUtil.getSessionFactory().openSession(); 
+            Transaction transaction = sess.beginTransaction();     
+            ls = (List<String>)sess.createSQLQuery(sql).list();
+            transaction.commit();
+            sess.close();            
+        } catch (HibernateException e) {
+            System.out.println("ERROR get data" + e);
+        }
+        
+        if(ls.isEmpty())
+            return false;
+        try (PrintWriter outs = new PrintWriter(new OutputStreamWriter(new FileOutputStream(file+".csv", false), "cp1251"), false)) {
+            outs.println("Статус;Цех;Артикул;Кол-во");
+            for(String s: ls)
+            {
+                outs.println(s);
+            }
+            
+            outs.close();
+            
+        } catch (UnsupportedEncodingException | FileNotFoundException ex) {
+                    System.out.println("ERROR " + ex);
+                }
+        
+        return true;
+    }
+    
 }

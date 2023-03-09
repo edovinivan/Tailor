@@ -89,6 +89,8 @@ public class FSaveExcel extends javax.swing.JDialog {
         jButton4 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Выгрузка данных");
@@ -161,6 +163,16 @@ public class FSaveExcel extends javax.swing.JDialog {
             }
         });
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel7.setText("Маршруты отправленные и принятые в цех");
+
+        jButton6.setText("Выгрузить");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -183,13 +195,15 @@ public class FSaveExcel extends javax.swing.JDialog {
                             .addComponent(jLabel1)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
-                            .addComponent(jLabel6))
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -218,12 +232,17 @@ public class FSaveExcel extends javax.swing.JDialog {
                     .addComponent(jLabel5)
                     .addComponent(jButton3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jButton5))
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jButton5))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel7))
+                    .addComponent(jButton6))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();
@@ -653,8 +672,8 @@ public class FSaveExcel extends javax.swing.JDialog {
             e1.appendChild(e2);                     
             
             
-            i++;
-            //if(i>5)
+            //i++;
+            //if(i>15)
             //    break;
         }
         doc.appendChild(e1);
@@ -663,7 +682,11 @@ public class FSaveExcel extends javax.swing.JDialog {
     
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        saveModelToXmlFile("c:\\1.xml");
+        File fl = new File("c:\\public\\tailor");
+        if(!fl.canExecute()){
+            fl.mkdirs();
+        }
+        saveModelToXmlFile("c:\\public\\tailor\\222.xml");
         System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -684,6 +707,15 @@ public class FSaveExcel extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        JFileChooser jf = new JFileChooser();        
+        if(jf.showSaveDialog(this) == JFileChooser.APPROVE_OPTION)
+        {
+            IOSaveData.saveMarhrutAll(jf.getSelectedFile().getAbsolutePath());
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * Запись xml в файл
      * @param file_name 
@@ -692,12 +724,15 @@ public class FSaveExcel extends javax.swing.JDialog {
     {
         try {
             DOMSource source = new DOMSource(doc);
-            FileWriter writer = new FileWriter(new File(file_name));
-            StreamResult result = new StreamResult(writer);
+            //FileWriter writer = new FileWriter(new File(file_name));
+            FileOutputStream fileOutputStream = new FileOutputStream(new File(file_name));
+            //StreamResult result = new StreamResult(writer);
+            StreamResult result = new StreamResult(fileOutputStream);
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             transformer.setOutputProperty(OutputKeys.METHOD, "xml");
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
             
             transformer.transform(source, result);
         } catch (IOException ex) {
@@ -770,6 +805,7 @@ public class FSaveExcel extends javax.swing.JDialog {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JCheckBox jCheckBox1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
@@ -779,5 +815,6 @@ public class FSaveExcel extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

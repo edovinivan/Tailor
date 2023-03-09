@@ -3076,7 +3076,7 @@ public class THaupt extends javax.swing.JFrame {
                         break;
                 }
             }
-            return;
+            System.exit(0);
         }
         
         java.awt.EventQueue.invokeLater(() -> {
