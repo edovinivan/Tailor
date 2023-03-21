@@ -32,6 +32,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import org.example.Gui.Form.Helps.FAddName;
 import org.example.logic.Files;
 import org.example.logic.Kleevaya;
 import org.example.logic.Model;
@@ -202,6 +203,7 @@ public class FModel extends javax.swing.JDialog {
         jButton21 = new javax.swing.JButton();
         jButton27 = new javax.swing.JButton();
         jButton29 = new javax.swing.JButton();
+        jButton37 = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTable6 = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
@@ -322,7 +324,6 @@ public class FModel extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
@@ -378,7 +379,6 @@ public class FModel extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("Материалы", jPanel8);
 
-        jToolBar2.setFloatable(false);
         jToolBar2.setRollover(true);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
@@ -457,7 +457,6 @@ public class FModel extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("Детали с вышивкой", jPanel5);
 
-        jToolBar3.setFloatable(false);
         jToolBar3.setRollover(true);
 
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
@@ -536,7 +535,6 @@ public class FModel extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("Детали с принтом", jPanel6);
 
-        jToolBar4.setFloatable(false);
         jToolBar4.setRollover(true);
 
         jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
@@ -616,7 +614,6 @@ public class FModel extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("Фурнитура", jPanel7);
 
-        jToolBar5.setFloatable(false);
         jToolBar5.setRollover(true);
 
         jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
@@ -722,7 +719,6 @@ public class FModel extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("Шаблоны", jPanel3);
 
-        jToolBar6.setFloatable(false);
         jToolBar6.setRollover(true);
 
         jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
@@ -787,6 +783,19 @@ public class FModel extends javax.swing.JDialog {
         });
         jToolBar6.add(jButton29);
 
+        jButton37.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/need.png"))); // NOI18N
+        jButton37.setText("Цвет");
+        jButton37.setFocusable(false);
+        jButton37.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jButton37.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton37ActionPerformed(evt);
+            }
+        });
+        jToolBar6.add(jButton37);
+
         jTable6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jTable6.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -828,7 +837,6 @@ public class FModel extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("Клеевая", jPanel4);
 
-        jToolBar7.setFloatable(false);
         jToolBar7.setRollover(true);
 
         jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
@@ -962,7 +970,6 @@ public class FModel extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("Цеха", jPanel9);
 
-        jToolBar8.setFloatable(false);
         jToolBar8.setRollover(true);
 
         jButton33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
@@ -1716,13 +1723,14 @@ public class FModel extends javax.swing.JDialog {
         // TODO add your handling code here:
         if(jTable6.getColumnCount()<=0)
             return;
-        int h = (jTable6.getWidth()-60);
+        int h = (jTable6.getWidth()-60)/2;
         
         jTable6.getColumnModel().getColumn(0).setPreferredWidth(0);
         jTable6.getColumnModel().getColumn(0).setMaxWidth(0);
         jTable6.getColumnModel().getColumn(0).setMinWidth(0);        
         jTable6.getColumnModel().getColumn(1).setPreferredWidth(h);                
         jTable6.getColumnModel().getColumn(2).setPreferredWidth(60);        
+        jTable6.getColumnModel().getColumn(3).setPreferredWidth(h);        
     }//GEN-LAST:event_jTable6ComponentResized
 
     /**
@@ -2206,6 +2214,27 @@ public class FModel extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_jButton36ActionPerformed
 
+    // цвет клеевой
+    private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
+        // TODO add your handling code here:        
+        
+        int h = jTable6.getSelectedRow();
+        if(h==-1) return;
+        ModelKleevaya mk = IOModel.getListModelKleevaya(0, (int)jTable6.getValueAt(h, 0)).get(0);
+        
+        FAddName fa = new FAddName(null, true, mk.getColor());
+        fa.setVisible(true);
+        if(fa.getResult()){
+            mk.setColor(fa.getText());
+            IOModel.setModelKleevaya(mk);
+            modelKleevaya.setData(model.getModel());
+            jTable6.setRowSelectionInterval(h, h);            
+        }
+        
+        
+        
+    }//GEN-LAST:event_jButton37ActionPerformed
+
     /**
      * Поместить фото в панель
      */    
@@ -2324,6 +2353,7 @@ public class FModel extends javax.swing.JDialog {
     private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton36;
+    private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -2477,6 +2507,7 @@ public class FModel extends javax.swing.JDialog {
             jButton31.setEnabled(false);  
             jButton33.setEnabled(false);  
             jButton35.setEnabled(false);  
+            jButton37.setEnabled(false);  
             modelChex.stop_edit();
         }
     }

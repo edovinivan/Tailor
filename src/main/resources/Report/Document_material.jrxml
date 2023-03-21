@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="570" pageHeight="822" columnWidth="570" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="66a1df0b-120a-4b6e-851e-7e828c99a2c8">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="WebFarma"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="DOC" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select
+  d.nomer,
+  d.dates,
+  a.name as agent,
+  c.name as color ,
+  p.name as product,
+  d.vid,
+  dj.price,
+  dj.light,
+  dj.ves,
+  dj.width,
+  dj.documentjournal,
+  dj.ves*dj.price as summas
+from documentjournal dj
+inner join document d on d.document = dj.document
+inner join product p on p.product = dj.product
+inner join color c on c.color = dj.color
+inner join agent a on a.agent = d.agent
+where d.document = $P{DOC} and dj.del = 0 order by p.name]]>
+	</queryString>
+	<field name="NOMER" class="java.lang.String">
+		<fieldDescription><![CDATA[РЅРѕРјРµСЂ]]></fieldDescription>
+	</field>
+	<field name="DATES" class="java.sql.Date">
+		<fieldDescription><![CDATA[РґР°С‚Р°]]></fieldDescription>
+	</field>
+	<field name="AGENT" class="java.lang.String"/>
+	<field name="COLOR" class="java.lang.String"/>
+	<field name="PRODUCT" class="java.lang.String"/>
+	<field name="VID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[1 - РґРѕРєСѓРјРµРЅС‚С‹ РїРѕР»РѕС‚РЅР°
+2 - РґРѕРєСѓРјРµРЅС‚С‹ С„СѓСЂРЅРёС‚СѓСЂС‹
+3 - РґРѕРєСѓРјРµРЅС‚С‹ РІРѕР·РІСЂР°С‚Р° РЅР° СЃРєР»Р°Рґ РїРѕСЃР»Рµ РЅР°СЃС‚РёР»Р°]]></fieldDescription>
+	</field>
+	<field name="PRICE" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[С†РµРЅР°]]></fieldDescription>
+	</field>
+	<field name="LIGHT" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[РґР»РёРЅР° Рј]]></fieldDescription>
+	</field>
+	<field name="VES" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[РІРµСЃ РєРі]]></fieldDescription>
+	</field>
+	<field name="WIDTH" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[С€РёСЂРёРЅР° СЃРј   РёР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РґР»СЏ С„СѓСЂРЅРёС‚СѓСЂС‹]]></fieldDescription>
+	</field>
+	<field name="DOCUMENTJOURNAL" class="java.lang.Integer"/>
+	<field name="SUMMAS" class="java.math.BigDecimal"/>
+	<variable name="VES_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{VES}]]></variableExpression>
+	</variable>
+	<variable name="PRICE_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{PRICE}*$F{VES}]]></variableExpression>
+	</variable>
+	<variable name="lines" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{DOCUMENTJOURNAL}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="62">
+			<staticText>
+				<reportElement x="56" y="18" width="59" height="20" uuid="10c5a3e3-f059-4244-933e-07805960e68f"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Документ №]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="115" y="18" width="100" height="20" uuid="36135e74-6582-4480-a6fa-d675db184284"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOMER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="215" y="18" width="25" height="20" uuid="d019a6fa-b4c5-4bb0-b97a-a198bfd37c6a"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[от]]></text>
+			</staticText>
+			<textField pattern="dd-MM-yyyy">
+				<reportElement x="240" y="18" width="100" height="20" uuid="c24bed9b-9138-4c4d-8f9b-25e099325a6d"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="56" y="38" width="100" height="20" uuid="ac20161a-a7e9-4aff-bbdf-4f7d5ba8125a"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Поставщик]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="38" width="184" height="20" uuid="4a6ae24d-ca9e-4f34-8812-5955e1e5dd17"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AGENT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18">
+			<staticText>
+				<reportElement x="41" y="0" width="199" height="18" uuid="7d754a23-ee09-4a02-b844-969feb5d7eb8"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Материал]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="100" height="18" uuid="ac81d72d-d6d8-4396-a2d8-15121ec2586b"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Цвет]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="0" width="70" height="18" uuid="9ab389c0-90cd-49db-ac1d-fb9545f8f7a2"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Цена]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="70" height="18" uuid="d233a693-ca48-4edd-8945-88267d78a1b8"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Вес]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="21" height="18" uuid="27d27df7-4f3c-4cb8-bc67-8a4264ac3897"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[№]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="70" height="18" uuid="bd26d49e-c1ee-4d86-a446-b6ae452de67e"/>
+				<box leftPadding="1" rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Сумма]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField>
+				<reportElement x="41" y="0" width="199" height="14" uuid="68630cb1-f9d6-48de-b395-df7a9a58ba6e"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="100" height="14" uuid="cec8d223-a428-4e13-9011-ec5b62e40aac"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{COLOR}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="340" y="0" width="70" height="14" uuid="4411cf1b-f932-4ebd-9cad-9ec5d2886a73"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRICE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="410" y="0" width="70" height="14" uuid="703fd23c-19b1-492c-af57-247d3ea3a170"/>
+				<box leftPadding="2" rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="21" height="14" uuid="e1e5295a-56c6-47be-b0fd-02df74e8c2df"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{lines}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="480" y="0" width="70" height="14" uuid="73d985f0-a41e-448c-a1ed-5e06c792c611"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUMMAS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="18"/>
+	</pageFooter>
+	<summary>
+		<band height="20">
+			<textField pattern="#,##0.00">
+				<reportElement x="410" y="0" width="70" height="20" uuid="d6a7b4f9-473f-4b28-bdb5-1929e236a673"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VES_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="480" y="0" width="70" height="20" uuid="d281ae5d-4487-4b1c-b871-27acea3d941b"/>
+				<box rightPadding="2">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PRICE_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

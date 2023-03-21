@@ -23,6 +23,7 @@ public class ModelKleevayaModel extends AbstractTableModel{
         listCol.add("№");
         listCol.add("Клеевая");        
         listCol.add("Кол-во");        
+        listCol.add("Цвет");        
     }   
     
     @Override
@@ -45,6 +46,8 @@ public class ModelKleevayaModel extends AbstractTableModel{
                 return list.get(rowIndex).getKleevaya().getName();
             case 2: 
                 return list.get(rowIndex).getQty();    
+            case 3: 
+                return list.get(rowIndex).getColor();        
         }
         return null;
     }

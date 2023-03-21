@@ -37,8 +37,21 @@ public class ModelKleevaya implements Serializable {
     @JoinColumn(name = "MODEL")
     Model model;
     
-    @Column(name = "QTY")
+    @Column(name = "QTY")            
     Integer qty;
+    
+    @Column(name = "COLOR")
+    String color;
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
+    
 
     public Integer getQty() {
         return qty;

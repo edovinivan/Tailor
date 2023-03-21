@@ -1,0 +1,1700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="570" leftMargin="15" rightMargin="10" topMargin="10" bottomMargin="10" uuid="66a1df0b-120a-4b6e-851e-7e828c99a2c8">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="DOC" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[2]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+  j.doc_returnf_journal as  journal,
+  p.name|| '('||c.name||')'  as product ,
+  d.nomer as docname,
+  d.dates,
+  a.name as agent,
+  'Без НДС' as nds,
+  sp.price,
+  sp.price*j.qty as summa,
+  j.qty as ves,
+  (select CURR_STR from currencystr((select sum(sp.price*j.qty) from doc_returnf_journal j inner join scladproduct sp on j.scladproduct = sp.scladproduct where j.doc_returnf = $P{DOC}),'RU',1)) as strname,
+  (select val_str from setup where setup = 6) as firma,
+  (select val_str from setup where setup = 7) as firmainn,
+  (select val_str from setup where setup = 8) as direktor
+from doc_returnf_journal j
+inner join doc_returnf d on d.doc_returnf = j.doc_returnf
+inner join scladproduct sp on sp.scladproduct = j.scladproduct
+inner join product p on p.product = sp.product
+inner join agent a on a.agent = d.agent
+inner join color c on c.color = sp.color
+where d.doc_returnf =  $P{DOC}]]>
+	</queryString>
+	<field name="JOURNAL" class="java.lang.Integer"/>
+	<field name="PRODUCT" class="java.lang.String"/>
+	<field name="DOCNAME" class="java.lang.String"/>
+	<field name="DATES" class="java.sql.Date">
+		<fieldDescription><![CDATA[РґР°С‚Р°]]></fieldDescription>
+	</field>
+	<field name="AGENT" class="java.lang.String"/>
+	<field name="NDS" class="java.lang.String"/>
+	<field name="PRICE" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[С†РµРЅР°]]></fieldDescription>
+	</field>
+	<field name="SUMMA" class="java.math.BigDecimal"/>
+	<field name="VES" class="java.math.BigDecimal"/>
+	<field name="STRNAME" class="java.lang.String"/>
+	<field name="FIRMA" class="java.lang.String"/>
+	<field name="FIRMAINN" class="java.lang.String"/>
+	<field name="DIREKTOR" class="java.lang.String"/>
+	<variable name="lines" class="java.lang.Integer" incrementType="Group" incrementGroup="id" calculation="Count">
+		<variableExpression><![CDATA[$F{JOURNAL}]]></variableExpression>
+		<initialValueExpression><![CDATA[$F{JOURNAL}]]></initialValueExpression>
+	</variable>
+	<variable name="SUMMACOST_1" class="java.math.BigDecimal" incrementType="Group" incrementGroup="id" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUMMA}]]></variableExpression>
+		<initialValueExpression><![CDATA[$F{SUMMA}]]></initialValueExpression>
+	</variable>
+	<variable name="SUMMA_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUMMA}]]></variableExpression>
+	</variable>
+	<variable name="SUMMASNDS_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUMMA}]]></variableExpression>
+	</variable>
+	<variable name="VES_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{VES}]]></variableExpression>
+	</variable>
+	<variable name="SUMMA_2" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUMMA}]]></variableExpression>
+	</variable>
+	<variable name="SUMMA_3" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUMMA}]]></variableExpression>
+	</variable>
+	<group name="id">
+		<groupExpression><![CDATA[$F{JOURNAL}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="194">
+			<staticText>
+				<reportElement x="335" y="0" width="228" height="10" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="42bced22-91c0-4532-b111-ac509f0d9930"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Унифицированная форма № ТОРГ-12 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="10" width="228" height="10" uuid="b18730b2-14d8-46c9-9b8e-cde7415b37a7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Утверждена постановлением Госкомстата России ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="20" width="228" height="10" uuid="169c5bf4-12f3-4b3e-9137-75e151b3cebb"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[от 25.12.98 №132]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="36" width="112" height="20" uuid="9884a673-0154-430d-9215-039256a2b6d7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Грузоотправитель:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="112" y="36" width="321" height="20" uuid="54a368b3-6f49-47e8-a023-9591b11b61b0"/>
+				<box leftPadding="2" rightPadding="2">
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FIRMA}+$F{FIRMAINN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="221" y="56" width="100" height="10" uuid="7dd5c6d1-030f-47a3-bf39-f3218627805d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[организация, адрес]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="56" width="112" height="20" uuid="a397ee79-a689-4e99-9163-70483ac60155"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Структурное подразделение:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="56" width="321" height="20" uuid="3b88e4d0-a0e1-4198-b1b7-7ea4ad942251"/>
+				<box leftPadding="2" rightPadding="2">
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="76" width="112" height="20" uuid="7bbe51b3-9156-4477-b85b-f580c0608272"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Грузополучатель:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="112" y="76" width="303" height="20" uuid="b225d464-1bc7-4d32-b09b-722bb210135b"/>
+				<box leftPadding="2" rightPadding="2">
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AGENT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="96" width="112" height="20" uuid="be9347e3-8e7d-4112-a09d-e490f8166f90"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Поставщик:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="112" y="96" width="303" height="20" uuid="a6e79a09-2af4-49cf-8761-c881952fec51"/>
+				<box leftPadding="2" rightPadding="2">
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FIRMA}+$F{FIRMAINN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="116" width="112" height="20" uuid="79580303-6bb0-42bd-aae1-f41b0f55ee21"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Плательщик]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="112" y="116" width="321" height="20" uuid="a41ee73b-af5b-49cd-b046-51231cf124e6"/>
+				<box leftPadding="2" rightPadding="2">
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AGENT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="136" width="112" height="9" uuid="2f7a000b-5cf5-4417-b54e-5579f060c458"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Основание:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="136" width="388" height="9" uuid="88c79554-a173-46e7-8e4f-a62da18f596e"/>
+				<box rightPadding="3">
+					<topPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[номер]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="47" width="40" height="9" uuid="21b1a257-dbed-408c-870a-6f959391e953"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Код]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="56" width="40" height="8" uuid="2e8d8b4d-aecf-4d7e-b85c-b04d685aff58"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="64" width="40" height="8" uuid="4f327a15-fde9-4902-828a-3b12f30f2c89"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="72" width="40" height="13" uuid="3555a75a-8dd7-4bf7-bc05-e7b679903a21"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="85" width="40" height="15" uuid="0b1840f3-71ae-4127-a8a1-9bf354deef3d"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="100" width="40" height="11" uuid="bfbedd03-4b60-4174-8e77-be09458c95e8"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="111" width="40" height="11" uuid="fd2df035-6730-47fd-ae12-1e49effb7dab"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="122" width="40" height="14" uuid="8856cba0-1736-4a89-8924-c410d35e4f7a"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="136" width="40" height="9" uuid="f1459f26-17f3-4e7c-bbbf-6eebb9081e31"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="145" width="40" height="9" uuid="35c72325-7371-477c-9ccc-f30ecfb6b940"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="172" width="40" height="9" uuid="13e65a86-31c5-48b2-a9d1-f5255c2dc60b"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="500" y="154" width="40" height="9" uuid="42b560c1-169a-4a1b-bf60-739cdc31c641"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DOCNAME}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement x="500" y="163" width="40" height="9" uuid="1663bae8-e16c-42fe-8581-7b698fe64a7c"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="438" y="56" width="62" height="8" uuid="ef7ad214-b41d-4d50-bcb1-ec6ac49b33ca"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Форма по ОКУД]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="64" width="46" height="8" uuid="134afe02-6085-4f5c-b8ea-dbcf439957f8"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[по ОКПО]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="56" width="67" height="20" uuid="aeac523e-e5f6-486f-b6a0-e19448c3c4f4"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="91" width="85" height="9" uuid="2d484f75-35e6-48be-ab3c-10f968480727"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Вид деятельности по ОКДП]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="103" width="49" height="8" uuid="b136108f-1b7b-4440-b97c-57ab316fb489"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[по ОКПО]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="113" width="40" height="9" uuid="9116b80b-a063-4470-8e6a-cf500417dbfc"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[по ОКПО]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="454" y="127" width="45" height="9" uuid="b7b3380e-004c-4b2a-8ed6-c3c202d80402"/>
+				<box rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[по ОКПО]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="145" width="31" height="9" uuid="4b524a0b-7638-45f0-98d4-407b40c1ebb2"/>
+				<box rightPadding="3">
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[дата]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="154" width="31" height="9" uuid="1542a88d-06ac-49ef-a75a-7df5614b41b0"/>
+				<box rightPadding="3">
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[номер]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="163" width="31" height="9" uuid="1fedbabd-e328-4be8-b7e7-49b844eb0df7"/>
+				<box rightPadding="3">
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[дата]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="172" width="66" height="9" uuid="eec4b1d4-2bed-4a78-bcbe-e1950fa75a24"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Вид операции]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="145" width="356" height="9" uuid="03b0bad7-a8d0-4894-9b3d-63de6245c258"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[наименование документа(договор, контракт, заказ-наряд)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="163" width="165" height="20" uuid="a215f94b-fc75-456d-b70a-c9492e3ea80a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" isBold="true" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[ТОВАРНАЯ НАКЛАДНАЯ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="163" width="70" height="10" uuid="974554d0-cde3-4295-8f27-2de80feab2dd"/>
+				<box leftPadding="2" rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Номер документа]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="163" width="86" height="10" uuid="3df0f7b4-7f75-491a-b5f8-16870bf8dd81"/>
+				<box leftPadding="2" rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Дата составления]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="165" y="173" width="70" height="10" uuid="0641bc53-32f4-4e63-86d5-d1e3d3eebc6f"/>
+				<box leftPadding="2" rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DOCNAME}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd.MM.yyyy">
+				<reportElement x="235" y="173" width="86" height="10" uuid="5c5981b3-ebd4-41a6-a348-63b06935a639"/>
+				<box leftPadding="2" rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATES}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="321" y="162" width="147" height="10" uuid="b739fcbe-6388-4bd9-af76-9adb53806ee5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="7" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Транспортная накладная]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="40">
+			<staticText>
+				<reportElement x="0" y="0" width="25" height="30" uuid="2e5a9e61-7585-4046-9f2b-b21893385bc7"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[№ по порядку]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="0" width="140" height="10" uuid="f34c2177-a295-45b6-a77c-59c5311e847e"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Товар]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="42" height="30" uuid="1aeae545-784a-4c3d-ad9b-53b2f384b32a"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Цена руб. коп.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="0" width="50" height="10" uuid="4b3ccb64-d402-4983-b8d7-c88ec33d1101"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Кол-во]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="10" width="32" height="20" uuid="3b90c6fe-970e-4be6-a6f4-1109f4ca2d18"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Код]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="0" width="60" height="10" uuid="735c84d1-e870-4cb5-8c9f-cba1f16f42a1"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[НДС]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="10" width="108" height="20" uuid="e7afa47f-6a41-469a-b2ea-766541281c0e"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Наименование, характеристика, сорт, артикул товара]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="0" width="73" height="10" uuid="6c9ea45c-60e5-4dc8-8885-5750c00e0d62"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Единица измерения]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="0" width="30" height="30" uuid="7f482023-4b61-4477-9bf5-036fb577f0cd"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Вид упаковки]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="20" height="30" uuid="79dcdcfc-f523-4b90-8c8b-f99f1579dcd1"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Масса брутто]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="30" height="30" uuid="4d50e08d-5cfa-4ff6-90dd-3e03bbd3e4e8"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Количество (масса нетто)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="0" width="41" height="30" uuid="0d1e0b6c-30d3-4f53-8dfd-b61979de2857"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Сумма с учетом НДС, руб. коп.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="41" height="30" uuid="450b75bf-c562-46df-95f8-ddfceac90992"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Сумма без учета НДС]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="10" width="36" height="20" uuid="385b33c6-ed7b-4150-adf0-4f5d6f160113"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[наимено вание]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="10" width="37" height="20" uuid="0c9ed109-4f91-43a0-9ac1-e5bb5cc07510"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[   код по   ОКЕИ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="10" width="25" height="20" uuid="38f019d8-2ae1-46da-9115-80df520535ef"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[в одном месте]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="10" width="25" height="20" uuid="7aae9ced-2921-4855-a25c-6a8a92a56c9e"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[мест, штук]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="10" width="25" height="20" uuid="6392cd6b-7acb-4c3e-b41e-43f34802711f"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[ставка, %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="10" width="35" height="20" uuid="455a1602-6254-4d92-a013-be8587bbfb59"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" isBold="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[сумма руб. коп.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="25" height="10" uuid="b25e0f7d-a30e-4d2f-a895-120cacbde7e2"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="30" width="108" height="10" uuid="671cb7e1-b8e5-4daf-93d3-1ccd4611cf5a"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="30" width="32" height="10" uuid="607e57fc-1c0a-46c4-9067-452248699c25"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="30" width="36" height="10" uuid="4c4118e3-9b3f-4ddb-a29e-24b788d24258"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="30" width="37" height="10" uuid="3d1c9d1a-fadd-411a-9fab-20384bd8e35b"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="30" width="30" height="10" uuid="eebe3095-c8db-4009-81b8-7bc964704f7d"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="30" width="25" height="10" uuid="757145e0-5c5a-4b81-858a-6fffc1d2d2f3"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="30" width="25" height="10" uuid="bf8a5a9d-f571-44f1-a710-dd992c88cc84"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="30" width="20" height="10" uuid="e90c7297-bff0-42af-b58f-c7c1ec4a8beb"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="30" width="30" height="10" uuid="268b53a4-65dd-43f0-a9b9-28e9a4af73d6"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="30" width="42" height="10" uuid="6e8f9d30-ab96-40a0-85e7-248fc03a2b93"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="30" width="41" height="10" uuid="922f316d-96ae-4063-bba9-6794d893d76a"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="30" width="25" height="10" uuid="f86aec85-2a02-4930-b870-4fd2d840f4d7"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[13]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="30" width="35" height="10" uuid="a2382948-0560-4849-ad7c-4e8e1e36095f"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[14]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="30" width="41" height="10" uuid="226aba01-2628-44c0-bdbf-1fe3332bf3ce"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="25" y="0" width="108" height="24" uuid="7e81881b-4101-419e-83ec-3d6ab2063c17"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" isStrikeThrough="false" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRODUCT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="368" y="0" width="42" height="24" uuid="0b602f06-c904-450b-8724-5f05a9b8c659"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRICE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="25" height="24" uuid="e2a10082-a226-40aa-ae9d-25593db0e868"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{lines}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="338" y="0" width="30" height="24" uuid="f328277e-0e80-425d-b50d-61838d680938"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VES}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00">
+				<reportElement x="511" y="0" width="41" height="24" uuid="87220ef9-7333-4306-9f0f-7c6389f88732"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUMMA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="165" y="0" width="36" height="24" uuid="35ca9914-3673-457a-a2a1-b13bee871af8"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[кг]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="0" width="37" height="24" uuid="9dc8486f-7f8b-4fbc-af7c-7ea137e16aa2"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[166]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="0" width="30" height="24" uuid="f53690b3-6acf-4579-a576-c97e6a8bcc61"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="0" width="25" height="24" uuid="fc52a8ce-1dbe-4edc-9b48-6eee75a8c935"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="0" width="25" height="24" uuid="c2cec6c9-0871-4fed-aa68-fcfc9f9272de"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="20" height="24" uuid="54d5d044-eb5c-4ea6-a393-23eefb8ffd2c"/>
+				<box leftPadding="1" rightPadding="1">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,##0.00">
+				<reportElement x="410" y="0" width="41" height="24" uuid="8ce4d8f4-e104-4ea9-9dbd-64103b6f9ace"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUMMA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="133" y="0" width="32" height="24" uuid="755f51d6-2c3a-4978-9979-27ae8a66307e"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="35" height="24" uuid="84accd93-5b56-4600-bd91-3a9bc8ae1c84"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="0" width="25" height="24" uuid="cd32af82-c974-40eb-9ea1-ff05691e3f77"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Без НДС]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="200">
+			<staticText>
+				<reportElement x="293" y="0" width="25" height="15" uuid="56da854d-2256-4549-a3c0-e3896cb3e4a8"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="20" height="15" uuid="18dc4890-7021-4c4a-be6f-40e91caf2a9a"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="0" width="42" height="15" uuid="5f92897b-273a-44f9-a29f-32b5c46cfefa"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="451" y="0" width="25" height="15" uuid="6e820235-a882-457f-92c7-bb8fdd9474ee"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="0" width="100" height="15" uuid="a5a5d5c2-3d0e-4aa2-849a-9d7cf9095f01"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Всего по накладной:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="15" width="165" height="10" uuid="2b48cd07-efb7-457f-88da-c4403ffb4cd4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Товарная накладная имеет приложение на]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="15" width="245" height="10" uuid="e6bcdbed-a872-4955-bb06-271fdb046d1c"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="25" width="47" height="10" uuid="3210c9b7-6e13-488e-a22e-7d15802a0582"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[и содержит]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="25" width="298" height="10" uuid="c1b4cda8-9fce-4ef9-b9aa-b43d0ed1a5d2"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="15" width="157" height="20" uuid="fd557f63-d752-4d4b-8e45-1b71c6ee2c30"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[порядковых номеров записей]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="35" width="100" height="10" uuid="6fb08796-0f38-42d3-8511-801f0a0ab4d1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[прописью]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="45" width="75" height="10" uuid="977ac883-c586-416a-9221-b021be67d4a0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Масса груза(нетто)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="45" width="312" height="10" uuid="eef7c74f-03d8-426f-83d4-acf29171d5f0"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="45" width="40" height="10" uuid="eca72e42-67b4-41a2-998a-b48dae1827c7"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="38" height="10" uuid="b87b7615-a580-4c87-82a9-bb01bfa66fb0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Всего мест]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="55" width="75" height="10" uuid="e313dd95-2654-4074-8d38-3214cde76268"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Масса груза(брутто)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="55" width="74" height="10" uuid="5761f382-99f1-4feb-b9ca-ec2072e535e3"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="55" width="312" height="10" uuid="83daae5b-33f7-4621-9e36-20663cb8afa1"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[прописью]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="55" width="40" height="10" uuid="fa740ccb-69d0-4a5a-b30f-f8e7ea9c9c41"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="65" width="74" height="10" uuid="d5117730-e684-4070-badd-02460c22faaa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[прописью]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="65" width="312" height="10" uuid="81b5fc30-d385-4d53-a378-3b19126607eb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[прописью]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="144" height="10" uuid="f74c3644-b565-4318-bee8-183ba4fe43a9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Приложение(паспорта, сертификаты и т.д.) на]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="144" y="90" width="115" height="10" uuid="02e8847d-14fd-456e-ba1e-d45af7196f09"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[прописью]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="80" width="34" height="10" uuid="96004ead-1f53-416a-9833-3521537ab843"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[листах]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="78" height="10" uuid="937738d9-37d2-43a5-aa67-9c5d4cb5b2b5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Всего отпущенно на сумму]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="78" y="100" width="157" height="20" uuid="053f025d-5cf7-43c3-bc28-92f2c5dfb10c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{STRNAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="120" width="65" height="10" uuid="f03c3645-bde0-40f2-98ee-c50313b8a507"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Отпуск груза разрешил]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="120" width="236" height="10" uuid="181e5481-0220-4f6f-8347-adb509ff3af4"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DIREKTOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="168" y="130" width="133" height="8" uuid="28703fcb-6ff9-4c18-bd19-71524a0c5027"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[расшифровка подписи]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="138" width="65" height="10" uuid="65457fc7-6916-4375-b78e-8667c52b9fbf"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Главный бухгалтер]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="65" y="138" width="236" height="10" uuid="9f65015b-503e-4d8e-b83d-50cae53a923e"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DIREKTOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="168" y="148" width="133" height="8" uuid="f088a8dd-0909-47e2-aba5-969b50a3e351"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[расшифровка подписи]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="156" width="65" height="10" uuid="cf6e210a-2723-43f5-a9cf-f67c075b0031"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Отпуск груза произвел]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="166" width="133" height="8" uuid="99e8b7b8-b57c-4068-84bf-c9474fbcb125"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[расшифровка подписи]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="166" width="34" height="8" uuid="a72c0b6b-b09c-48e8-a701-5e1cbed756eb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[подпись]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="148" width="34" height="8" uuid="663d6c91-a4f9-4609-9f55-89f43162c7ed"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[подпись]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="130" width="34" height="8" uuid="893767db-29e6-437a-9715-9769b8f8d0af"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[подпись]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="80" width="10" height="105" uuid="969aab64-c246-4a1b-96da-6bd81b1a5910"/>
+				<box>
+					<leftPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="180" width="24" height="20" uuid="5e6dce5c-be54-4652-8262-6b0ac4d1ae07"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[М.П.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="80" width="118" height="10" uuid="e0c68fce-10d6-4dd5-a2ee-0a07be5bc3c6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[По доверенности №                 от]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="90" width="30" height="10" uuid="b63004a3-1099-4128-9d64-3e164b9c84c2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[выданной]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="100" width="189" height="8" uuid="1a299e6d-ad9f-48c3-a867-afde5eec5946"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[кем, кому (организация, должность, фамилия, имя, отчество)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="120" width="189" height="8" uuid="12817250-7876-45bf-b07e-0cc1734c8ed9"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[кем, кому (организация, должность, фамилия, имя, отчество)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="138" width="53" height="10" uuid="6bce7c2a-691c-402b-9299-e8ee7960f47c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Груз принял]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="156" width="51" height="20" uuid="39fd4388-91c6-44a8-a3e3-0f40779bee3b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="6" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[Груз получил грузополучатель]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="148" width="64" height="8" uuid="5fa0ada3-8462-4651-bd81-47b32fab1955"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[подпись]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="166" width="64" height="8" uuid="7636496b-6a74-4966-819e-7b112652350d"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[подпись]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="148" width="102" height="8" uuid="499074a0-8491-4905-8ffa-b287adf6f1a6"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[расшифровка подписи]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="166" width="101" height="8" uuid="3fa07ba7-0015-4f77-a8ee-772fd09a629f"/>
+				<box>
+					<topPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="5" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[расшифровка подписи]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="185" width="24" height="15" uuid="2265271b-9f83-4c6a-9e58-3ddc67dbf246"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[М.П.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="156" width="236" height="10" uuid="04db6271-dfa1-4ad1-be65-c6d41561f581"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="35" height="15" uuid="8b116c4d-84ac-4b7b-9bb6-4beeba879a5b"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement>
+					<font pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField pattern="#,##0.00">
+				<reportElement x="338" y="0" width="30" height="15" uuid="52f071a6-16db-4d97-8460-db083c733623"/>
+				<box rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{VES_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="410" y="0" width="41" height="15" uuid="ef402eb5-af0c-4346-91ae-2022a5d57e17"/>
+				<box rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMMA_2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00">
+				<reportElement x="511" y="0" width="41" height="15" uuid="5aede001-fff8-47ce-a5b4-dbbb49aa77b1"/>
+				<box rightPadding="1">
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="8" pdfFontName="arial.ttf" pdfEncoding="Cp1251"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMMA_2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
