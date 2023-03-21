@@ -100,7 +100,7 @@ public class LMarshrut extends javax.swing.JPanel {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jButton1.setText("Закрыть");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -112,7 +112,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/edit.png"))); // NOI18N
         jButton2.setText("Изменить");
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -123,7 +123,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton2);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/refresh.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/refresh.png"))); // NOI18N
         jButton5.setText("Обновить");
         jButton5.setFocusable(false);
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -135,7 +135,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton5);
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/filter.png"))); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/filter.png"))); // NOI18N
         jButton12.setText("Фильтр");
         jButton12.setFocusable(false);
         jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -148,7 +148,7 @@ public class LMarshrut extends javax.swing.JPanel {
         jToolBar1.add(jButton12);
         jToolBar1.add(jSeparator4);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/forw.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/forw.png"))); // NOI18N
         jButton3.setText("Отправить");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -160,7 +160,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton3);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bac.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/bac.png"))); // NOI18N
         jButton4.setText("Отменить отправку");
         jButton4.setFocusable(false);
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -172,7 +172,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton4);
 
-        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/magn.png"))); // NOI18N
+        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/magn.png"))); // NOI18N
         jToggleButton1.setText("Все");
         jToggleButton1.setFocusable(false);
         jToggleButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -185,7 +185,7 @@ public class LMarshrut extends javax.swing.JPanel {
         jToolBar1.add(jToggleButton1);
         jToolBar1.add(jSeparator1);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Filled.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/Filled.png"))); // NOI18N
         jButton6.setText("Принять");
         jButton6.setFocusable(false);
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -197,7 +197,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton6);
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/basket.png"))); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/basket.png"))); // NOI18N
         jButton9.setText("Отменить принятие");
         jButton9.setFocusable(false);
         jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -209,7 +209,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton9);
 
-        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/magn.png"))); // NOI18N
+        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/magn.png"))); // NOI18N
         jToggleButton2.setText("Все");
         jToggleButton2.setFocusable(false);
         jToggleButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -222,7 +222,7 @@ public class LMarshrut extends javax.swing.JPanel {
         jToolBar1.add(jToggleButton2);
         jToolBar1.add(jSeparator2);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/2.png"))); // NOI18N
         jButton7.setText("Отработать");
         jButton7.setFocusable(false);
         jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -234,7 +234,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton7);
 
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/1.png"))); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/1.png"))); // NOI18N
         jButton10.setText("Отменить отработку");
         jButton10.setFocusable(false);
         jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -246,7 +246,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton10);
 
-        jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/magn.png"))); // NOI18N
+        jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/magn.png"))); // NOI18N
         jToggleButton3.setText("Все");
         jToggleButton3.setFocusable(false);
         jToggleButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -259,7 +259,7 @@ public class LMarshrut extends javax.swing.JPanel {
         jToolBar1.add(jToggleButton3);
         jToolBar1.add(jSeparator3);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clos.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/clos.png"))); // NOI18N
         jButton8.setText("На склад");
         jButton8.setFocusable(false);
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -271,7 +271,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton8);
 
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/work.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/work.png"))); // NOI18N
         jButton11.setText("Вернуть со склада");
         jButton11.setFocusable(false);
         jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -283,7 +283,7 @@ public class LMarshrut extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton11);
 
-        jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/magn.png"))); // NOI18N
+        jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/magn.png"))); // NOI18N
         jToggleButton4.setText("Все");
         jToggleButton4.setFocusable(false);
         jToggleButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -302,7 +302,7 @@ public class LMarshrut extends javax.swing.JPanel {
         jCheckBox1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jCheckBox1);
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/print.png"))); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
         jButton13.setText("Печать");
         jButton13.setFocusable(false);
         jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

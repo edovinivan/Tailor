@@ -64,7 +64,7 @@ public class LAllNastilForReturn extends javax.swing.JPanel {
         jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
         jButton1.setText("Закрыть");
         jButton1.setFocusable(false);
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -76,7 +76,7 @@ public class LAllNastilForReturn extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton1);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bac.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/bac.png"))); // NOI18N
         jButton2.setText("Возвраты");
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -88,7 +88,7 @@ public class LAllNastilForReturn extends javax.swing.JPanel {
         });
         jToolBar1.add(jButton2);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/2.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/2.png"))); // NOI18N
         jButton3.setText("Отработать");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -234,9 +234,9 @@ public class LAllNastilForReturn extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     // подсветка и картинки в таблицу                       
-    final ImageIcon edit = new ImageIcon(getClass().getResource("/images/1.png"));
-    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/images/2.png"));
-    //final ImageIcon ok3 = new ImageIcon(getClass().getResource("/images/clos.png"));
+    final ImageIcon edit = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
+    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
+    //final ImageIcon ok3 = new ImageIcon(getClass().getResource("/org/example/images/clos.png"));
     
     private DefaultTableCellRenderer jTableRenderer = new DefaultTableCellRenderer() {
         @Override
@@ -263,7 +263,7 @@ public class LAllNastilForReturn extends javax.swing.JPanel {
     };
     
     // подсветка и картинки в таблицу                       
-    final ImageIcon hand = new ImageIcon(getClass().getResource("/images/Hand.png"));
+    final ImageIcon hand = new ImageIcon(getClass().getResource("/org/example/images/Hand.png"));
     
     
     private DefaultTableCellRenderer jTableRenderer3 = new DefaultTableCellRenderer() {

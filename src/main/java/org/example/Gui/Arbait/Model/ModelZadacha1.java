@@ -123,11 +123,11 @@ public class ModelZadacha1 extends AbstractTableModel{
     }*/
     
     // подсветка и картинки в таблицу                       
-    final ImageIcon edit = new ImageIcon(getClass().getResource("/images/1.png"));
-    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/images/2.png"));
-    final ImageIcon ok2 = new ImageIcon(getClass().getResource("/images/up.png"));
-    final ImageIcon ok3 = new ImageIcon(getClass().getResource("/images/cascade.png"));
-    final ImageIcon ok10 = new ImageIcon(getClass().getResource("/images/clos.png"));
+    final ImageIcon edit = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
+    final ImageIcon ok1 = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
+    final ImageIcon ok2 = new ImageIcon(getClass().getResource("/org/example/images/up.png"));
+    final ImageIcon ok3 = new ImageIcon(getClass().getResource("/org/example/images/cascade.png"));
+    final ImageIcon ok10 = new ImageIcon(getClass().getResource("/org/example/images/clos.png"));
     public DefaultTableCellRenderer jTableRenderer = new DefaultTableCellRenderer() {
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
@@ -167,7 +167,7 @@ public class ModelZadacha1 extends AbstractTableModel{
 
     };
     
-    private ImageIcon ok11 = new ImageIcon(getClass().getResource("/images/Hand.png"));    
+    private ImageIcon ok11 = new ImageIcon(getClass().getResource("/org/example/images/Hand.png"));
     public DefaultTableCellRenderer jTableRendererHand = new DefaultTableCellRenderer() {
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
@@ -185,7 +185,7 @@ public class ModelZadacha1 extends AbstractTableModel{
     };
     
     
-     private ImageIcon pln = new ImageIcon(getClass().getResource("/images/work.png"));    
+     private ImageIcon pln = new ImageIcon(getClass().getResource("/org/example/images/work.png"));
     public DefaultTableCellRenderer jTableRendererPh = new DefaultTableCellRenderer() {
         @Override
         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {

@@ -104,11 +104,11 @@ public class ModelPretenziaList  extends AbstractTableModel{
     };
     
     // подсветка и картинки в таблицу                       
-    final ImageIcon s1 = new ImageIcon(getClass().getResource("/images/1.png"));
-    final ImageIcon s2 = new ImageIcon(getClass().getResource("/images/forward.png"));
-    final ImageIcon s3 = new ImageIcon(getClass().getResource("/images/2.png"));
-    final ImageIcon s4 = new ImageIcon(getClass().getResource("/images/clos.png"));
-    final ImageIcon s11 = new ImageIcon(getClass().getResource("/images/block.png"));
+    final ImageIcon s1 = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
+    final ImageIcon s2 = new ImageIcon(getClass().getResource("/org/example/images/forward.png"));
+    final ImageIcon s3 = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
+    final ImageIcon s4 = new ImageIcon(getClass().getResource("/org/example/images/clos.png"));
+    final ImageIcon s11 = new ImageIcon(getClass().getResource("/org/example/images/block.png"));
     
     
     
