@@ -135,6 +135,8 @@
     <mapping class="org.example.logic.plan.LMapProjectJournal"/>
     <mapping class="org.example.logic.plan.MapArticleColorJoin"/>
     <mapping class="org.example.logic.plan.MapExceptionArticle"/>
+    <mapping class="org.example.logic.OperationTextGruppa"/>
+    <mapping class="org.example.logic.OperationTextGruppaJournal"/>
     
   </session-factory>
 </hibernate-configuration>

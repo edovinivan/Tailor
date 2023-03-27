@@ -9,13 +9,16 @@ import org.example.Gui.Form.Helps.FGetOperation;
 import org.example.Gui.Form.Helps.FGetOperationText;
 import org.example.Gui.Form.Helps.FGetRazrad;
 import java.math.RoundingMode;
+import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
+import org.example.Gui.Form.Helps.FGetOperationTextGruppa;
 import org.example.logic.ModelOperation;
 import org.example.logic.Operation;
 import org.example.logic.Razrad;
 import org.example.util.HelpClass;
 import org.example.util.IOModel;
 import org.example.util.IOOperation;
+import org.example.util.IOOperationTextGruppa;
 import org.example.util.IORazrad;
 
 /**
@@ -83,6 +86,7 @@ public class FModelOperation extends javax.swing.JDialog {
         jSpinner2 = new javax.swing.JSpinner();
         jButton5 = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Операция для конфекционной карты");
@@ -151,7 +155,7 @@ public class FModelOperation extends javax.swing.JDialog {
         jLabel7.setText("Номер");
 
         jSpinner2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(Integer.valueOf(0), Integer.valueOf(0), null, Integer.valueOf(1)));
+        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
         jButton5.setText("...");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -163,6 +167,13 @@ public class FModelOperation extends javax.swing.JDialog {
         jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField2.setText("1");
+
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/need.png"))); // NOI18N
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,12 +208,15 @@ public class FModelOperation extends javax.swing.JDialog {
                         .addGap(66, 66, 66)
                         .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(168, 168, 168)))
-                .addGap(27, 27, 27)
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton6)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,7 +230,8 @@ public class FModelOperation extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel3)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5))
+                    .addComponent(jButton5)
+                    .addComponent(jButton6))
                 .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel4)
@@ -312,6 +327,21 @@ public class FModelOperation extends javax.swing.JDialog {
             jTextField3.setText(IOOperation.getListOperationText(f.getResultValue()).get(0).getText());
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        FGetOperationTextGruppa fGetOperationTextGruppa = new FGetOperationTextGruppa(null, true);
+        fGetOperationTextGruppa.setVisible(true);
+        if(fGetOperationTextGruppa.getResult()){
+            String str = IOOperationTextGruppa.getListOperationTextGruppaJournal(fGetOperationTextGruppa.getResultValue())
+                    .stream()
+                    .map(t->{
+                        return t.getNom() + ". " + t.getText() + " ";
+                    })
+                    .collect(Collectors.joining());
+            jTextField3.setText(str);
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -361,6 +391,7 @@ public class FModelOperation extends javax.swing.JDialog {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

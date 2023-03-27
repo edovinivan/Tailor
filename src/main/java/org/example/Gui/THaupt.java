@@ -103,6 +103,7 @@ import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
+import org.example.Gui.List.LOperationTextGruppa;
 import org.example.logic.Files;
 import org.example.util.HelpClass;
 import org.example.util.IOFiles;
@@ -216,6 +217,8 @@ public class THaupt extends javax.swing.JFrame {
     LModelPlanHaupt lModelPlanHaupt = new LModelPlanHaupt(this);
     FCalcTimeModel fCalcTimeModel = new FCalcTimeModel(this);
     
+    LOperationTextGruppa lOperationTextGruppa = new LOperationTextGruppa(this);
+    
     LMapProject lMapProject = new LMapProject(this);
 
     /**
@@ -274,6 +277,7 @@ public class THaupt extends javax.swing.JFrame {
         jMenuItem27 = new javax.swing.JMenuItem();
         jMenuItem28 = new javax.swing.JMenuItem();
         jMenuItem37 = new javax.swing.JMenuItem();
+        jMenuItem144 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem122 = new javax.swing.JMenuItem();
@@ -443,7 +447,6 @@ public class THaupt extends javax.swing.JFrame {
         jTabbedPane1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.BOTTOM);
 
-        jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/add.png"))); // NOI18N
@@ -813,6 +816,15 @@ public class THaupt extends javax.swing.JFrame {
             }
         });
         jMenu2.add(jMenuItem37);
+
+        jMenuItem144.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/sun.png"))); // NOI18N
+        jMenuItem144.setText("Описание операций");
+        jMenuItem144.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem144ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem144);
 
         jMenuBar1.add(jMenu2);
 
@@ -3034,6 +3046,12 @@ public class THaupt extends javax.swing.JFrame {
         f.setVisible(true);
     }//GEN-LAST:event_jMenuItem143ActionPerformed
 
+    private void jMenuItem144ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem144ActionPerformed
+        // TODO add your handling code here:
+        jTabbedPane1.addTab("Описание операций", lOperationTextGruppa);
+        jTabbedPane1.setSelectedComponent(lOperationTextGruppa);
+    }//GEN-LAST:event_jMenuItem144ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3159,6 +3177,7 @@ public class THaupt extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem141;
     private javax.swing.JMenuItem jMenuItem142;
     private javax.swing.JMenuItem jMenuItem143;
+    private javax.swing.JMenuItem jMenuItem144;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
