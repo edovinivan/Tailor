@@ -858,6 +858,39 @@ public class FParamReportPrintRabotnik extends javax.swing.JDialog {
 
         }
         
+        if(vid == 50) 
+        {
+            jLabel2.setVisible(false);
+            jTextField2.setVisible(false);
+            jButton2.setVisible(false);
+            
+            jLabel1.setVisible(true);
+            jTextField1.setVisible(true);
+            jButton1.setVisible(true);
+            
+            jLabel5.setVisible(false);
+            jTextField3.setVisible(false);
+            jButton5.setVisible(false);
+            
+            jLabel6.setVisible(false);
+            jTextField4.setVisible(false);
+            jButton6.setVisible(false);
+            
+            jLabel4.setVisible(true);
+            jLabel3.setVisible(true);
+            jDateChooser1.setVisible(true);
+            jDateChooser2.setVisible(true);
+            
+            jLabel7.setVisible(false);
+            jTextField5.setVisible(false);
+            jButton7.setVisible(false);
+
+            jLabel8.setVisible(false);
+            jTextField6.setVisible(false);
+            jButton8.setVisible(false);
+
+        }
+        
         
         
         
@@ -1319,6 +1352,9 @@ public class FParamReportPrintRabotnik extends javax.swing.JDialog {
            case 49:    
                 id = 86;
                 break;                     
+            case 50:    
+                id = 87;
+                break;         
                 
         }
         PrintReport pr = new PrintReport(null, true, id, 0);

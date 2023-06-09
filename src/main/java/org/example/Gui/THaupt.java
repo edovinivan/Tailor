@@ -5,6 +5,7 @@
  */
 package org.example.Gui;
 
+import java.io.File;
 import org.example.Gui.Analit.FAnalitika1;
 import org.example.Gui.Analit.FArticleNastils;
 import org.example.Gui.Analit.FGetPrognoz;
@@ -366,6 +367,7 @@ public class THaupt extends javax.swing.JFrame {
         jMenuItem129 = new javax.swing.JMenuItem();
         jMenuItem132 = new javax.swing.JMenuItem();
         jMenuItem139 = new javax.swing.JMenuItem();
+        jMenuItem145 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuItem23 = new javax.swing.JMenuItem();
         jMenuItem69 = new javax.swing.JMenuItem();
@@ -1571,6 +1573,15 @@ public class THaupt extends javax.swing.JFrame {
         });
         jMenu10.add(jMenuItem139);
 
+        jMenuItem145.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/icons8-Forward_16.png"))); // NOI18N
+        jMenuItem145.setText("Группы операций выполненные сотрудниками");
+        jMenuItem145.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem145ActionPerformed(evt);
+            }
+        });
+        jMenu10.add(jMenuItem145);
+
         jMenuBar1.add(jMenu10);
 
         jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
@@ -1972,6 +1983,7 @@ public class THaupt extends javax.swing.JFrame {
         //проверим версия программы в базе и в ехе файле
         int ver = 108;    
         jLabel2.setText("v 1." + ver);
+        
         if(IOSetup.getSetuValInt(5)!= ver)
         {
             try {
@@ -1979,6 +1991,10 @@ public class THaupt extends javax.swing.JFrame {
                 Files f_jar = IOFiles.getFiles(1409);
                 IOFiles.saveFile(f_exe.getObj(), f_exe.getName()+"_");
                 IOFiles.saveFile(f_jar.getObj(), f_jar.getName()+"_");
+                if(!new File("UpdaterTailor.jar").exists()){
+                    Files fupdate = IOFiles.getFiles(8397);
+                    IOFiles.saveFile(fupdate.getObj(), "UpdaterTailor.jar");
+                }
                 JOptionPane.showMessageDialog(null, "Программа обновилась и будет закрыта. Запустите её вновь!");
                 Runtime.getRuntime().exec("java -jar UpdaterTailor.jar");
                 System.exit(0);
@@ -3052,6 +3068,12 @@ public class THaupt extends javax.swing.JFrame {
         jTabbedPane1.setSelectedComponent(lOperationTextGruppa);
     }//GEN-LAST:event_jMenuItem144ActionPerformed
 
+    private void jMenuItem145ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem145ActionPerformed
+        // TODO add your handling code here:
+        FParamReportPrintRabotnik f = new FParamReportPrintRabotnik(null, true, 50);
+        f.setVisible(true);
+    }//GEN-LAST:event_jMenuItem145ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3178,6 +3200,7 @@ public class THaupt extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem142;
     private javax.swing.JMenuItem jMenuItem143;
     private javax.swing.JMenuItem jMenuItem144;
+    private javax.swing.JMenuItem jMenuItem145;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem17;
