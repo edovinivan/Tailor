@@ -3422,6 +3422,7 @@ public class THaupt extends javax.swing.JFrame {
         jMenuItem141.setVisible(false);
         jMenuItem142.setVisible(false);
         jMenuItem143.setVisible(false);
+        jMenuItem145.setVisible(false);
         
         jMenu2.setVisible(false);
         jMenu3.setVisible(false);
@@ -3902,6 +3903,12 @@ public class THaupt extends javax.swing.JFrame {
         {
             jMenu10.setVisible(true);            
             jMenuItem139.setVisible(true);
+        }
+        
+        if(IOOperator.getSetupOperator(81)>0)
+        {
+            jMenu10.setVisible(true);            
+            jMenuItem145.setVisible(true);
         }
         
 

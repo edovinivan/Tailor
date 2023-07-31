@@ -246,4 +246,47 @@ public class IOSaveData {
         return true;
     }
     
+    
+     /**
+     * Сохранить все маршруты в цехе
+     * @param file
+     * @return 
+     */
+    public static boolean saveZadachaResult(String file, String date1, String date2)
+    {
+        String sql;
+        sql = "select ZADACHA || ';' || ARTICLE || ';' || COMMENTS || ';' || ZADACHADATE || ';' || SUMZAKCHEH || ';' || SUMWORKSHOP || ';' || SUMPRINT || ';' || QTY4 || ';' || QTY3 || ';' || ALLSUM1|| ';' || ALLSUM2 from unloading_expenses('"+date1+"', '"+date2+"')";
+        
+        List<String> ls = null;
+        
+        try 
+        {
+            
+            Session sess = HibernateUtil.getSessionFactory().openSession(); 
+            Transaction transaction = sess.beginTransaction();     
+            ls = (List<String>)sess.createSQLQuery(sql).list();
+            transaction.commit();
+            sess.close();            
+        } catch (HibernateException e) {
+            System.out.println("ERROR get data" + e);
+        }
+        
+        if(ls.isEmpty())
+            return false;
+        try (PrintWriter outs = new PrintWriter(new OutputStreamWriter(new FileOutputStream(file+".csv", false), "cp1251"), false)) {
+            outs.println("Задача;Артикул;Комментарий к артикулу;Дата задачи;Себестоимость закройный цех - полотна; Субестоимость швейный цех; Сумма принт/вышивка;Количество изделий полученных на склад;Количество изделий факт; Себестоимость по полученным на склад; Субестоимость по откомплектованным  ");
+            for(String s: ls)
+            {
+                outs.println(s.replace(".", ","));
+            }
+            
+            outs.close();
+            
+        } catch (UnsupportedEncodingException | FileNotFoundException ex) {
+                    System.out.println("ERROR " + ex);
+                }
+        
+        return true;
+    }
+    
 }

@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
+import org.example.Gui.Form.Report.LReport;
 import org.example.util.IODocumentF;
 import org.example.util.IOOperator;
 
@@ -63,6 +64,7 @@ public class LDocumentF extends javax.swing.JPanel {
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
@@ -72,7 +74,6 @@ public class LDocumentF extends javax.swing.JPanel {
             }
         });
 
-        jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/cancel.png"))); // NOI18N
@@ -194,6 +195,18 @@ public class LDocumentF extends javax.swing.JPanel {
             }
         });
         jToolBar1.add(jButton10);
+
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/example/images/print.png"))); // NOI18N
+        jButton11.setText("Печать");
+        jButton11.setFocusable(false);
+        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton11.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jToolBar1.add(jButton11);
 
         jTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -443,6 +456,13 @@ public class LDocumentF extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton10ActionPerformed
 
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        if(jTable1.getSelectedRow()==-1) return;
+        LReport lr = new LReport(null, true, 21,(int)jTable1.getValueAt(jTable1.getSelectedRow(), 0));
+        lr.setVisible(true);
+    }//GEN-LAST:event_jButton11ActionPerformed
+
     // подсветка и картинки в таблицу                       
     final ImageIcon edit = new ImageIcon(getClass().getResource("/org/example/images/1.png"));
     final ImageIcon ok = new ImageIcon(getClass().getResource("/org/example/images/2.png"));
@@ -491,6 +511,7 @@ public class LDocumentF extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

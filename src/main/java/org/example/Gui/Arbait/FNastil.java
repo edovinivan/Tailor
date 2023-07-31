@@ -278,7 +278,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField8.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField8.setText("0");
         jTextField8.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField8FocusGained(evt);
@@ -293,7 +292,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField14.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField14.setText("0");
         jTextField14.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField14FocusGained(evt);
@@ -356,7 +354,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField4.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField4.setText("0");
         jTextField4.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField4FocusGained(evt);
@@ -371,7 +368,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField25.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField25.setText("0");
         jTextField25.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField25FocusGained(evt);
@@ -474,7 +470,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField7.setText("0");
         jTextField7.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField7FocusGained(evt);
@@ -486,7 +481,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField6.setText("0");
         jTextField6.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField6FocusGained(evt);
@@ -498,7 +492,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField5.setText("0");
         jTextField5.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField5FocusGained(evt);
@@ -519,7 +512,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField10.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField10.setText("0");
         jTextField10.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField10FocusGained(evt);
@@ -568,7 +560,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField27.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField27.setText("0");
         jTextField27.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField27FocusGained(evt);
@@ -583,7 +574,6 @@ public class FNastil extends javax.swing.JDialog {
 
         jTextField28.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextField28.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField28.setText("0");
         jTextField28.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jTextField28FocusGained(evt);
@@ -627,7 +617,7 @@ public class FNastil extends javax.swing.JDialog {
                                     .addComponent(jTextField5, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                                     .addComponent(jTextField27)
                                     .addComponent(jTextField28))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 4, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -763,7 +753,7 @@ public class FNastil extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton1)
@@ -862,17 +852,21 @@ public class FNastil extends javax.swing.JDialog {
         jTextField2.setText(zn.getTipnastila().getName());
         jTextField3.setText(zn.getTipnastilania().getName());
         jSpinner1.setValue(zn.getQtyl());
-        jTextField4.setText(zn.getQtyend().setScale(2, RoundingMode.HALF_EVEN).toString());
-        jTextField5.setText(zn.getQtydel().setScale(2, RoundingMode.HALF_EVEN).toString());
-        jTextField27.setText(zn.getQtydel1().setScale(2, RoundingMode.HALF_EVEN).toString());
-        jTextField28.setText(zn.getQtylosk1().setScale(2, RoundingMode.HALF_EVEN).toString());
-        jTextField6.setText(zn.getQtylosk().setScale(2, RoundingMode.HALF_EVEN).toString());
-        jTextField7.setText(zn.getQtygut().setScale(2, RoundingMode.HALF_EVEN).toString());
-        jTextField8.setText(zn.getQtytruba().setScale(2, RoundingMode.HALF_EVEN).toString());
+        
+        jTextField4.setText(HelpClass.checkNotEdit(zn.getQtyend())? zn.getQtyend().setScale(2, RoundingMode.HALF_EVEN).toString():"");
+        jTextField5.setText(HelpClass.checkNotEdit(zn.getQtydel())? zn.getQtydel().setScale(2, RoundingMode.HALF_EVEN).toString():"");
+        jTextField27.setText(HelpClass.checkNotEdit(zn.getQtydel1())?zn.getQtydel1().setScale(2, RoundingMode.HALF_EVEN).toString():"");
+        jTextField28.setText(HelpClass.checkNotEdit(zn.getQtylosk1())?zn.getQtylosk1().setScale(2, RoundingMode.HALF_EVEN).toString():"");
+        jTextField6.setText(HelpClass.checkNotEdit(zn.getQtylosk())?zn.getQtylosk().setScale(2, RoundingMode.HALF_EVEN).toString():"");
+        jTextField7.setText(HelpClass.checkNotEdit(zn.getQtygut())?zn.getQtygut().setScale(2, RoundingMode.HALF_EVEN).toString():"");
+        jTextField8.setText(HelpClass.checkNotEdit(zn.getQtytruba())?zn.getQtytruba().setScale(2, RoundingMode.HALF_EVEN).toString():"");
+        
         jTextField9.setText(zn.getAddarticle());
-        jTextField10.setText(zn.getQtyaddarticle().setScale(2, RoundingMode.HALF_EVEN).toString());
-        jTextField14.setText(zn.getQtyreturn().setScale(2, RoundingMode.HALF_EVEN).toString());
-        jTextField25.setText(zn.getQtybeika().setScale(2, RoundingMode.HALF_EVEN).toString());
+        
+        jTextField10.setText(HelpClass.checkNotEdit(zn.getQtyaddarticle())? zn.getQtyaddarticle().setScale(2, RoundingMode.HALF_EVEN).toString():"");
+        jTextField14.setText(HelpClass.checkNotEdit(zn.getQtyreturn())? zn.getQtyreturn().setScale(2, RoundingMode.HALF_EVEN).toString():"");        
+        jTextField25.setText(HelpClass.checkNotEdit(zn.getQtybeika())? zn.getQtybeika().setScale(2, RoundingMode.HALF_EVEN).toString():"");
+        
         jTextField11.setText(zn.getRezak().getName());
         jTextField12.setText(zn.getNastil().getName());
         jTextField15.setText(zn.getZadacha().getNomer());
@@ -943,18 +937,18 @@ public class FNastil extends javax.swing.JDialog {
     private void saveNastil()
     {
         zn.setAddarticle(jTextField9.getText());
-        zn.setQtyaddarticle(HelpClass.GetBigDecimalIzText(jTextField10.getText()));
-        zn.setQtydel(HelpClass.GetBigDecimalIzText(jTextField5.getText()));
-        zn.setQtydel1(HelpClass.GetBigDecimalIzText(jTextField27.getText()));
-        zn.setQtyend(HelpClass.GetBigDecimalIzText(jTextField4.getText()));
-        zn.setQtygut(HelpClass.GetBigDecimalIzText(jTextField7.getText()));        
-        zn.setQtylosk(HelpClass.GetBigDecimalIzText(jTextField6.getText()));
-        zn.setQtylosk1(HelpClass.GetBigDecimalIzText(jTextField28.getText()));
-        zn.setQtytruba(HelpClass.GetBigDecimalIzText(jTextField8.getText()));
-        zn.setQtyreturn(HelpClass.GetBigDecimalIzText(jTextField14.getText()));
+        zn.setQtyaddarticle(HelpClass.GetBigDecimalIzText2(jTextField10.getText()));
+        zn.setQtydel(HelpClass.GetBigDecimalIzText2(jTextField5.getText()));
+        zn.setQtydel1(HelpClass.GetBigDecimalIzText2(jTextField27.getText()));
+        zn.setQtyend(HelpClass.GetBigDecimalIzText2(jTextField4.getText()));
+        zn.setQtygut(HelpClass.GetBigDecimalIzText2(jTextField7.getText()));        
+        zn.setQtylosk(HelpClass.GetBigDecimalIzText2(jTextField6.getText()));
+        zn.setQtylosk1(HelpClass.GetBigDecimalIzText2(jTextField28.getText()));
+        zn.setQtytruba(HelpClass.GetBigDecimalIzText2(jTextField8.getText()));
+        zn.setQtyreturn(HelpClass.GetBigDecimalIzText2(jTextField14.getText()));
         zn.setQtynull(HelpClass.GetBigDecimalIzText(jTextField19.getText()));
         zn.setDlina(HelpClass.GetBigDecimalIzText(jTextField20.getText()));
-        zn.setQtybeika(HelpClass.GetBigDecimalIzText(jTextField25.getText()));
+        zn.setQtybeika(HelpClass.GetBigDecimalIzText2(jTextField25.getText()));
         zn.setDates(jDateChooser1.getDate());
         zn.setQtyl((Integer) jSpinner1.getValue());
         zn.setQtyl_string(jTextField17.getText());
@@ -992,6 +986,24 @@ public class FNastil extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(null, "Введите количество слоев!");
                 return;
             }
+            
+            
+            if(     !HelpClass.checkNotEdit2(jTextField8.getText()) ||
+                    !HelpClass.checkNotEdit2(jTextField4.getText()) ||
+                    !HelpClass.checkNotEdit2(jTextField14.getText()) ||
+                    !HelpClass.checkNotEdit2(jTextField25.getText()) ||
+                    !HelpClass.checkNotEdit2(jTextField5.getText()) ||
+                    !HelpClass.checkNotEdit2(jTextField27.getText()) ||
+                    !HelpClass.checkNotEdit2(jTextField6.getText()) ||
+                    !HelpClass.checkNotEdit2(jTextField28.getText()) ||
+                    !HelpClass.checkNotEdit2(jTextField7.getText()) ||
+                    !HelpClass.checkNotEdit2(jTextField10.getText())){
+                JOptionPane.showMessageDialog(null, "Введите правильный вес!");
+                return;
+            }
+                
+                
+            
             
         
             int r;
@@ -1165,17 +1177,6 @@ public class FNastil extends javax.swing.JDialog {
         jTable2.getColumnModel().getColumn(3).setPreferredWidth(70);
     }//GEN-LAST:event_jTable2ComponentResized
 
-    private void jTextField25FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField25FocusGained
-        // TODO add your handling code here:
-        jTextField25.setSelectionStart(0);
-        jTextField25.setSelectionEnd(jTextField25.getText().length());
-    }//GEN-LAST:event_jTextField25FocusGained
-
-    private void jTextField25FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField25FocusLost
-        // TODO add your handling code here:
-        printSummaQty();
-    }//GEN-LAST:event_jTextField25FocusLost
-
     private void jTextField27FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField27FocusGained
         // TODO add your handling code here:
         jTextField27.setSelectionStart(0);
@@ -1197,6 +1198,17 @@ public class FNastil extends javax.swing.JDialog {
         // TODO add your handling code here:
         printSummaQty();
     }//GEN-LAST:event_jTextField28FocusLost
+
+    private void jTextField25FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField25FocusLost
+        // TODO add your handling code here:
+        printSummaQty();
+    }//GEN-LAST:event_jTextField25FocusLost
+
+    private void jTextField25FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField25FocusGained
+        // TODO add your handling code here:
+        jTextField25.setSelectionStart(0);
+        jTextField25.setSelectionEnd(jTextField25.getText().length());
+    }//GEN-LAST:event_jTextField25FocusGained
 
     /**
      * @param args the command line arguments

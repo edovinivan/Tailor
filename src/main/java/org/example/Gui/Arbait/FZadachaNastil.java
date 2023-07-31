@@ -81,22 +81,38 @@ public class FZadachaNastil extends javax.swing.JDialog {
             loadZN();
         else
         {
+            
+            /* 
+            zn.setQtyaddarticle(HelpClass.GetBigDecimalIzText2(jTextField10.getText()));
+        zn.setQtydel(HelpClass.GetBigDecimalIzText2(jTextField5.getText()));
+        zn.setQtydel1(HelpClass.GetBigDecimalIzText2(jTextField27.getText()));
+        zn.setQtyend(HelpClass.GetBigDecimalIzText2(jTextField4.getText()));
+        zn.setQtygut(HelpClass.GetBigDecimalIzText2(jTextField7.getText()));        
+        zn.setQtylosk(HelpClass.GetBigDecimalIzText2(jTextField6.getText()));
+        zn.setQtylosk1(HelpClass.GetBigDecimalIzText2(jTextField28.getText()));
+        zn.setQtytruba(HelpClass.GetBigDecimalIzText2(jTextField8.getText()));
+        zn.setQtyreturn(HelpClass.GetBigDecimalIzText2(jTextField14.getText()));
+        zn.setQtynull(HelpClass.GetBigDecimalIzText(jTextField19.getText()));
+        zn.setDlina(HelpClass.GetBigDecimalIzText(jTextField20.getText()));
+        zn.setQtybeika(HelpClass.GetBigDecimalIzText2(jTextField25.getText()));*/
+            
+            
             jTextField1.setText(IOZadacha.getListZadacha(z, 0).get(0).getNomer() + "-" + (IOZadachaNastil.getListZadachaNastil(z, -1).size() + 1) + "-" + IOSetup.getNextNomNastil());
-            zadachaNastil.setQtyaddarticle(new BigDecimal(0));
-            zadachaNastil.setQtydel(new BigDecimal(0));
-            zadachaNastil.setQtydel1(new BigDecimal(0));
-            zadachaNastil.setQtyend(new BigDecimal(0));
-            zadachaNastil.setQtygut(new BigDecimal(0));
+            zadachaNastil.setQtyaddarticle(HelpClass.MIN_QTY_EDIT);
+            zadachaNastil.setQtydel(HelpClass.MIN_QTY_EDIT);
+            zadachaNastil.setQtydel1(HelpClass.MIN_QTY_EDIT);
+            zadachaNastil.setQtyend(HelpClass.MIN_QTY_EDIT);
+            zadachaNastil.setQtygut(HelpClass.MIN_QTY_EDIT);
             zadachaNastil.setQtyl(0);
-            zadachaNastil.setQtylosk(new BigDecimal(0));
-            zadachaNastil.setQtylosk1(new BigDecimal(0));
-            zadachaNastil.setQtytruba(new BigDecimal(0));
-            zadachaNastil.setQtyreturn(new BigDecimal(0));
+            zadachaNastil.setQtylosk(HelpClass.MIN_QTY_EDIT);
+            zadachaNastil.setQtylosk1(HelpClass.MIN_QTY_EDIT);
+            zadachaNastil.setQtytruba(HelpClass.MIN_QTY_EDIT);
+            zadachaNastil.setQtyreturn(HelpClass.MIN_QTY_EDIT);
             zadachaNastil.setQtyl_string("0");
-            zadachaNastil.setDlina(new BigDecimal(0));
-            zadachaNastil.setQtynull(new BigDecimal(0));
+            zadachaNastil.setDlina(HelpClass.MIN_QTY_EDIT);
+            zadachaNastil.setQtynull(HelpClass.MIN_QTY_EDIT);
             zadachaNastil.setDlinakonc(BigDecimal.ZERO);
-            zadachaNastil.setQtybeika(BigDecimal.ZERO);
+            zadachaNastil.setQtybeika(HelpClass.MIN_QTY_EDIT);
             zadachaNastil.setPachka(0);      
             zadachaNastil.setPasportreturn("");
             zadachaNastil.setDateclose(new Date());

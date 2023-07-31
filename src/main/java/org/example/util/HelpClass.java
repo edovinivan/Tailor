@@ -39,6 +39,8 @@ public class HelpClass {
         }
     }
     
+    
+    
     /**
      * проверка текста на соответствие числу Integer
      * @param s - текст который нужно проверить
@@ -72,6 +74,37 @@ public class HelpClass {
         {
             //System.out.println("ERROR");
             return new BigDecimal(0);
+        }
+    }
+    
+    public static BigDecimal GetBigDecimalIzText2(String s)
+    {
+        try
+        {
+            return new BigDecimal(s.replace(",", "."));
+        }
+        catch(NumberFormatException e)
+        {
+            //System.out.println("ERROR");
+            return MIN_QTY_EDIT;
+        }
+    }
+    
+    public static boolean checkNotEdit(BigDecimal bg){
+        return MIN_QTY_EDIT.compareTo(bg) != 0;
+    }
+    
+    public static BigDecimal MIN_QTY_EDIT = new BigDecimal("0.00001"); 
+    
+    public static boolean checkNotEdit2(String s){
+        try
+        {
+            new BigDecimal(s.replace(",", "."));
+            return true;
+        }
+        catch(NumberFormatException e)
+        {
+            return false;
         }
     }
     

@@ -8,9 +8,7 @@ package org.example.Gui.Form.Report;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
-import org.example.logic.Agent;
 import org.example.logic.Report;
-import org.example.util.IOAgent;
 import org.example.util.IOReport;
 
 /**

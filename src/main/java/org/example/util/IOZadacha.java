@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
+import org.example.dto.MegaReportDto;
 import org.example.logic.LSZadacha;
 import org.example.logic.Model;
 import org.example.logic.ModelPrintDetali;
@@ -36,6 +37,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.Transaction;
+import org.hibernate.transform.Transformers;
 
 /**
  *
@@ -1040,4 +1042,59 @@ public class IOZadacha {
         return f.getAbsolutePath();
     }
     
+    
+    public  static List<Integer> getListZadachaForArticle(int article)
+    {
+        Session sess = HibernateUtil.getSessionFactory().openSession(); 
+        String sql = "select z.zadacha from zadacha z where z.del = 0 and z.hand = 0 and z.status = 10 and z.model = " + article;        
+        List<Integer> ls = (List<Integer>)sess.createSQLQuery(sql).list();        
+        return ls;
+    }
+    
+    public  static List<String> getStringMegaReportForZadacha(int zadacha)
+    {
+        Session sess = HibernateUtil.getSessionFactory().openSession(); 
+        String sql = "select FL1 || ';' ||\n" +
+"       FL2 || ';' ||\n" +
+"       replace( round(FL3,3),'.', ',') || ';' ||\n" +
+"       replace(FL4,'.', ',') || ';' ||\n" +
+"       FL5 || ';' ||\n" +
+"       replace(FL6,'.', ',') || ';' ||\n" +
+"       replace(FL7,'.', ',') || ';' ||\n" +
+"       replace(FL8,'.', ',') || ';' ||\n" +
+"       replace(FL9,'.', ',') || ';' ||\n" +
+"       replace(FL10,'.', ',') || ';' ||\n" +
+"       replace(round(FL11,2),'.', ',') || ';' ||\n" +
+"       replace(round(FL12,2),'.', ',') || ';' ||\n" +
+"       replace(round(FL13,2),'.', ',') || ';' ||\n" +
+"       replace(round(FL14,2),'.', ',') || ';' ||\n" +
+"       replace(FL15,'.', ',') || ';' ||\n" +
+"       replace(FL16,'.', ',') || ';' ||\n" +
+"       replace(FL17,'.', ',') || ';' ||\n" +
+"       replace(FL18,'.', ',') || ';' ||\n" +
+"       replace(FL19,'.', ',') || ';' ||\n" +
+"       replace(round(FL20,2),'.', ',') || ';' ||\n" +
+"       replace(round(FL21,2),'.', ',') || ';' ||\n" +
+"       replace(FL22,'.', ',') || ';' ||\n" +
+"       replace(FL23,'.', ',') || ';' ||\n" +
+"       replace(round(FL24,3),'.', ',') || ';' ||\n" +
+"       replace(FL25,'.', ',') || ';' ||\n" +
+"       replace(FL26,'.', ',') || ';' ||\n" +
+"       replace(FL27,'.', ',') || ';' ||\n" +
+"       replace(FL28,'.', ',') || ';' ||\n" +
+"       replace(round(FL29,2),'.', ',') from PRINT_MEGA_REPORT(" + zadacha + ")";        
+        List<String> ls = (List<String>)sess.createSQLQuery(sql).list();        
+        return ls;
+    }
+    
+    public  static List<MegaReportDto> getListDtoMegaReportForZadacha(int zadacha)
+    {
+        Session sess = HibernateUtil.getSessionFactory().openSession(); 
+        String sql = "select FL1, FL2, FL3, FL4, FL5, FL6, FL7, FL8, FL9, FL10, FL11, FL12, FL13, FL14, FL15, FL16, FL17, FL18, FL19, FL20, FL21, FL22, FL23, FL24, FL25, FL26, FL27, FL28, FL29, FL30, FL31 from PRINT_MEGA_REPORT(" + zadacha + ")";        
+        
+        List<MegaReportDto> ls = sess.createSQLQuery(sql)
+                .setResultTransformer(Transformers.aliasToBean(MegaReportDto.class))
+                . list();        
+        return ls;
+    }
 }

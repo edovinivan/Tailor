@@ -40,6 +40,7 @@ public class LReport extends javax.swing.JDialog {
      * 18 - Склад лоскутов
      * 19 - Склад Кроя
      * 20 - Сезоны планирование
+     * 21 - Перемещения фурнитуры
      * @param nDocs - номер документа
      */
     public LReport(java.awt.Frame parent, boolean modal, int tip, int nDocs) {

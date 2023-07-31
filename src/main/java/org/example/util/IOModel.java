@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.example.dto.MegaReportDto;
 import org.example.logic.Color;
 import org.example.logic.Files;
 import org.example.logic.LModel1;
@@ -30,6 +31,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.transform.Transformers;
 
 /**
  *
@@ -1202,6 +1204,16 @@ public class IOModel {
         return ls.get(0);
     }
     
+    
+    
+    public static List<Integer> getAllModelForArticle(String article){
+        Session sess = HibernateUtil.getSessionFactory().openSession(); 
+        String sql = "select model from model where article = '" + article + "'";        
+        List<Integer> ls = sess.createSQLQuery(sql)
+                //.setResultTransformer(Transformers.aliasToBean(Integer.class))
+                . list();        
+        return ls;
+    }
     
     
 }

@@ -330,6 +330,22 @@ public class LAllNastil extends javax.swing.JPanel {
                 return;
             }
             
+            if(     !HelpClass.checkNotEdit(zn.getQtyaddarticle()) ||
+                    !HelpClass.checkNotEdit(zn.getQtydel()) ||
+                    !HelpClass.checkNotEdit(zn.getQtydel1()) ||
+                    !HelpClass.checkNotEdit(zn.getQtyend()) ||
+                    !HelpClass.checkNotEdit(zn.getQtygut()) ||
+                    !HelpClass.checkNotEdit(zn.getQtylosk()) ||
+                    !HelpClass.checkNotEdit(zn.getQtylosk1()) ||
+                    !HelpClass.checkNotEdit(zn.getQtytruba()) ||
+                    !HelpClass.checkNotEdit(zn.getQtyreturn()) ||
+                    !HelpClass.checkNotEdit(zn.getQtybeika())){
+                JOptionPane.showMessageDialog(null, "Введите правильный вес!");
+                return;
+            }
+            
+            
+            
             int r;
             if(zn.getQtyreturn().signum()==0)        
                 r = IOZadachaNastil.setStatusOkForNastil(zn.getZadachanastil(), 3);
