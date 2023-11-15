@@ -22,6 +22,7 @@ public class MegaReportDto {
    private String FL6; 
    private BigDecimal FL7; 
    private String FL8; 
+   private Integer FL8_1;
    private BigDecimal FL9; 
    private Integer FL10; 
    private BigDecimal FL11; 
@@ -73,6 +74,14 @@ public class MegaReportDto {
 
     public void setFL31(String FL31) {
         this.FL31 = FL31;
+    }
+
+    public Integer getFL8_1() {
+        return FL8_1;
+    }
+
+    public void setFL8_1(Integer FL8_1) {
+        this.FL8_1 = FL8_1;
     }
     
     
@@ -334,9 +343,13 @@ public class MegaReportDto {
         return g.setScale(3, RoundingMode.UP).toString().replace(".", ",");
     }
     
+    private String getArt(){        
+        return FL1.replace("/", "").split(" ")[0].replace("-", "");
+    }
+    
     public String toSaveFile(){
         String str = "";
-        str = str + FL1;
+        str = str + getArt();
         str = str + ";";
         str = str + FL2; 
         str = str + ";";
@@ -344,7 +357,7 @@ public class MegaReportDto {
         str = str + ";";
         str = str + scale3(FL3_1);
         str = str + ";";
-        str = str + scale2(FL4);
+        str = str + scale2(FL4); 
         str = str + ";";
         str = str + FL5;
         str = str + ";";
@@ -352,8 +365,10 @@ public class MegaReportDto {
         str = str + ";";
         str = str + scale2(FL7);
         str = str + ";";
-        str = str + FL8;
+        str = str + FL8_1;        
         str = str + ";";
+        str = str + FL8;
+        str = str + ";";        
         str = str + scale2(FL9);
         str = str + ";";
         str = str + FL10;

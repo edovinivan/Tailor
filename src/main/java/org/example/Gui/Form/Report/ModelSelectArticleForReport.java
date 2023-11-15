@@ -103,6 +103,13 @@ public class ModelSelectArticleForReport extends AbstractTableModel{
                 .collect(Collectors.toList());
     }
     
+    public void setAllEnable(){
+        for(LModel1 l: list){
+            l.setCoucom(1);
+        }
+        fireTableDataChanged();
+    }
+    
     
     
 }

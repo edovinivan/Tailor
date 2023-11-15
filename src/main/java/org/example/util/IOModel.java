@@ -25,6 +25,7 @@ import org.example.logic.ModelPrintDetali;
 import org.example.logic.ModelProduct;
 import org.example.logic.ModelSablon;
 import org.example.logic.RabotnikGruppa;
+import org.example.logic.Razmeri;
 import org.example.logic.Zadacha;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -88,6 +89,10 @@ public class IOModel {
         m.setStatus(0);
         m.setDates(new Date());
         m.setArticle("Копия " + m.getArticle());
+        if(m.getFirstrazmeri().getDel() == 1){
+            m.setFirstrazmeri(new Razmeri(0));
+            m.setEndrazmeri(new Razmeri(0));
+        }
         m = setModel(m);
         // скопируем все материалы
         for(ModelProduct mp: getListModelProduct(ml, -1, 0))
@@ -166,6 +171,10 @@ public class IOModel {
         m.setStatus(0);
         m.setDates(new Date());
         m.setArticle("Копия " + m.getArticle());
+        if(m.getFirstrazmeri().getDel() == 1){
+            m.setFirstrazmeri(new Razmeri(0));
+            m.setEndrazmeri(new Razmeri(0));
+        }
         m = setModel(m);
         // скопируем все материалы
         for(ModelProduct mp: getListModelProduct(ml, -1, 0))
@@ -548,6 +557,26 @@ public class IOModel {
             System.out.println("ERROR SAVE" + e);            
         }
         return p;
+    }
+    
+    
+    /**
+     * Получить список объектов   
+     * @return 
+     */
+    public static List<ModelProduct> getListModelProductAll()
+    {
+        List<ModelProduct> ls = new ArrayList<>();
+        try  
+        {
+            Session sess = HibernateUtil.getSessionFactory().openSession();
+            
+            ls = sess.createCriteria(ModelProduct.class).list();            
+        }catch(HibernateException e)
+        {
+            System.out.println("GER ERROR " + e);            
+        }        
+        return ls;        
     }
     
     

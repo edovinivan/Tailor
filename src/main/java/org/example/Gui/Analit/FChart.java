@@ -186,7 +186,7 @@ public class FChart extends javax.swing.JDialog {
     }
 
     DateAxis axis = (DateAxis) plot.getDomainAxis();
-    axis.setDateFormatOverride(new SimpleDateFormat("dd.MM.YYYY"));
+    axis.setDateFormatOverride(new SimpleDateFormat("dd.MM.yyyy"));
 
     return chart;
 }

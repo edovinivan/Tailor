@@ -1002,6 +1002,14 @@ public class FNastil extends javax.swing.JDialog {
                 return;
             }
                 
+            
+            //если есть доп артикул то проверим что ввели вес
+            if(jTextField9.getText() != null && jTextField9.getText().length()>1){
+                if(zn.getQtyaddarticle().compareTo(BigDecimal.ZERO)==0){
+                    JOptionPane.showMessageDialog(null, "Введите правильный вес доп. артикула!");
+                    return;
+                }
+            }
                 
             
             

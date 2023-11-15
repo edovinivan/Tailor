@@ -1090,7 +1090,7 @@ public class IOZadacha {
     public  static List<MegaReportDto> getListDtoMegaReportForZadacha(int zadacha)
     {
         Session sess = HibernateUtil.getSessionFactory().openSession(); 
-        String sql = "select FL1, FL2, FL3, FL4, FL5, FL6, FL7, FL8, FL9, FL10, FL11, FL12, FL13, FL14, FL15, FL16, FL17, FL18, FL19, FL20, FL21, FL22, FL23, FL24, FL25, FL26, FL27, FL28, FL29, FL30, FL31 from PRINT_MEGA_REPORT(" + zadacha + ")";        
+        String sql = "select FL1, FL2, FL3, FL4, FL5, FL6, FL7, FL8_1, FL8,  FL9, FL10, FL11, FL12, FL13, FL14, FL15, FL16, FL17, FL18, FL19, FL20, FL21, FL22, FL23, FL24, FL25, FL26, FL27, FL28, FL29, FL30, FL31 from PRINT_MEGA_REPORT(" + zadacha + ")";        
         
         List<MegaReportDto> ls = sess.createSQLQuery(sql)
                 .setResultTransformer(Transformers.aliasToBean(MegaReportDto.class))

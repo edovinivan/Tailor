@@ -9,6 +9,7 @@ import org.example.Gui.Arbait.Model.ModelAllNastil;
 import org.example.Gui.Form.Helps.FGetDate;
 import org.example.Gui.THaupt;
 import java.awt.event.KeyEvent;
+import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
@@ -344,7 +345,13 @@ public class LAllNastil extends javax.swing.JPanel {
                 return;
             }
             
-            
+             //если есть доп артикул то проверим что ввели вес
+            if(zn.getAddarticle() != null && zn.getAddarticle().length()>1){
+                if(zn.getQtyaddarticle().compareTo(BigDecimal.ZERO)==0){
+                    JOptionPane.showMessageDialog(null, "Введите правильный вес доп. артикула!");
+                    return;
+                }
+            }
             
             int r;
             if(zn.getQtyreturn().signum()==0)        

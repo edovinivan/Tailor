@@ -152,7 +152,8 @@ public class HelpClass {
      */
     public static String getPrintDate(Date d)
     {
-        SimpleDateFormat sd = new SimpleDateFormat("dd-MM-YYYY");
+        //System.out.println("-->" + d.toString());
+        SimpleDateFormat sd = new SimpleDateFormat("dd-MM-yyyy");
         return sd.format(d);
     }
     
@@ -163,7 +164,7 @@ public class HelpClass {
      */
     public static String getPrintDate1(Date d)
     {
-        SimpleDateFormat sd = new SimpleDateFormat("YYYY-MM-dd");
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd");
         return sd.format(d);
     }
     
@@ -174,7 +175,7 @@ public class HelpClass {
      */
     public static String getPrintDate4(Date d)
     {
-        SimpleDateFormat sd = new SimpleDateFormat("YYYYMMdd");
+        SimpleDateFormat sd = new SimpleDateFormat("yyyyMMdd");
         return sd.format(d);
     }
     
@@ -186,7 +187,7 @@ public class HelpClass {
      */
     public static String getPrintDate2(Date d)
     {
-        SimpleDateFormat sd = new SimpleDateFormat("YYMMddHHmmss");
+        SimpleDateFormat sd = new SimpleDateFormat("yyMMddHHmmss");
         return sd.format(d);
     }
     
@@ -198,7 +199,7 @@ public class HelpClass {
      */
     public static String getPrintDate3(Date d)
     {
-        SimpleDateFormat sd = new SimpleDateFormat("YYYY-MM-dd HH:mm");
+        SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         return sd.format(d);
     }
     
@@ -210,7 +211,7 @@ public class HelpClass {
      */
     public static String getPrintDate5(Date d)
     {
-        SimpleDateFormat sd = new SimpleDateFormat("YYYYMMddHHmmss");
+        SimpleDateFormat sd = new SimpleDateFormat("yyyyMMddHHmmss");
         return sd.format(d);
     }
     

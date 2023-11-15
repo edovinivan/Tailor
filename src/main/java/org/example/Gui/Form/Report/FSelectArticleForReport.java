@@ -60,6 +60,7 @@ public class FSelectArticleForReport extends javax.swing.JDialog {
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Выбор артикулов");
@@ -112,17 +113,27 @@ public class FSelectArticleForReport extends javax.swing.JDialog {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton3.setText("Выделить все");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addGap(0, 144, Short.MAX_VALUE))
+                .addGap(0, 29, Short.MAX_VALUE))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -131,7 +142,8 @@ public class FSelectArticleForReport extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jLabel1)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE))
         );
@@ -218,9 +230,9 @@ public class FSelectArticleForReport extends javax.swing.JDialog {
         if(jf.showSaveDialog(this) == JFileChooser.APPROVE_OPTION)
         {
             try (PrintWriter outs = new PrintWriter(new OutputStreamWriter(new FileOutputStream(jf.getSelectedFile().getAbsolutePath()+".csv", false), "cp1251"), false)) {
-                String head = "1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30,31,32";
+                String head = "1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33";
                 outs.println(head);
-                head = "Артикул;Задача по артикулу (№);Вес 1 изделия -общий по задаче(кг);Средний вес 1 изделия без учёта минимального и максимального- общий по задаче(кг);Стоимость комплектовки 1 изделия(руб.);Дата задачи;Наличие принта;Стоимость принта(руб.);Наличие вышивки;Стоимость вышивки(руб.);Швейный цех -Количество изделий, принятых на склад из швейного цеха(шт.);Швейный цех -Себестоимость 1 изделия по откомплектованным изделиям(руб.);Швейный цех -Себестоимость 1 изделия по принятым на склад(руб.);Итого - Себестоимость 1 изделия по откомплектованным изделиям(руб.);Итого - себестоимость 1 изделия по принятым на склад(руб.);Вес кроя в задаче(кг);Вес доп. артикула в задаче(кг);% отходов доп. артикула в задаче;Доп. Артикул;Вес отходов в задаче(кг);% отходов по задаче;Среднее значение % отходов по артикулу до задачи;Настилы по задаче;Вид настила;Вес 1 изделия - по настилу(кг);Вес кроя в настиле(кг);Вес доп. артикула в настиле(кг);% отходов доп. артикула в настиле;Вес отходов(кг) в настиле;% отходов по настилу;Сумма фурнитуры;Фурнитура";
+                head = "Артикул;Задача по артикулу (№);Вес 1 изделия -общий по задаче(кг);Средний вес 1 изделия без учёта минимального и максимального- общий по задаче(кг);Стоимость комплектовки 1 изделия(руб.);Дата задачи;Наличие принта;Стоимость принта(руб.);Кол-во деталей с принтом;Наличие вышивки;Стоимость вышивки(руб.);Швейный цех -Количество изделий, принятых на склад из швейного цеха(шт.);Швейный цех -Себестоимость 1 изделия по откомплектованным изделиям(руб.);Швейный цех -Себестоимость 1 изделия по принятым на склад(руб.);Итого - Себестоимость 1 изделия по откомплектованным изделиям(руб.);Итого - себестоимость 1 изделия по принятым на склад(руб.);Вес кроя в задаче(кг);Вес доп. артикула в задаче(кг);% доп. Артикула в задаче;Доп. Артикул;Вес отходов в задаче(кг);% отходов по задаче;Среднее значение % отходов по артикулу до задачи;Настилы по задаче;Вид настила;Вес 1 изделия - по настилу(кг);Вес кроя в настиле(кг);Вес доп. артикула в настиле(кг);% отходов доп. артикула в настиле;Вес отходов(кг) в настиле;% отходов по настилу;Сумма фурнитуры;Фурнитура";
                 outs.println(head);
             
             List<Integer> lsZadacha;
@@ -268,6 +280,11 @@ public class FSelectArticleForReport extends javax.swing.JDialog {
         setVisible(false);               
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        model.setAllEnable();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void setFilter()
     {
@@ -319,6 +336,7 @@ public class FSelectArticleForReport extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

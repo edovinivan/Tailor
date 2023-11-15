@@ -12,6 +12,8 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.List;
+import org.example.logic.ModelProduct;
+import org.example.logic.Razmeri;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -289,4 +291,37 @@ public class IOSaveData {
         return true;
     }
     
+    
+    public static void saveRazmeriForLoad(String strFile){
+        try (PrintWriter outs = new PrintWriter(new OutputStreamWriter(new FileOutputStream(strFile+".csv", false), "cp1251"), false)) {
+            outs.println("Артикул код;Артикул;Код тип полотна; Тип полотна; Код размера; Размер; Вес");
+            
+            List<Razmeri> listRazmeri = IORazmeri.getListAllRazmeri();
+            List<ModelProduct> listModelProduct = IOModel.getListModelProductAll();
+            
+            IOModel.getListModel(-1, 2, false)                
+                    .stream()                    
+                    //.filter(it -> it.getFirstrazmeri().getDel() == 0)
+                    .forEach(model ->{
+                        
+                        listRazmeri
+                            .stream()
+                            .filter(it->it.getDel() == 0)
+                            .filter(it->it.getRazmerigruppa().getRazmerigruppa().compareTo(model.getFirstrazmeri().getRazmerigruppa().getRazmerigruppa()) == 0)
+                            .forEach(it->{
+                                listModelProduct
+                                    .stream()
+                                    .filter(im->im.getModel().getModel().compareTo(model.getModel()) == 0 && im.getVid() == 1)
+                                    .forEach(product -> {
+                                        outs.println(model.getModel() + ";" + model.getArticle() + ";" + product.getModelproduct() + ";" + product.getTipproduct().getName() + ";" + it.getRazmeri()+ ";" + it.getName() );
+                                    });                            
+                            });   
+                    }                
+                );
+            outs.close();
+            
+        } catch (UnsupportedEncodingException | FileNotFoundException ex) {
+                    System.out.println("ERROR " + ex);
+                }
+    }
 }

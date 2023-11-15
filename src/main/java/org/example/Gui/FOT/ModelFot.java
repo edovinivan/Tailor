@@ -5,7 +5,11 @@
  */
 package org.example.Gui.FOT;
 
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 import org.example.logic.Zadacha;
@@ -70,8 +74,9 @@ public class ModelFot extends AbstractTableModel{
                 else
                     return "";                    
             case 6: 
-                if(list.get(rowIndex).getStatus()==10)
+                if(list.get(rowIndex).getStatus()==10){                    
                     return HelpClass.getPrintDate(list.get(rowIndex).getDateend());
+                }
                 else
                     return "";                   
                 
